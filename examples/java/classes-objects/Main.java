@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-// A class is a blueprint. Each object made from it has its own data.
+// A class defines the fields and methods its objects have. Each object made from it has its own data.
 class Student {
     // Fields are declared at the top of the class, each with a type.
     String name;

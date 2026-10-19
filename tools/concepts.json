@@ -319,7 +319,7 @@
   "level": "brilliant",
   "topic": "Data structures",
   "title": "Sets and hashing",
-  "contrast": "Python objects in a set need __hash__ and __eq__; defining only __eq__ makes them unhashable. Java objects need hashCode() and equals(); with only equals(), duplicates slip into the set with no error."
+  "contrast": "Python objects in a set need __hash__ and __eq__; defining only __eq__ makes them unhashable. Java objects need hashCode() and equals(); with only equals(), the set keeps duplicates and reports no error."
  },
  {
   "id": "generics-typing",

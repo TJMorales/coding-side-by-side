@@ -52,7 +52,7 @@ public class Main {
         System.out.println("Unique grades: " + unique.size());
 
         // Edge case: there is no setter. g1.score = 100; does not compile:
-        // cannot assign a value to final variable score
+        // score has private access in Grade
 
         // Edge case: validation rejects bad data at creation time.
         try {

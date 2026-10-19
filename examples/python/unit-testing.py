@@ -16,7 +16,7 @@ def letter_grade(score):
     return "F"
 
 
-# Each method whose name starts with test_ is one test.
+# Each method whose name starts with test is one test.
 class TestLetterGrade(unittest.TestCase):
     def test_typical_scores(self):
         self.assertEqual(letter_grade(95), "A")
@@ -24,7 +24,7 @@ class TestLetterGrade(unittest.TestCase):
         self.assertEqual(letter_grade(42), "F")
 
     def test_boundaries(self):
-        # Off-by-one bugs live at the edges, so test the exact cutoffs.
+        # Off-by-one mistakes happen at the cutoffs, so test the exact cutoff values.
         self.assertEqual(letter_grade(90), "A")
         self.assertEqual(letter_grade(89), "B")
         self.assertEqual(letter_grade(70), "C")

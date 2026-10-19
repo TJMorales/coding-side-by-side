@@ -1,4 +1,4 @@
-# A class is a blueprint. Each object made from it has its own data.
+# A class defines the fields and methods its objects have. Each object made from it has its own data.
 class Student:
     # __init__ runs when you create a Student. self is the new object.
     def __init__(self, name, grade_level):

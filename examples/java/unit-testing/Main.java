@@ -45,7 +45,7 @@ public class Main {
         check("typical 95", "A", letterGrade(95));
         check("typical 85", "B", letterGrade(85));
         check("typical 42", "F", letterGrade(42));
-        // Off-by-one bugs live at the edges, so test the exact cutoffs.
+        // Off-by-one mistakes happen at the cutoffs, so test the exact cutoff values.
         check("boundary 90", "A", letterGrade(90));
         check("boundary 89", "B", letterGrade(89));
         check("boundary 70", "C", letterGrade(70));

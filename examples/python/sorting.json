@@ -5,7 +5,7 @@
     "The outer loop of selection sort runs len(items) - 1 times. The last value is already in place.",
     "Both functions change the list in place. They do not make a new list."
   ],
-  "pitfall": "In insertion sort, writing items[j] = current instead of items[j + 1] = current after the while loop puts the value one spot too far left and can raise IndexError or overwrite data.",
+  "pitfall": "In insertion sort, writing items[j] = current instead of items[j + 1] = current after the while loop puts the value one spot too far left. When j is -1, items[-1] overwrites the last item with no error.",
   "keywords": ["selection sort", "insertion sort", "swap", "sorting algorithm", "in place", "pass", "shift"],
   "run": true
 }

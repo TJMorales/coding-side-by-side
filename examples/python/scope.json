@@ -5,6 +5,6 @@
     "bonus exists only inside calculate_bonus(). Using it outside raises NameError.",
     "global total_points lets add_points() change the variable outside the function."
   ],
-  "pitfall": "Assigning to a global inside a function without global creates a local copy, so the global never changes. Using += on it raises UnboundLocalError: cannot access local variable 'total_points'.",
+  "pitfall": "Assigning to a global inside a function without global creates a new local variable with the same name, so the global never changes. Using += on it raises UnboundLocalError: cannot access local variable 'total_points'.",
   "keywords": ["scope", "local", "global", "NameError", "UnboundLocalError", "variable lifetime", "block scope"]
 }

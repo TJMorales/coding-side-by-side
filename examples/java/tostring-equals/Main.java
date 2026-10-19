@@ -23,6 +23,12 @@ class Student {
         }
         return studentId == ((Student) other).studentId;
     }
+
+    // Objects that are equal must have equal hash codes, so override both.
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(studentId);
+    }
 }
 
 public class Main {

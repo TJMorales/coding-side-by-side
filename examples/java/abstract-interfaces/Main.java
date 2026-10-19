@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// An interface lists methods a class promises to have. It has no fields or constructors.
+// An interface lists methods a class promises to have. It has no instance fields or constructors.
 interface Gradable {
     double percent();
 }
