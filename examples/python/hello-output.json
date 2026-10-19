@@ -1,0 +1,10 @@
+{
+  "summary": "print() displays text and values in the console. Every print() starts a new line unless you change end.",
+  "notes": [
+    "Text goes in quotes. Numbers do not.",
+    "Commas between values add a space automatically.",
+    "end=\"\" replaces the usual newline with nothing."
+  ],
+  "pitfall": "Writing Print with a capital P causes a NameError. Python is case-sensitive.",
+  "keywords": ["print", "console", "end", "newline"]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "break stops a loop early and continue skips to the next pass. Use them when you are searching for something or need to skip bad data.",
+  "notes": [
+    "continue jumps back to the top of the loop. The print(f\"Passing: ...\") line is skipped for -1.",
+    "break leaves the loop completely, so 75 is never checked.",
+    "The else on a for loop runs only when the loop ends without break. It lines up with for, not with if."
+  ],
+  "pitfall": "Indenting else under the if instead of under the for turns it into a normal if/else, so it runs on every pass where the score passes.",
+  "keywords": ["break", "continue", "for else", "loop else", "exit loop", "skip", "search"]
+}

@@ -1,0 +1,19 @@
+{
+  "summary": "A comment is a note for people reading your code. Java skips it when it compiles the program.",
+  "notes": [
+    "// starts a comment that runs to the end of the line.",
+    "/* and */ wrap a block comment that can cover several lines.",
+    "/** */ is a Javadoc comment. Put it right above a class or method to describe it."
+  ],
+  "pitfall": "Forgetting the closing */ turns the rest of the file into a comment, and javac reports error: unclosed comment.",
+  "keywords": [
+    "comment",
+    "//",
+    "/*",
+    "*/",
+    "Javadoc",
+    "/**",
+    "block comment",
+    "comment out"
+  ]
+}

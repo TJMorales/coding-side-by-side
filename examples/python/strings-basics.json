@@ -1,0 +1,19 @@
+{
+  "summary": "A string is text in quotes. Use len() to count its characters, an index to get one character, and == to compare two strings.",
+  "notes": [
+    "len(song) counts every character, including spaces.",
+    "song[0] is the first character. song[len(song) - 1] is the last.",
+    "== compares the text, and the comparison is case-sensitive."
+  ],
+  "pitfall": "Joining a str and an int with + causes TypeError: can only concatenate str (not \"int\") to str. Use str() or a comma in print().",
+  "keywords": [
+    "string",
+    "str",
+    "len",
+    "index",
+    "==",
+    "concatenate",
+    "+",
+    "case-sensitive"
+  ]
+}

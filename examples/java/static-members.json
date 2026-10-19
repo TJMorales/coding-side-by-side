@@ -1,0 +1,11 @@
+{
+  "summary": "A static field is shared by every object of the class, and a static method is called on the class itself. Fields without static belong to one object.",
+  "notes": [
+    "static int count = 0; exists once, no matter how many Student objects you make.",
+    "A static method like isValidId() cannot use this or instance fields like name.",
+    "leo.school = ... changes the one shared static field. Write Student.school so this is clear."
+  ],
+  "pitfall": "Using an instance field inside a static method, like name in isValidId(), causes the compile error \"non-static variable name cannot be referenced from a static context\".",
+  "keywords": ["static", "class variable", "instance variable", "static method", "shared", "counter", "non-static context"],
+  "run": true
+}

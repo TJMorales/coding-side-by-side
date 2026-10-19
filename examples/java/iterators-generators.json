@@ -1,0 +1,10 @@
+{
+  "summary": "An Iterator hands out values one at a time with hasNext() and next(). A class that implements Iterable<T> can be used in an enhanced for loop.",
+  "notes": [
+    "iterator() returns a new Iterator each time it is called, so the same Countdown can be looped over more than once.",
+    "return current--; returns the current value and then subtracts 1.",
+    "next() throws NoSuchElementException when there are no values left. That is the rule for every Java Iterator."
+  ],
+  "pitfall": "Implementing Iterator<Integer> but not Iterable<Integer> makes for (int n : new Countdown(5)) fail to compile with for-each not applicable to expression type.",
+  "keywords": ["Iterator", "Iterable", "hasNext", "next", "enhanced for", "for-each", "NoSuchElementException", "anonymous class", "subList"]
+}

@@ -1,0 +1,19 @@
+{
+  "summary": "A String is text in double quotes. Use length() to count characters, charAt() to get one, and equals() to compare two Strings.",
+  "notes": [
+    "length() is a method, so it needs parentheses. Arrays use length with no parentheses.",
+    "charAt(0) returns the first character as a char.",
+    "equals() compares the text. == compares whether two variables point to the same object."
+  ],
+  "pitfall": "Comparing Strings with == can print false even when the text matches, as search == artist shows. Use equals().",
+  "keywords": [
+    "String",
+    "length",
+    "charAt",
+    "equals",
+    "==",
+    "concatenate",
+    "+",
+    "case-sensitive"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "Scope is where in the code a variable can be used. In Python, if blocks and loops do not create a new scope, but functions do.",
+  "notes": [
+    "message is created inside the if and printed after it. This works because the if was True.",
+    "bonus exists only inside calculate_bonus(). Using it outside raises NameError.",
+    "global total_points lets add_points() change the variable outside the function."
+  ],
+  "pitfall": "Assigning to a global inside a function without global creates a local copy, so the global never changes. Using += on it raises UnboundLocalError: cannot access local variable 'total_points'.",
+  "keywords": ["scope", "local", "global", "NameError", "UnboundLocalError", "variable lifetime", "block scope"]
+}

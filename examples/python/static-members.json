@@ -1,0 +1,11 @@
+{
+  "summary": "A class variable is shared by every object of the class. An instance variable belongs to one object. Use class variables for counters and values that are the same for everyone.",
+  "notes": [
+    "Student.count += 1 updates the shared counter. self.count += 1 would create a separate count on that one object.",
+    "@staticmethod defines a method you call as Student.is_valid_id(1500) without any object.",
+    "leo.school = ... does not change Student.school. It adds a school field to leo only."
+  ],
+  "pitfall": "Writing self.count += 1 in __init__ leaves Student.count at 0, because it creates an instance variable instead of changing the class variable.",
+  "keywords": ["class variable", "instance variable", "static", "@staticmethod", "shared", "counter", "class attribute"],
+  "run": true
+}

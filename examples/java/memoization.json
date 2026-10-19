@@ -1,0 +1,10 @@
+{
+  "summary": "Memoization saves the result of each method call so the same input is never computed twice. It turns naive recursive Fibonacci from exponential time into linear time.",
+  "notes": [
+    "memo.containsKey(n) checks for a saved answer before doing any work.",
+    "Map<Integer, Long> uses wrapper types because generics cannot hold int or long directly.",
+    "long is exact up to fib(92). Past that the value overflows and wraps to a negative number."
+  ],
+  "pitfall": "Using memo.computeIfAbsent(n, k -> fibMemo(k - 1) + fibMemo(k - 2)) on a HashMap changes the map while it is being updated and throws ConcurrentModificationException. Use containsKey, get, and put.",
+  "keywords": ["memoization", "dynamic programming", "HashMap", "containsKey", "fibonacci", "recursion", "cache", "long overflow"]
+}

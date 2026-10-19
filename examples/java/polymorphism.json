@@ -1,0 +1,11 @@
+{
+  "summary": "Polymorphism means one method call, like student.report(), runs the version that belongs to the object's actual class. A Student variable or array can hold any subclass object.",
+  "notes": [
+    "Student[] roster can hold an HonorsStudent object because HonorsStudent extends Student.",
+    "The compiler checks the declared type (Student) to decide which methods you may call. Java picks which version runs when the program runs.",
+    "(HonorsStudent) roster[1] is a cast. Casting an object to the wrong class compiles but throws ClassCastException when it runs."
+  ],
+  "pitfall": "Calling roster[1].weightedAverage() fails to compile with \"cannot find symbol\", even though the object is an HonorsStudent, because the declared type is Student.",
+  "keywords": ["polymorphism", "override", "@Override", "dynamic dispatch", "cast", "ClassCastException", "declared type", "actual type"],
+  "run": true
+}

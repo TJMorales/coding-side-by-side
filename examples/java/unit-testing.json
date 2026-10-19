@@ -1,0 +1,10 @@
+{
+  "summary": "A unit test runs a small piece of code with known inputs and checks the result. Java projects usually add JUnit for this. This example writes small check methods so it runs with no extra library.",
+  "notes": [
+    "check() compares with expected.equals(actual), not ==, because the values are Strings.",
+    "checkThrows() takes a Runnable lambda so the code runs inside its try block, where the exception can be caught.",
+    "In JUnit 5, each @Test method is one test, and assertEquals(expected, actual) puts the expected value first."
+  ],
+  "pitfall": "Swapping the arguments to assertEquals(actual, expected) still passes or fails correctly, but the failure message reports the values backwards and is confusing to read.",
+  "keywords": ["unit test", "JUnit", "assertEquals", "assertThrows", "@Test", "boundary testing", "Runnable", "testing", "test case"]
+}

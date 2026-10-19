@@ -1,0 +1,20 @@
+{
+  "summary": "When a program crashes, Python prints a traceback. It tells you the file, the line number, and the type of error.",
+  "notes": [
+    "Read the last line first: IndexError: list index out of range.",
+    "The File line gives the line number that crashed.",
+    "Lines before the crash still ran, so their output appears above the traceback."
+  ],
+  "pitfall": "Fixing the line above or below the reported line. Go to the exact line number in the traceback first.",
+  "keywords": [
+    "error",
+    "traceback",
+    "IndexError",
+    "exception",
+    "crash",
+    "line number",
+    "debug",
+    "runtime error"
+  ],
+  "expect_error": true
+}

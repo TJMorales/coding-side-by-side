@@ -1,0 +1,19 @@
+{
+  "summary": "A for loop repeats a block a set number of times. Its header has three parts: start, condition, and update.",
+  "notes": [
+    "int lap = 1 runs once, before the loop starts.",
+    "lap < 6 is checked before each pass. The loop stops when it is false.",
+    "lap++ adds 1 after each pass. seconds -= 2 subtracts 2."
+  ],
+  "pitfall": "Writing lap <= 5 versus lap < 5 changes the count by one. Check the first and last values the loop prints.",
+  "keywords": [
+    "for",
+    "loop",
+    "++",
+    "counter",
+    "repeat",
+    "iterate",
+    "condition",
+    "update"
+  ]
+}

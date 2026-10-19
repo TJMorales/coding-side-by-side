@@ -1,0 +1,11 @@
+{
+  "summary": "Selection sort repeatedly finds the smallest unsorted value and swaps it into place. Insertion sort takes each value and shifts larger values right until it fits.",
+  "notes": [
+    "items[i], items[smallest] = items[smallest], items[i] swaps two values without a temporary variable.",
+    "The outer loop of selection sort runs len(items) - 1 times. The last value is already in place.",
+    "Both functions change the list in place. They do not make a new list."
+  ],
+  "pitfall": "In insertion sort, writing items[j] = current instead of items[j + 1] = current after the while loop puts the value one spot too far left and can raise IndexError or overwrite data.",
+  "keywords": ["selection sort", "insertion sort", "swap", "sorting algorithm", "in place", "pass", "shift"],
+  "run": true
+}

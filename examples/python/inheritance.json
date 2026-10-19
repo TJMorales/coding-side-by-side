@@ -1,0 +1,11 @@
+{
+  "summary": "Inheritance makes a new class that starts with all the fields and methods of an existing class. You add new methods or override old ones in the child class.",
+  "notes": [
+    "class HonorsStudent(Student) names the parent class in parentheses.",
+    "super().__init__(name, scores) must run, or self.name and self.scores are never set.",
+    "super().describe() calls the parent's version of a method you have overridden."
+  ],
+  "pitfall": "Leaving out super().__init__(...) in the child's __init__ causes AttributeError: 'HonorsStudent' object has no attribute 'scores' when average() runs.",
+  "keywords": ["inheritance", "subclass", "superclass", "parent", "child", "super()", "override", "isinstance"],
+  "run": true
+}

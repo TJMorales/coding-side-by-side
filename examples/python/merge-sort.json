@@ -1,0 +1,10 @@
+{
+  "summary": "Merge sort splits a list in half, sorts each half recursively, and merges the two sorted halves. It runs in O(n log n) time on every input.",
+  "notes": [
+    "scores[:mid] and scores[mid:] make new lists, so merge_sort returns a new list and leaves the original alone.",
+    "left[i] <= right[j] uses <= so equal scores keep their original order. That makes the sort stable.",
+    "result.extend(left[i:]) copies the leftovers after one side runs out."
+  ],
+  "pitfall": "Forgetting the base case if len(scores) <= 1 makes the function call itself forever and ends with RecursionError: maximum recursion depth exceeded.",
+  "keywords": ["merge sort", "divide and conquer", "recursion", "slicing", "n log n", "stable sort", "merge"]
+}

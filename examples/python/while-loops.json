@@ -1,0 +1,17 @@
+{
+  "summary": "A while loop repeats as long as its condition is True. Use it when you do not know ahead of time how many times to repeat.",
+  "notes": [
+    "The condition is checked before each pass through the loop.",
+    "savings = savings + 30 changes the value the condition checks.",
+    "When the condition is False at the start, the body runs zero times."
+  ],
+  "pitfall": "Forgetting to change the variable in the condition makes an infinite loop. The program never stops. Press Ctrl+C to stop it.",
+  "keywords": [
+    "while",
+    "loop",
+    "repeat",
+    "condition",
+    "infinite loop",
+    "sentinel"
+  ]
+}

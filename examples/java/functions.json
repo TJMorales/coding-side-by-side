@@ -1,0 +1,19 @@
+{
+  "summary": "A method is a named block of code inside a class. You declare its return type and the type of each parameter.",
+  "notes": [
+    "static double percent(int score, int total) says it returns a double and takes two ints.",
+    "void means the method does not return a value.",
+    "(double) score turns the int into a double so the division keeps the decimal."
+  ],
+  "pitfall": "Forgetting return in a method that is not void causes error: missing return statement.",
+  "keywords": [
+    "method",
+    "static",
+    "void",
+    "return",
+    "parameter",
+    "argument",
+    "return type",
+    "function"
+  ]
+}

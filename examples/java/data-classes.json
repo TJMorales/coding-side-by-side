@@ -1,0 +1,10 @@
+{
+  "summary": "A record writes the constructor, getters, toString(), equals(), and hashCode() for a class from its component list. Every field in a record is final.",
+  "notes": [
+    "record Grade(String student, int score) declares the fields and the constructor in one line.",
+    "The compact constructor Grade { ... } has no parameter list. It runs before the fields are set, so it is the place to validate.",
+    "Record getters use the field name with no get prefix: g1.score()."
+  ],
+  "pitfall": "Calling g1.getScore() fails to compile with cannot find symbol. A record named the getter score().",
+  "keywords": ["record", "compact constructor", "immutable", "final", "equals", "hashCode", "toString", "IllegalArgumentException", "data class", "getter"]
+}

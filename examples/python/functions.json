@@ -1,0 +1,18 @@
+{
+  "summary": "A function is a named block of code you can run many times. def defines it, and return sends a value back to the caller.",
+  "notes": [
+    "def percent(score, total): defines the function. The body is indented.",
+    "return ends the function and gives back a value.",
+    "A function with no return gives back None."
+  ],
+  "pitfall": "Calling a function before its def line causes NameError: name 'percent' is not defined. Define functions at the top of the file.",
+  "keywords": [
+    "def",
+    "function",
+    "return",
+    "parameter",
+    "argument",
+    "call",
+    "None"
+  ]
+}

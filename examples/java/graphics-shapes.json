@@ -1,0 +1,11 @@
+{
+  "summary": "Swing draws inside a JPanel's paintComponent method, using a Graphics object to fill and outline shapes. Swing calls paintComponent for you whenever the window needs drawing.",
+  "notes": [
+    "Java's (0, 0) is the top-left corner and y increases going down, unlike turtle's centered origin.",
+    "Each fill or draw call uses the color from the most recent g.setColor(...).",
+    "SwingUtilities.invokeLater(...) creates the window on the event dispatch thread, where Swing code must run."
+  ],
+  "pitfall": "Leaving out super.paintComponent(g) skips clearing the panel, so the background color never appears and old drawings can stay on screen.",
+  "keywords": ["Swing", "JPanel", "JFrame", "paintComponent", "Graphics", "fillRect", "fillOval", "drawString", "Color", "invokeLater"],
+  "run": false
+}

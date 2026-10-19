@@ -1,0 +1,11 @@
+{
+  "summary": "An abstract class defines methods that every subclass must write, and you cannot create objects from it directly. Use one when several classes share a shape but compute something differently.",
+  "notes": [
+    "Gradable(ABC) plus @abstractmethod makes percent() required in every concrete subclass.",
+    "Assignment inherits percent() as abstract, so it is still abstract even with __init__ and summary().",
+    "Python checks for missing abstract methods when you create the object, not when the file loads."
+  ],
+  "pitfall": "Forgetting to write percent() in a subclass causes TypeError: Can't instantiate abstract class Quiz without an implementation for abstract method 'percent'.",
+  "keywords": ["abstract class", "ABC", "@abstractmethod", "interface", "abc module", "TypeError", "subclass"],
+  "run": true
+}

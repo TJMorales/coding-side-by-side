@@ -1,0 +1,10 @@
+{
+  "summary": "Type hints label what types a variable, parameter, or return value should have. Generic classes like Box[T] work with any type while keeping the hints accurate.",
+  "notes": [
+    "class Box[T]: is Python 3.12 syntax. Older code writes T = TypeVar(\"T\") and class Box(Generic[T]).",
+    "def first_item[T](items: list[T]) -> T says the return value has the same type as the list's items.",
+    "Box[str](404) runs with no error. Hints are only checked by a separate tool such as mypy."
+  ],
+  "pitfall": "Assuming a hint like scores: list[float] will stop bad data. Python runs the code anyway, so a wrong type fails later with an error like TypeError: unsupported operand type(s).",
+  "keywords": ["type hints", "generics", "TypeVar", "Generic", "annotations", "mypy", "list[int]", "-> return type", "typing", "3.12"]
+}

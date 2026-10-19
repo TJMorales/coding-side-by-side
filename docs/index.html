@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side by Side: Python and Java Reference</title>
+    <meta name="description" content="A code reference for Python and Java, from your first print statement to threads, generics, and game loops. Compare both languages concept by concept." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#concepts">Skip to concepts</a>
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <h1 class="wordmark" aria-label="Side by Side">
+          <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
+        </h1>
+        <p class="tagline">Python and Java, one concept at a time. From your first <code>print</code> to threads and game loops.</p>
+      </div>
+
+      <form class="facets" role="search" aria-label="Filter concepts" onsubmit="return false">
+        <div class="facet facet-search">
+          <label for="q">Search</label>
+          <input id="q" type="search" placeholder="Try: loop, constructor, HashMap, f-string" autocomplete="off" spellcheck="false" />
+        </div>
+
+        <fieldset class="facet facet-lang">
+          <legend>Language</legend>
+          <div class="segmented" role="radiogroup">
+            <label class="seg seg-py"><input type="radio" name="lang" value="python" /><span>Python</span></label>
+            <label class="seg seg-both"><input type="radio" name="lang" value="both" /><span>Side by side</span></label>
+            <label class="seg seg-java"><input type="radio" name="lang" value="java" /><span>Java</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="facet facet-level">
+          <legend>Level <span class="legend-hint">Pick one or more</span></legend>
+          <div class="ladder" id="levels"></div>
+        </fieldset>
+
+        <fieldset class="facet facet-topic">
+          <legend>Topic</legend>
+          <div class="chips" id="topics"></div>
+        </fieldset>
+      </form>
+    </header>
+
+    <div class="status-row">
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="color-keys" id="color-keys" aria-label="Syntax color key"></div>
+    </div>
+
+    <div class="layout">
+      <nav class="rail" id="rail" aria-label="Concepts on this page"></nav>
+      <main id="concepts" tabindex="-1"></main>
+    </div>
+
+    <footer class="foot">
+      <p>Every example on this page was run with Python 3 and Java 21. Console output is copied from those runs, and graphics examples show a screenshot of the window they opened.</p>
+    </footer>
+
+    <script src="highlight.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

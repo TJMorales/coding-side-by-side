@@ -1,0 +1,46 @@
+{
+  "summary": "Swing sends mouse and keyboard events to listener objects that you add to a component. Each listener method changes your data and then calls repaint() to redraw.",
+  "notes": [
+    "addMouseListener(new MouseAdapter() { ... }) adds an object, not a function. MouseAdapter and KeyAdapter supply empty versions of the methods you skip.",
+    "e.getKeyCode() returns constants like KeyEvent.VK_LEFT for the arrow keys.",
+    "repaint() does not draw right away. It asks Swing to call paintComponent soon."
+  ],
+  "pitfall": "Forgetting setFocusable(true) or requestFocusInWindow() means keyPressed never runs. Mouse clicks still work, so the bug looks like broken arrow keys.",
+  "keywords": [
+    "Swing",
+    "MouseListener",
+    "MouseAdapter",
+    "KeyListener",
+    "KeyAdapter",
+    "KeyEvent",
+    "repaint",
+    "focus",
+    "events",
+    "listener"
+  ],
+  "run": false,
+  "gui_actions": [
+    [
+      "click",
+      100,
+      80
+    ],
+    [
+      "wait",
+      0.3
+    ],
+    [
+      "key",
+      "Right"
+    ],
+    [
+      "key",
+      "Right"
+    ],
+    [
+      "key",
+      "Right"
+    ]
+  ],
+  "shot_note": "After one click near the top left and three Right presses."
+}

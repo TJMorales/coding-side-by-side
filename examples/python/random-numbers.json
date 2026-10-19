@@ -1,0 +1,10 @@
+{
+  "summary": "The random module makes random numbers, picks, and shuffles for games and simulations. random.seed() makes the results repeat so you can test them.",
+  "notes": [
+    "random.randint(1, 6) can return 1, 2, 3, 4, 5, or 6. Both ends are included.",
+    "random.randrange(0, 6) works like range(0, 6): it never returns 6.",
+    "random.shuffle(team) changes the list and returns None."
+  ],
+  "pitfall": "Writing team = random.shuffle(team) sets team to None, because shuffle() changes the list in place and returns nothing.",
+  "keywords": ["random", "randint", "randrange", "seed", "choice", "shuffle", "dice", "Random", "nextInt"]
+}

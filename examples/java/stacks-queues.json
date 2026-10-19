@@ -1,0 +1,23 @@
+{
+  "summary": "A stack removes the newest item first (LIFO). A queue removes the oldest item first (FIFO). Java's ArrayDeque does both jobs.",
+  "notes": [
+    "Declare the stack as Deque<Character> to get push() and pop(). Declare the queue as Queue<String> to get offer() and poll().",
+    "stack.isEmpty() is checked first, so pop() never runs on an empty stack. .equals() compares the two Character objects by value.",
+    "poll() returns null on an empty queue instead of throwing. remove() throws NoSuchElementException."
+  ],
+  "pitfall": "Calling pop() on an empty ArrayDeque throws NoSuchElementException. Check stack.isEmpty() first. The old Stack class also works but is slower, so prefer ArrayDeque.",
+  "keywords": [
+    "stack",
+    "queue",
+    "ArrayDeque",
+    "Deque",
+    "push",
+    "pop",
+    "offer",
+    "poll",
+    "peek",
+    "LIFO",
+    "FIFO",
+    "balanced brackets"
+  ]
+}

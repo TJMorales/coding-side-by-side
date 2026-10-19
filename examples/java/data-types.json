@@ -1,0 +1,20 @@
+{
+  "summary": "Java has primitive types (int, double, char, boolean) for simple values and object types like String for text.",
+  "notes": [
+    "A char uses single quotes: 'A'. A String uses double quotes: \"A\".",
+    "Primitive type names are lowercase. String starts with a capital S.",
+    "Integer.MAX_VALUE is the largest int (2147483647). Adding 1 wraps to -2147483648."
+  ],
+  "pitfall": "Writing string with a lowercase s causes error: cannot find symbol. The type is String.",
+  "keywords": [
+    "int",
+    "double",
+    "char",
+    "boolean",
+    "String",
+    "primitive",
+    "type",
+    "overflow",
+    "Integer.MAX_VALUE"
+  ]
+}

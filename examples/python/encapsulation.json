@@ -1,0 +1,11 @@
+{
+  "summary": "Encapsulation keeps an object's data behind methods so the object can reject bad values. Python uses an underscore name plus @property to do this.",
+  "notes": [
+    "_gpa is private by convention only. Python still lets outside code read and write it.",
+    "@property and @gpa.setter must use the same method name, gpa.",
+    "self.gpa = gpa in __init__ uses the setter, so a bad starting GPA is rejected too."
+  ],
+  "pitfall": "Naming the stored field gpa instead of _gpa makes the setter call itself forever and causes RecursionError: maximum recursion depth exceeded.",
+  "keywords": ["encapsulation", "private", "underscore", "@property", "setter", "getter", "validation", "ValueError"],
+  "run": true
+}

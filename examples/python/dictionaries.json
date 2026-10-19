@@ -1,0 +1,10 @@
+{
+  "summary": "A dictionary matches keys to values, like names to scores. Use it when you look things up by a name instead of by a position.",
+  "notes": [
+    "scores[\"Ben\"] = 82 replaces the old value because keys are unique.",
+    "91 in scores is False because in only checks keys.",
+    "counts.get(food, 0) + 1 is the standard way to count items."
+  ],
+  "pitfall": "scores[\"Zoe\"] on a missing key stops the program with KeyError: 'Zoe'. Use get() or check with in first.",
+  "keywords": ["dict", "dictionary", "key", "value", "items", "get", "del", "KeyError", "HashMap", "map", "count"]
+}

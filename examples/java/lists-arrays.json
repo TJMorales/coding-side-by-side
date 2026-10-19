@@ -1,0 +1,18 @@
+{
+  "summary": "An array stores a fixed number of values of one type. You get each value by its index, starting at 0.",
+  "notes": [
+    "int[] scores = {88, 92, 75}; makes an array of length 3.",
+    "scores.length has no parentheses. It is a field, not a method.",
+    "Arrays.copyOf(scores, 4) makes a new array of length 4. The extra slot starts at 0."
+  ],
+  "pitfall": "Using scores[scores.length] causes ArrayIndexOutOfBoundsException. The last index is scores.length - 1.",
+  "keywords": [
+    "array",
+    "int[]",
+    "length",
+    "index",
+    "Arrays.toString",
+    "Arrays.copyOf",
+    "fixed size"
+  ]
+}

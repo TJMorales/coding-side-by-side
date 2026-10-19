@@ -1,0 +1,10 @@
+{
+  "summary": "ArrayList is Java's resizable list. Use it instead of an array when the number of items changes while the program runs.",
+  "notes": [
+    "import java.util.ArrayList is required at the top of the file.",
+    "add(item) adds to the end. add(0, item) adds at the front and shifts the rest right.",
+    "Use size() for an ArrayList. Arrays use .length and Strings use length()."
+  ],
+  "pitfall": "playlist.get(4) on a list of size 4 throws IndexOutOfBoundsException: Index 4 out of bounds for length 4. The last index is size() - 1.",
+  "keywords": ["ArrayList", "add", "get", "set", "remove", "size", "contains", "indexOf", "import java.util.ArrayList", "list methods"]
+}

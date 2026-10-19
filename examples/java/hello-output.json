@@ -1,0 +1,10 @@
+{
+  "summary": "System.out.println() displays a line in the console. System.out.print() displays text without ending the line.",
+  "notes": [
+    "Every Java program starts running at public static void main.",
+    "Each statement ends with a semicolon.",
+    "+ joins Strings and numbers into one String."
+  ],
+  "pitfall": "The file name must match the public class name: class Main lives in Main.java.",
+  "keywords": ["println", "print", "System.out", "main", "console"]
+}

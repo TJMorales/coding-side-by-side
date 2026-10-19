@@ -1,0 +1,10 @@
+{
+  "summary": "A lambda is a small unnamed function such as s -> s + 5. Java filters and transforms collections with the Stream API: filter(), map(), collect(), and reduce().",
+  "notes": [
+    "Nothing in a stream runs until a terminal step such as collect(), toList(), or reduce().",
+    "reduce(0, (acc, s) -> acc + s) starts at 0, so an empty stream returns 0.",
+    "mapToInt(Integer::intValue) turns a Stream<Integer> into an IntStream, which has sum() and max()."
+  ],
+  "pitfall": "Reusing a stream after a terminal step throws IllegalStateException: stream has already been operated upon or closed. Call scores.stream() again for each pipeline.",
+  "keywords": ["lambda", "stream", "filter", "map", "collect", "reduce", "Collectors", "toList", "toMap", "method reference", "IntStream", "functional programming"]
+}

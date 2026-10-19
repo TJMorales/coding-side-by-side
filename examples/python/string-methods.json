@@ -1,0 +1,10 @@
+{
+  "summary": "String methods clean up, search, slice, and split text. Each one returns a new string, so you save the result in a variable.",
+  "notes": [
+    "course[1:4] includes index 1 and stops before index 4.",
+    "find() returns -1 when the text is not found. The in keyword returns True or False.",
+    "split(\",\") returns a list. \" | \".join(names) is called on the separator, not on the list."
+  ],
+  "pitfall": "Writing course.lower() on its own line does nothing visible. Strings are immutable, so you must write course = course.lower().",
+  "keywords": ["strip", "upper", "lower", "slice", "find", "replace", "split", "join", "in", "immutable", "substring"]
+}

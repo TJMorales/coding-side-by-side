@@ -1,0 +1,10 @@
+{
+  "summary": "The Strategy pattern passes the rule for a task into an object instead of writing every rule inside it. In Python, a strategy is often just a function.",
+  "notes": [
+    "Gradebook(drop_lowest) passes the function itself. Writing drop_lowest() would call it and pass the result.",
+    "strategy.__name__ is the function's name as a string, used here to label each line.",
+    "book.strategy = drop_lowest swaps the rule on an existing object without changing the Gradebook class."
+  ],
+  "pitfall": "Writing Gradebook(drop_lowest()) calls the function with no arguments and fails with TypeError: drop_lowest() missing 1 required positional argument: 'scores'.",
+  "keywords": ["strategy pattern", "design pattern", "first-class function", "lambda", "callable", "dependency injection", "open closed principle"]
+}

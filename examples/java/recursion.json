@@ -1,0 +1,11 @@
+{
+  "summary": "A recursive method calls itself on a smaller input until it reaches a base case it can answer directly. Use it when a problem breaks into a smaller copy of itself.",
+  "notes": [
+    "Every recursive method needs a base case, like if (n <= 1) return 1;, that makes no further call.",
+    "n / 10 is int division, so it drops the last digit of n.",
+    "factorial returns long because 13! is already too big for an int."
+  ],
+  "pitfall": "A base case that is never reached, like depth(-1) counting down past 0, keeps calling until the program crashes with java.lang.StackOverflowError.",
+  "keywords": ["recursion", "recursive", "base case", "factorial", "call stack", "StackOverflowError"],
+  "run": true
+}

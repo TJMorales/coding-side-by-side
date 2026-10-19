@@ -1,0 +1,11 @@
+{
+  "summary": "An interface lists methods a class promises to write. An abstract class can share real code but still leave some methods for subclasses, and you cannot create objects from it.",
+  "notes": [
+    "A class extends one class but can implement many interfaces: class Quiz extends Assignment implements Gradable, Comparable<Quiz>.",
+    "Interface methods are public, so percent() in Quiz and Project must be declared public.",
+    "%% in String.format prints a single percent sign."
+  ],
+  "pitfall": "Leaving percent() out of Quiz fails to compile with \"Quiz is not abstract and does not override abstract method percent() in Gradable\".",
+  "keywords": ["interface", "abstract class", "abstract", "implements", "extends", "@Override", "cannot be instantiated"],
+  "run": true
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "A unit test runs a small piece of code with known inputs and checks the result. Python's unittest module is in the standard library, so you can test without installing anything.",
+  "notes": [
+    "Test methods must start with test_. unittest finds and runs them by that name.",
+    "test_boundaries checks 89, 90, 69, and 70, because off-by-one mistakes happen at cutoffs.",
+    "with self.assertRaises(ValueError): passes only if the block raises ValueError."
+  ],
+  "pitfall": "Naming a method check_boundaries instead of test_boundaries means unittest never runs it, and the report shows fewer tests with no error.",
+  "keywords": ["unittest", "unit test", "TestCase", "assertEqual", "assertRaises", "test_", "boundary testing", "TextTestRunner", "testing", "pytest"]
+}

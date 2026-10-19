@@ -1,0 +1,10 @@
+{
+  "summary": "Threads run parts of a program at the same time. When two threads change the same variable, a threading.Lock makes them take turns so no update is lost.",
+  "notes": [
+    "self.sold += 1 is not one step. It reads, adds, and writes, and another thread can run in between. That is a race condition.",
+    "with self.lock: acquires the lock and releases it at the end of the block, even if an error happens.",
+    "t.join() waits for the thread to finish. Print shared totals only after every join()."
+  ],
+  "pitfall": "A race condition may not show up on every run, so code that passed once can still be wrong. Lock every read-modify-write of shared data.",
+  "keywords": ["thread", "threading", "Lock", "race condition", "join", "start", "concurrency", "synchronization", "with", "GIL"]
+}

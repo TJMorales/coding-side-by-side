@@ -1,0 +1,21 @@
+{
+  "summary": "A comparison like score >= 70 gives True or False. Use and, or, and not to combine conditions.",
+  "notes": [
+    "The comparison operators are ==, !=, <, >, <=, and >=.",
+    "and needs both sides True. or needs at least one side True.",
+    "not flips one value: not True is False."
+  ],
+  "pitfall": "Writing if score = 85: causes SyntaxError. Use == to compare. A single = assigns.",
+  "keywords": [
+    "bool",
+    "True",
+    "False",
+    "and",
+    "or",
+    "not",
+    "==",
+    "!=",
+    "comparison",
+    "logic"
+  ]
+}

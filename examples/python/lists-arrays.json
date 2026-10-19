@@ -1,0 +1,18 @@
+{
+  "summary": "A list stores several values in order under one name. You get each value by its index, starting at 0.",
+  "notes": [
+    "scores[0] is the first value. scores[len(scores) - 1] is the last.",
+    "scores[2] = 79 replaces the value at index 2.",
+    "append() adds a value to the end, and len() grows by 1."
+  ],
+  "pitfall": "Using an index equal to len(scores) causes IndexError: list index out of range. The last index is len(scores) - 1.",
+  "keywords": [
+    "list",
+    "index",
+    "append",
+    "len",
+    "square brackets",
+    "array",
+    "[]"
+  ]
+}

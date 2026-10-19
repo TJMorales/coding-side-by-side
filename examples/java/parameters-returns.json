@@ -1,0 +1,10 @@
+{
+  "summary": "Parameters pass values into a method, and return sends a result back. The return type in the header says what kind of value comes back.",
+  "notes": [
+    "static String letterGrade(int score) declares both the parameter type and the return type.",
+    "Two methods named curve with different parameter lists is called overloading. Java picks one by the arguments.",
+    "summarize() returns one double[] that holds three numbers, because a method can return only one value."
+  ],
+  "pitfall": "Leaving out the last return in a non-void method causes the compile error: missing return statement.",
+  "keywords": ["parameter", "argument", "return", "return type", "void", "overloading", "missing return statement", "method"]
+}

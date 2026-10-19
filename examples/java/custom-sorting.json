@@ -1,0 +1,10 @@
+{
+  "summary": "A class implements Comparable to define one natural order. A Comparator defines any other order, and comparing(...).thenComparing(...) sorts by several fields.",
+  "notes": [
+    "compareTo returns a negative number, zero, or a positive number. name.compareTo(other.name) does that for Strings.",
+    "Comparator.comparingInt(Student::getGrade).reversed().thenComparing(Student::getName) reverses only the grade part.",
+    "list.sort(null) means use the natural order from compareTo."
+  ],
+  "pitfall": "Writing return other.grade - grade works until values are large enough to overflow int, then the order breaks with no error. Use Integer.compare(other.grade, grade) or comparingInt.",
+  "keywords": ["Comparable", "compareTo", "Comparator", "comparing", "comparingInt", "thenComparing", "reversed", "sort", "method reference", "stable sort"]
+}

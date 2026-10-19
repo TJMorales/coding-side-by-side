@@ -1,0 +1,18 @@
+{
+  "summary": "A variable stores a value under a name so you can use it later. You make one by assigning a value with =.",
+  "notes": [
+    "You never write a type. type() shows the type Python chose from the value.",
+    "test_score = test_score + 5 reads the old value, adds 5, and stores the result.",
+    "Reassigning test_score to a str is allowed in Python, but it makes code harder to follow."
+  ],
+  "pitfall": "Using a variable before you assign it causes NameError: name 'test_score' is not defined. Check spelling and capitalization too.",
+  "keywords": [
+    "variable",
+    "assign",
+    "=",
+    "type",
+    "snake_case",
+    "reassign",
+    "dynamic typing"
+  ]
+}

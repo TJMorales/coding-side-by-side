@@ -1,0 +1,10 @@
+{
+  "summary": "A HashMap matches keys to values, like names to scores. Use it when you look things up by a name instead of by a position.",
+  "notes": [
+    "import java.util.HashMap is required. HashMap<String, Integer> uses Integer, not int.",
+    "put(\"Ben\", 82) replaces the old value because keys are unique.",
+    "counts.put(food, counts.getOrDefault(food, 0) + 1) is the standard way to count items."
+  ],
+  "pitfall": "int score = scores.get(\"Zoe\"); throws NullPointerException because get() returns null for a missing key. Check containsKey() first or use getOrDefault().",
+  "keywords": ["HashMap", "Map", "put", "get", "getOrDefault", "containsKey", "keySet", "remove", "null", "dictionary", "dict"]
+}

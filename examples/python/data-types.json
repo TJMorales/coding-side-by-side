@@ -1,0 +1,20 @@
+{
+  "summary": "Every value has a type that decides what you can do with it. The basic types are int, float, str, and bool.",
+  "notes": [
+    "A number with a decimal point is a float, even 14.0.",
+    "True and False start with a capital letter.",
+    "Python has no char type. \"A\" is a str of length 1, and you can use single or double quotes."
+  ],
+  "pitfall": "Writing true in lowercase causes NameError: name 'true' is not defined. Python's bool values are True and False.",
+  "keywords": [
+    "int",
+    "float",
+    "str",
+    "bool",
+    "type",
+    "True",
+    "False",
+    "integer",
+    "decimal"
+  ]
+}

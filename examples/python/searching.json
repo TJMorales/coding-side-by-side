@@ -1,0 +1,11 @@
+{
+  "summary": "Linear search checks items one at a time. Binary search halves a sorted list on each step, so it needs far fewer comparisons on long lists.",
+  "notes": [
+    "mid = (low + high) // 2 uses // so mid is an int. A single / gives a float and items[mid] raises TypeError.",
+    "low = mid + 1 and high = mid - 1 skip mid, because it was already checked.",
+    "Both functions return a tuple (index, comparisons). -1 means not found."
+  ],
+  "pitfall": "Running binary search on an unsorted list gives wrong answers with no error, often -1 for a value that is in the list.",
+  "keywords": ["linear search", "binary search", "sequential search", "midpoint", "sorted", "comparisons", "algorithm"],
+  "run": true
+}

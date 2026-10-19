@@ -1,0 +1,19 @@
+{
+  "summary": "Merge sort splits an array in half, sorts each half recursively, and merges the two sorted halves. It runs in O(n log n) time on every input.",
+  "notes": [
+    "mergeSort takes lo and hi indexes instead of copying the array. The range is [lo, hi), so hi is not included.",
+    "One temp array is created in sort() and reused by every merge call.",
+    "System.arraycopy(temp, lo, scores, lo, hi - lo) copies the merged range back into scores."
+  ],
+  "pitfall": "Using the base case hi - lo == 0 instead of hi - lo <= 1 makes a one-item range split into itself forever and ends with StackOverflowError.",
+  "keywords": [
+    "merge sort",
+    "divide and conquer",
+    "recursion",
+    "arraycopy",
+    "n log n",
+    "stable sort",
+    "merge",
+    "index range"
+  ]
+}

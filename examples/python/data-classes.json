@@ -1,0 +1,10 @@
+{
+  "summary": "@dataclass writes __init__, __repr__, and __eq__ for a class from its field list. @dataclass(frozen=True) makes objects that cannot change after creation.",
+  "notes": [
+    "Each field needs a type hint, such as score: int. Fields without a hint are not part of the dataclass.",
+    "__post_init__ runs right after the generated __init__, so it is the place to validate values.",
+    "field(default_factory=list) gives each object its own new list."
+  ],
+  "pitfall": "Writing tags: list[str] = [] raises ValueError: mutable default <class 'list'> for field tags is not allowed: use default_factory.",
+  "keywords": ["dataclass", "@dataclass", "frozen", "FrozenInstanceError", "__post_init__", "field", "default_factory", "__repr__", "__eq__", "immutable", "record"]
+}

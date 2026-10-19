@@ -1,0 +1,37 @@
+{
+  "summary": "A game loop repeats three steps every frame: update positions, check collisions, and draw. In Swing, a javax.swing.Timer runs the loop and repaint() asks for a new frame.",
+  "notes": [
+    "new Timer(FRAME_MS, e -> gameLoop()).start() runs gameLoop every 16 ms on the Swing thread, so the window stays responsive.",
+    "ball.intersects(paddle) is the rectangle collision check. java.awt.Rectangle does the overlap math for you.",
+    "super.paintComponent(g) clears the previous frame. Leaving it out draws a trail."
+  ],
+  "pitfall": "Key presses do nothing if the panel does not have focus. Call setFocusable(true) on the panel. Also import javax.swing.Timer, not java.util.Timer, which runs on a different thread.",
+  "keywords": [
+    "game loop",
+    "animation",
+    "Swing",
+    "Timer",
+    "javax.swing.Timer",
+    "repaint",
+    "paintComponent",
+    "KeyListener",
+    "Rectangle",
+    "intersects",
+    "collision",
+    "JPanel"
+  ],
+  "run": false,
+  "gui_actions": [
+    [
+      "click",
+      300,
+      200
+    ],
+    [
+      "keydown",
+      "Left",
+      0.8
+    ]
+  ],
+  "shot_note": "Mid-game, after holding the Left key."
+}

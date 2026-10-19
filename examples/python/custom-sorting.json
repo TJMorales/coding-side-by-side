@@ -1,0 +1,10 @@
+{
+  "summary": "sorted() and list.sort() take a key= function that returns the value to sort by. Returning a tuple sorts by several fields at once.",
+  "notes": [
+    "key=lambda s: (-s.grade, s.name) sorts by grade high to low, then by name A to Z for ties.",
+    "__lt__ defines the natural order, so sorted(roster) works with no key.",
+    "Python's sort is stable: items with equal keys stay in the order they already had."
+  ],
+  "pitfall": "The minus trick only works on numbers. -s.name fails with TypeError: bad operand type for unary -: 'str'. Sort by the second key first, then sort again by the first key with reverse=True.",
+  "keywords": ["sorted", "sort", "key", "lambda", "tuple key", "reverse", "__lt__", "stable sort", "multiple fields", "tie-breaker"]
+}

@@ -1,0 +1,36 @@
+{
+  "summary": "A game loop repeats three steps every frame: update positions, check collisions, and draw. With turtle, screen.ontimer() schedules the next frame and screen.update() draws it.",
+  "notes": [
+    "screen.tracer(0) turns off automatic drawing, so the ball does not flicker. screen.update() draws the whole frame at once.",
+    "screen.ontimer(game_loop, FRAME_MS) runs game_loop again after 16 ms. It does not block, so keys still work.",
+    "The paddle check compares distances between centers to half-widths added together: 50 + 10 across and 10 + 10 up and down."
+  ],
+  "pitfall": "Using a while True: loop with time.sleep() instead of ontimer() freezes the window, because turtle never gets a chance to handle key presses or redraw.",
+  "keywords": [
+    "game loop",
+    "animation",
+    "turtle",
+    "ontimer",
+    "tracer",
+    "update",
+    "onkeypress",
+    "listen",
+    "collision",
+    "bounce",
+    "frame"
+  ],
+  "run": false,
+  "gui_actions": [
+    [
+      "click",
+      300,
+      200
+    ],
+    [
+      "keydown",
+      "Left",
+      0.8
+    ]
+  ],
+  "shot_note": "Mid-game, after holding the Left key."
+}

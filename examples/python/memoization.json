@@ -1,0 +1,10 @@
+{
+  "summary": "Memoization saves the result of each function call so the same input is never computed twice. It turns naive recursive Fibonacci from exponential time into linear time.",
+  "notes": [
+    "if n in memo: return memo[n] is the lookup that skips repeated work.",
+    "@functools.cache stores results in a dictionary for you. cache_info() shows hits and misses.",
+    "functools.cache only works when every argument is hashable, such as int or str."
+  ],
+  "pitfall": "Putting memo = {} inside fib_memo creates a new empty dictionary on every call, so nothing is ever saved and the function is as slow as the naive version.",
+  "keywords": ["memoization", "dynamic programming", "functools.cache", "lru_cache", "fibonacci", "recursion", "dictionary", "cache"]
+}

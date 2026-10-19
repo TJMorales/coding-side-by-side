@@ -1,0 +1,10 @@
+{
+  "summary": "Generics let one class or method work with any type while the compiler still checks types. Box<String> can only hold a String, and get() returns a String with no cast.",
+  "notes": [
+    "static <T> T firstItem(List<T> items) declares T before the return type. Java infers T from the argument.",
+    "new Box<>(\"Calculator\") uses the diamond <>. The compiler copies the type from the left side.",
+    "Type parameters must be object types: Box<Integer> works, Box<int> does not compile."
+  ],
+  "pitfall": "Writing new Box<String>(404) fails at compile time with incompatible types: int cannot be converted to String. That is the point: the error appears before the program runs.",
+  "keywords": ["generics", "type parameter", "<T>", "generic method", "diamond operator", "Box", "Pair", "type safety", "Integer", "wrapper class"]
+}

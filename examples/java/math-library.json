@@ -1,0 +1,10 @@
+{
+  "summary": "The Math class has square roots, powers, rounding, pi, and more. It is always available, so you never import it.",
+  "notes": [
+    "Java has no ** operator. Use Math.pow(2, 10), which returns 1024.0 as a double.",
+    "(int) Math.ceil(students / 40.0) turns the double result back into an int.",
+    "Math.round() returns a long. Math.round(area * 100) / 100.0 rounds to 2 decimal places."
+  ],
+  "pitfall": "Math.ceil(47 / 40) gives 1.0, not 2.0, because 47 / 40 is int division and is already 1. Write 47 / 40.0.",
+  "keywords": ["Math", "Math.sqrt", "Math.pow", "Math.ceil", "Math.floor", "Math.round", "Math.abs", "Math.PI", "math", "distance"]
+}

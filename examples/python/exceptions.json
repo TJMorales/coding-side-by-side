@@ -1,0 +1,10 @@
+{
+  "summary": "try/except lets your program handle an error and keep running. raise reports an error from your own code when a value breaks the rules.",
+  "notes": [
+    "except ValueError as error stores the error so you can print its message.",
+    "else runs only if the try block succeeded. finally runs every time.",
+    "raise ValueError(...) sends the error to the caller's except block."
+  ],
+  "pitfall": "A bare except: with no type catches every error, including typos like NameError, which hides bugs. Name the error type you expect.",
+  "keywords": ["try", "except", "else", "finally", "raise", "ValueError", "ZeroDivisionError", "exception", "error handling", "catch"]
+}

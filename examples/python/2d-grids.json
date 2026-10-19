@@ -1,0 +1,10 @@
+{
+  "summary": "A 2D list stores data in rows and columns, like a gradebook or a game board. You reach one cell with two indexes.",
+  "notes": [
+    "grades[1][2] means row 1, then column 2. Both start counting at 0.",
+    "len(grades) is the number of rows. len(grades[0]) is the number of columns.",
+    "[[0] * 4 for _ in range(3)] makes 3 separate rows."
+  ],
+  "pitfall": "[[0] * 4] * 3 makes 3 references to one row. Changing wrong[0][0] changes column 0 in every row.",
+  "keywords": ["2D list", "list of lists", "grid", "matrix", "rows", "columns", "int[][]", "nested list"]
+}

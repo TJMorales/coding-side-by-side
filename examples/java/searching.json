@@ -1,0 +1,11 @@
+{
+  "summary": "Linear search checks items one at a time. Binary search halves a sorted array on each step, so it needs far fewer comparisons on long arrays.",
+  "notes": [
+    "(low + high) / 2 is int division in Java, so mid is already a whole number.",
+    "low = mid + 1 and high = mid - 1 skip mid, because it was already checked.",
+    "A Java method returns one value, so each search returns an int[] holding the index and the count."
+  ],
+  "pitfall": "Running binary search on an unsorted array gives wrong answers with no error, often -1 for a value that is in the array.",
+  "keywords": ["linear search", "binary search", "sequential search", "midpoint", "sorted", "comparisons", "Arrays.binarySearch"],
+  "run": true
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "A nested loop is a loop inside another loop. Use it for rows and columns: tables, patterns, and grids.",
+  "notes": [
+    "The inner loop starts over at col = 1 each time the outer loop moves to its next row.",
+    "System.out.println() after the inner loop's closing brace ends each row.",
+    "col < row in the inner loop makes row 1 print 1 star, row 2 print 2 stars, and so on."
+  ],
+  "pitfall": "Using the same variable name in both loops, like int row twice, causes the compile error: variable row is already defined in method main.",
+  "keywords": ["nested loop", "inner loop", "outer loop", "rows", "columns", "times table", "pattern", "printf"]
+}

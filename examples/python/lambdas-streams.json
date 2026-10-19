@@ -1,0 +1,10 @@
+{
+  "summary": "A lambda is a small unnamed function written in one expression. Python usually filters and transforms lists with comprehensions, and also has map(), filter(), and functools.reduce().",
+  "notes": [
+    "[s + 5 for s in scores if s >= 70] does the filter and the transform in one comprehension.",
+    "map() and filter() return iterators. Wrap them in list() to see the values, and they can only be read once.",
+    "reduce(lambda acc, s: acc + s, scores, 0) starts at 0, so an empty list returns 0 instead of failing."
+  ],
+  "pitfall": "Calling reduce() on an empty list with no starting value raises TypeError: reduce() of empty iterable with no initial value.",
+  "keywords": ["lambda", "list comprehension", "map", "filter", "reduce", "functools", "dict comprehension", "functional programming", "iterator"]
+}

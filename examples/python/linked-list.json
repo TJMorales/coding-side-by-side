@@ -1,0 +1,10 @@
+{
+  "summary": "A linked list stores values in separate nodes, each pointing to the next one. Adding at the front is O(1), but reaching index i takes i steps.",
+  "notes": [
+    "while current is not None: is the standard traversal loop. It stops after the last node.",
+    "insert_at sets new_node.next before current.next. Reversing those two lines loses the rest of the list.",
+    "__str__ is what print() calls to turn the list into text."
+  ],
+  "pitfall": "Calling insert_at with an index past the end makes current become None, and current.next fails with AttributeError: 'NoneType' object has no attribute 'next'.",
+  "keywords": ["linked list", "node", "next", "None", "head", "traversal", "__str__", "insert", "AttributeError"]
+}

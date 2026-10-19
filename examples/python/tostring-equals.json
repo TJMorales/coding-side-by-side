@@ -1,0 +1,11 @@
+{
+  "summary": "__str__ sets the text print() shows for your object, and __eq__ sets what == means. Use is only when you need to know if two names point to the same object.",
+  "notes": [
+    "return NotImplemented tells Python the comparison does not apply, so a == 1001 becomes False.",
+    "b in roster calls __eq__ on each item, so it finds a matching Student by id.",
+    "Defining __eq__ removes the default __hash__, so you also need __hash__ to put a Student in a set or use it as a dict key."
+  ],
+  "pitfall": "Using is to compare two students with the same data gives False, because is checks identity. Use == to compare values.",
+  "keywords": ["__str__", "__eq__", "__repr__", "is", "==", "equality", "identity", "print object"],
+  "run": true
+}

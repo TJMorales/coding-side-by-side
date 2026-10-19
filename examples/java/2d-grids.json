@@ -1,0 +1,10 @@
+{
+  "summary": "A 2D array stores data in rows and columns, like a gradebook or a game board. You reach one cell with two indexes.",
+  "notes": [
+    "grades[1][2] means row 1, then column 2. Both start counting at 0.",
+    "grades.length is the number of rows. grades[0].length is the number of columns.",
+    "(double) total makes the division keep its decimal part. Without it, int division drops it."
+  ],
+  "pitfall": "grades[3][0] on a grid with 3 rows throws ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3. The last row is grades.length - 1.",
+  "keywords": ["2D array", "int[][]", "grid", "matrix", "rows", "columns", "Arrays.deepToString", "Arrays.toString", "list of lists"]
+}

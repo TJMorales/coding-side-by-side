@@ -1,0 +1,10 @@
+{
+  "summary": "String methods clean up, search, cut, and split text. Each one returns a new String, so you save the result in a variable.",
+  "notes": [
+    "course.substring(1, 4) includes index 1 and stops before index 4. substring(4) goes to the end.",
+    "indexOf() returns -1 when the text is not found. contains() returns true or false.",
+    "split(\",\") returns a String[] array. String.join(\" | \", names) joins it with a separator."
+  ],
+  "pitfall": "course.substring(4, 20) on an 8-character String throws StringIndexOutOfBoundsException. The end index can be at most course.length().",
+  "keywords": ["trim", "toUpperCase", "toLowerCase", "substring", "indexOf", "contains", "replace", "split", "String.join", "immutable"]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "A nested loop is a loop inside another loop. Use it for rows and columns: tables, patterns, and grids.",
+  "notes": [
+    "The inner loop starts over from the beginning each time the outer loop moves to its next value.",
+    "print() after the inner loop, at the outer loop's indentation, ends each row.",
+    "range(row) in the inner loop makes row 1 print 1 star, row 2 print 2 stars, and so on."
+  ],
+  "pitfall": "Indenting the row-ending print() one level too far puts it inside the inner loop, so every number lands on its own line.",
+  "keywords": ["nested loop", "inner loop", "outer loop", "rows", "columns", "times table", "pattern"]
+}

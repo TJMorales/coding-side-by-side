@@ -1,0 +1,11 @@
+{
+  "summary": "Inheritance makes a new class that starts with all the fields and methods of an existing class. You add new methods or override old ones in the subclass.",
+  "notes": [
+    "class HonorsStudent extends Student names the one parent class. Java allows only one class after extends.",
+    "super(name, scores); must be the first statement in the subclass constructor.",
+    "super.describe() calls the parent's version of a method you have overridden."
+  ],
+  "pitfall": "Leaving out super(name, scores); fails to compile with \"constructor Student in class Student cannot be applied to given types\", because Java tries to call a Student() constructor that does not exist.",
+  "keywords": ["inheritance", "extends", "subclass", "superclass", "super", "@Override", "protected", "instanceof"],
+  "run": true
+}

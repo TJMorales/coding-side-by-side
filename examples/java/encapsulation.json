@@ -1,0 +1,11 @@
+{
+  "summary": "Encapsulation keeps an object's data behind methods so the object can reject bad values. Java marks fields private and gives outside code public getters and setters.",
+  "notes": [
+    "private double gpa; cannot be read or changed from Main. The compiler stops it.",
+    "setGpa() throws IllegalArgumentException before gpa = value; runs, so a bad value is never stored.",
+    "The constructor calls setGpa(gpa) instead of gpa = gpa; so the same check applies when the object is made."
+  ],
+  "pitfall": "Writing maya.gpa = 9.9; in Main causes the compile error \"gpa has private access in Student\". Use maya.setGpa(...) instead.",
+  "keywords": ["encapsulation", "private", "public", "getter", "setter", "validation", "IllegalArgumentException", "access modifier"],
+  "run": true
+}

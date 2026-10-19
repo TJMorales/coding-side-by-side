@@ -1,0 +1,10 @@
+{
+  "summary": "open() writes and reads text files so data lasts after the program ends. Use a with block so the file is always closed.",
+  "notes": [
+    "\"w\" erases the file first. \"a\" adds to the end.",
+    "Each line read from a file ends with \\n. line.strip() removes it before you split.",
+    "Values read from a file are strings, so int(score) converts them before adding."
+  ],
+  "pitfall": "Opening with \"w\" when you meant \"a\" erases everything already in the file, with no error message.",
+  "keywords": ["open", "with", "read", "write", "append", "file", "FileNotFoundError", "strip", "split", "text file"]
+}

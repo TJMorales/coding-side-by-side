@@ -1,0 +1,10 @@
+{
+  "summary": "A stack removes the newest item first (LIFO). A queue removes the oldest item first (FIFO). Python uses a list as a stack and collections.deque as a queue.",
+  "notes": [
+    "stack.append() and stack.pop() both work on the end of the list, so they are O(1).",
+    "if not stack or stack.pop() != pairs[ch] checks for an empty stack first, so pop() never runs on an empty list.",
+    "print_queue.popleft() removes from the front of a deque in O(1). list.pop(0) does the same job in O(n)."
+  ],
+  "pitfall": "Calling pop() on an empty list raises IndexError: pop from empty list. Check if stack: before popping.",
+  "keywords": ["stack", "queue", "deque", "append", "pop", "popleft", "LIFO", "FIFO", "balanced brackets", "collections"]
+}

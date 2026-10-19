@@ -1,0 +1,10 @@
+{
+  "summary": "break stops a loop early and continue skips to the next pass. Use them when you are searching for something or need to skip bad data.",
+  "notes": [
+    "continue jumps to the next pass. The \"Passing\" line is skipped for -1.",
+    "break leaves the loop completely, so 75 is never checked.",
+    "Java has no for...else. Set a boolean like foundFailing before break and check it after the loop."
+  ],
+  "pitfall": "Code on the line after break or continue, inside the same braces, causes the compile error: unreachable statement.",
+  "keywords": ["break", "continue", "exit loop", "skip", "flag", "boolean", "search", "for each"]
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "A constructor sets up a new object's fields. Java lets you overload constructors, so one class can be created with different sets of arguments.",
+  "notes": [
+    "Overloaded constructors must differ in the number or types of their parameters.",
+    "this(name, 9); calls the two-parameter constructor. It must be the first statement in the constructor.",
+    "If you write any constructor, Java no longer gives you the free no-argument one, so Student() is written out here."
+  ],
+  "pitfall": "Putting this(...) after another statement causes the compile error \"call to this must be first statement in constructor\".",
+  "keywords": ["constructor", "overloading", "this()", "constructor chaining", "default constructor", "new", "List.of"],
+  "run": true
+}

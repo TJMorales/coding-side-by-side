@@ -1,0 +1,11 @@
+{
+  "summary": "The turtle module draws by moving a pen around the window. You fill shapes by drawing them between begin_fill() and end_fill().",
+  "notes": [
+    "penup() before goto() moves the pen without drawing a line.",
+    "pen.color(\"orange\", \"gold\") sets the outline color first and the fill color second.",
+    "write() places text at the pen's position. align=\"center\" centers it there."
+  ],
+  "pitfall": "Leaving out turtle.done() at the end makes the window close as soon as the drawing finishes, or never respond to the close button.",
+  "keywords": ["turtle", "graphics", "draw", "rectangle", "circle", "begin_fill", "end_fill", "write", "color"],
+  "run": false
+}

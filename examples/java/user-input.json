@@ -1,0 +1,18 @@
+{
+  "summary": "A Scanner reads what the user types. Use nextLine() for text and nextInt() or nextDouble() for numbers.",
+  "notes": [
+    "import java.util.Scanner; must be at the top of the file.",
+    "nextInt() returns an int, so you can do math with it right away."
+  ],
+  "pitfall": "Calling nextLine() right after nextInt() returns an empty String, because nextInt() leaves the Enter key in the input. Call an extra nextLine() first.",
+  "keywords": [
+    "Scanner",
+    "nextLine",
+    "nextInt",
+    "nextDouble",
+    "System.in",
+    "input",
+    "import"
+  ],
+  "stdin": "Maya\n16"
+}

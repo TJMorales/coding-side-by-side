@@ -1,0 +1,10 @@
+{
+  "summary": "Parameters pass values into a function, and return sends a result back. Use return when the caller needs the answer, not just printed text.",
+  "notes": [
+    "points=5 is a default. curve(72) uses 5 and curve(98, 10) uses 10.",
+    "return min(...), max(...), ... sends back a tuple. low, high, average = ... unpacks it into 3 variables.",
+    "The code after a return does not run."
+  ],
+  "pitfall": "Printing inside a function instead of returning gives the caller None. result = show(quiz) stores None.",
+  "keywords": ["parameter", "argument", "return", "default parameter", "tuple", "unpack", "None", "multiple return values"]
+}

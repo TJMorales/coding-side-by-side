@@ -1,0 +1,11 @@
+{
+  "summary": "Selection sort repeatedly finds the smallest unsorted value and swaps it into place. Insertion sort takes each value and shifts larger values right until it fits.",
+  "notes": [
+    "int temp = items[i]; saves the first value before items[i] is overwritten.",
+    "The outer loop of selection sort runs items.length - 1 times. The last value is already in place.",
+    "Arrays.toString(items) prints the contents. Printing items alone shows something like [I@1b6d3586."
+  ],
+  "pitfall": "Swapping without temp, items[i] = items[smallest]; items[smallest] = items[i];, copies one value into both spots and loses the other.",
+  "keywords": ["selection sort", "insertion sort", "swap", "temp", "sorting algorithm", "Arrays.toString", "in place"],
+  "run": true
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "List methods add, remove, replace, and search items. Use them when the number of items changes while the program runs.",
+  "notes": [
+    "append() adds to the end. insert(0, item) adds at the front and shifts everything else right.",
+    "pop() removes and returns the last item. pop(0) removes the first.",
+    "remove(value) deletes only the first matching value."
+  ],
+  "pitfall": "playlist.remove(\"Hello\") on a missing value stops the program with ValueError: list.remove(x): x not in list. Check with in first.",
+  "keywords": ["append", "insert", "remove", "pop", "index", "in", "len", "list methods", "ArrayList"]
+}

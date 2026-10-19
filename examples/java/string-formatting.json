@@ -1,0 +1,10 @@
+{
+  "summary": "printf and String.format build text from values, with control over decimal places, column width, and alignment. Use them for reports, receipts, and tables.",
+  "notes": [
+    "%.2f shows 2 decimal places. It does not change the value stored in average.",
+    "%-12s pads the text to 12 characters, lined up on the left. %6.1f uses 6 characters, lined up on the right.",
+    "printf does not end the line. Put %n at the end of the format."
+  ],
+  "pitfall": "Using %d for a double throws IllegalFormatConversionException: d != java.lang.Double. Use %f for double and %d for int.",
+  "keywords": ["printf", "String.format", "format", "%.2f", "%s", "%d", "%n", "width", "align", "decimal places"]
+}

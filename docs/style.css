@@ -1,0 +1,642 @@
+/* Side by Side
+   Three token sets:
+   1. Shell: neutral frame that belongs to neither language.
+   2. Python: sage paper, white IDLE editor, IDLE syntax roles, Recursive Casual, rounded, indent guides.
+   3. Java: steel paper, UML class-box panes, IntelliJ Darcula editor, IBM Plex Condensed + JetBrains Mono, square. */
+
+:root {
+  /* shell */
+  --ink: #1b1f1d;
+  --muted: #59605c;
+  --rule: #c7cdc8;
+  --shell: #f0f1ee;
+  --raised: #fbfbfa;
+  --focus: #1d4ed8;
+
+  /* python system */
+  --py-paper: #e3eedd;
+  --py-surface: #ffffff;
+  --py-ink: #142a20;
+  --py-blue: #285a87;
+  --py-yellow: #f2c337;
+  --py-guide: #d9b02a;
+  --py-rule: #cfdccb;
+  --py-gutter: #f3f6f1;
+  --py-lineno: #7a887f;
+  --py-keyword: #b25100;
+  --py-builtin: #7d1f8c;
+  --py-string: #157a24;
+  --py-comment: #c0262d;
+  --py-definition: #1e3fcc;
+  --py-stdout: #1e3fcc;
+
+  /* java system */
+  --j-paper: #dde4ec;
+  --j-surface: #f7f9fb;
+  --j-ink: #17212c;
+  --j-blue: #4d7a97;
+  --j-blue-dark: #355a73;
+  --j-orange: #e76f00;
+  --j-orange-text: #a84e05;
+  --j-rule: #b7c2cd;
+  --j-code: #2b2b2b;
+  --j-gutter: #313335;
+  --j-lineno: #7d8285;
+  --j-fg: #a9b7c6;
+  --j-keyword: #d48a4e;
+  --j-string: #86a873;
+  --j-number: #7da7cb;
+  --j-comment: #9b9b9b;
+  --j-javadoc: #7aad6c;
+  --j-method: #ffc66d;
+  --j-annotation: #bbb529;
+  --j-field: #b29bc6;
+  --j-console: #bbbbbb;
+  --j-err: #ff6b68;
+
+  /* type */
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-py: "Recursive", "Segoe UI", system-ui, sans-serif;
+  --f-py-mono: "Recursive", ui-monospace, Consolas, monospace;
+  --f-java: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-java-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+  --step--1: 0.84rem;
+  --step-0: 1rem;
+  --step-1: 1.2rem;
+  --step-2: 1.55rem;
+  --step-3: 2.1rem;
+  --step-4: clamp(2.6rem, 6vw, 4.4rem);
+
+  --radius-py: 14px;
+  --radius-j: 2px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-padding-top: 16px; }
+
+body {
+  margin: 0;
+  background: var(--shell);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body[data-lang="python"] { background: var(--py-paper); }
+body[data-lang="java"] { background: var(--j-paper); }
+
+code, pre { font-family: var(--f-py-mono); font-variation-settings: "MONO" 1, "CASL" 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 10;
+  background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 6px;
+}
+.skip:focus { top: 12px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------------- masthead ---------------- */
+.masthead {
+  position: relative;
+  padding: 36px 24px 22px;
+  border-bottom: 1px solid var(--rule);
+  background: linear-gradient(90deg, var(--py-paper) 50%, var(--j-paper) 50%);
+}
+body[data-lang="python"] .masthead { background: var(--py-paper); border-color: var(--py-rule); }
+body[data-lang="java"] .masthead { background: var(--j-paper); border-color: var(--j-rule); }
+
+.masthead-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  gap: 6px;
+  margin-bottom: 26px;
+}
+
+/* The wordmark: Python's face on one side of the seam, Java's on the other. */
+.wordmark {
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  align-items: baseline;
+  width: 100%;
+  margin: 0;
+  font-size: var(--step-4);
+  line-height: 1;
+  font-weight: 400;
+}
+.wm-py {
+  justify-self: end;
+  padding-right: 0.22em;
+  font-family: var(--f-py);
+  font-variation-settings: "CASL" 1, "wght" 820, "slnt" 0;
+  color: var(--py-blue);
+  letter-spacing: -0.02em;
+}
+.wm-seam { align-self: stretch; background: var(--ink); width: 3px; }
+.wm-java {
+  justify-self: start;
+  padding-left: 0.22em;
+  font-family: var(--f-java);
+  font-weight: 700;
+  color: var(--j-ink);
+  letter-spacing: -0.01em;
+}
+.wm-java::first-letter { color: inherit; }
+.tagline { margin: 10px 0 0; max-width: 46ch; color: var(--muted); font-size: var(--step-1); line-height: 1.4; }
+.tagline code { font-size: 0.92em; color: var(--ink); }
+
+/* ---------------- facets ---------------- */
+.facets {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 1.2fr) auto;
+  grid-template-areas: "search lang" "level level" "topic topic";
+  gap: 16px 24px;
+  padding: 18px 20px 16px;
+  background: var(--raised);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+.facet { margin: 0; padding: 0; border: 0; min-width: 0; }
+.facet > label, .facet > legend {
+  display: block;
+  margin-bottom: 6px;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.legend-hint { text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; }
+.facet-search { grid-area: search; }
+.facet-lang { grid-area: lang; }
+.facet-level { grid-area: level; }
+.facet-topic { grid-area: topic; }
+
+#q {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: var(--step-0);
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+#q::placeholder { color: #7b827e; }
+
+.segmented { display: inline-flex; border: 1px solid var(--ink); border-radius: 8px; overflow: hidden; height: 44px; }
+.seg { position: relative; display: flex; }
+.seg input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.seg span {
+  display: flex; align-items: center; padding: 0 16px;
+  font-weight: 700; white-space: nowrap; cursor: pointer;
+  border-left: 1px solid var(--ink);
+}
+.seg:first-child span { border-left: 0; }
+.seg-py span { font-family: var(--f-py); font-variation-settings: "CASL" 1, "wght" 700; }
+.seg-java span { font-family: var(--f-java); font-weight: 600; letter-spacing: 0.01em; }
+.seg input:checked + span { color: #fff; }
+.seg-py input:checked + span { background: var(--py-blue); }
+.seg-both input:checked + span { background: var(--ink); }
+.seg-java input:checked + span { background: var(--j-blue-dark); }
+.seg input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: -3px; }
+
+/* Level ladder: an ordered sequence, so it shows rising steps. */
+.ladder { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.rung {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "steps label" "steps blurb";
+  column-gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 10px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.rung:hover { border-color: var(--ink); }
+.rung[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.rung-label { grid-area: label; font-weight: 700; }
+.rung-blurb { grid-area: blurb; font-size: var(--step--1); opacity: 0.75; line-height: 1.3; }
+.steps { grid-area: steps; display: inline-flex; align-items: flex-end; gap: 2px; height: 16px; }
+.steps i { width: 4px; background: currentColor; opacity: 0.22; border-radius: 1px; }
+.steps i:nth-child(1) { height: 5px; }
+.steps i:nth-child(2) { height: 8px; }
+.steps i:nth-child(3) { height: 12px; }
+.steps i:nth-child(4) { height: 16px; }
+.steps i.on { opacity: 1; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 6px 12px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.chip[data-empty] { color: #6f7672; }
+.chip-n { font-variant-numeric: tabular-nums; opacity: 0.65; margin-left: 2px; }
+
+/* ---------------- status row ---------------- */
+.status-row {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 18px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.count { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+.color-keys { display: flex; gap: 10px; flex-wrap: wrap; }
+.key { border-radius: 8px; font-size: 0.9rem; }
+.key summary { cursor: pointer; padding: 6px 12px; font-weight: 700; list-style: none; border: 1px solid var(--rule); border-radius: 8px; background: var(--raised); }
+.key summary::-webkit-details-marker { display: none; }
+.key summary::after { content: " +"; color: var(--muted); }
+.key[open] summary::after { content: " -"; }
+.key dl { margin: 6px 0 0; padding: 10px 12px; display: grid; gap: 4px 14px; grid-template-columns: repeat(2, auto); border-radius: 8px; }
+.key dl div { display: flex; gap: 8px; align-items: baseline; }
+.key dt { margin: 0; }
+.key dd { margin: 0; color: var(--muted); font-size: 0.85rem; }
+.key-python dl { background: var(--py-surface); border: 1px solid var(--py-rule); }
+.key-java dl { background: var(--j-code); color: var(--j-fg); }
+.key-java dd { color: #9aa3ab; }
+.key-java code { font-family: var(--f-java-mono); }
+
+/* ---------------- layout ---------------- */
+.layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 24px 64px;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 32px;
+}
+.rail {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  padding-right: 6px;
+  font-size: 0.92rem;
+}
+.rail-level { margin: 14px 0 4px; font-size: var(--step--1); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.rail-level:first-child { margin-top: 4px; }
+.rail ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--rule); }
+.rail a {
+  display: block;
+  padding: 3px 0 3px 12px;
+  margin-left: -1px;
+  color: var(--ink);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  line-height: 1.35;
+}
+.rail a:hover { text-decoration: underline; }
+.rail a[aria-current] { border-left-color: var(--ink); font-weight: 700; }
+
+main:focus { outline: none; }
+
+.level-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 24px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--ink);
+  font-size: var(--step-2);
+}
+.level-head:first-child { margin-top: 0; }
+.level-head span { font-size: var(--step-0); font-weight: 400; color: var(--muted); }
+
+/* ---------------- concept ---------------- */
+.concept { margin: 0 0 44px; animation: rise 260ms ease-out both; }
+.concept:nth-child(2) { animation-delay: 30ms; }
+.concept:nth-child(3) { animation-delay: 60ms; }
+.concept:nth-child(4) { animation-delay: 90ms; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.concept-head { margin-bottom: 12px; }
+.concept-meta { display: flex; gap: 14px; align-items: center; margin: 0 0 2px; font-size: var(--step--1); color: var(--muted); }
+.meta-level { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; }
+.meta-level .steps { height: 12px; }
+.meta-level .steps i:nth-child(1) { height: 4px; }
+.meta-level .steps i:nth-child(2) { height: 6px; }
+.meta-level .steps i:nth-child(3) { height: 9px; }
+.meta-level .steps i:nth-child(4) { height: 12px; }
+.concept-title { margin: 0; font-size: var(--step-3); line-height: 1.15; letter-spacing: -0.01em; }
+.concept-title:focus { outline: none; }
+body[data-lang="python"] .concept-title { font-family: var(--f-py); font-variation-settings: "CASL" 1, "wght" 760; color: var(--py-ink); }
+body[data-lang="java"] .concept-title { font-family: var(--f-java); font-weight: 700; color: var(--j-ink); }
+
+.panes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+.panes-both {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "py java" "diff diff";
+  column-gap: 28px;
+  position: relative;
+}
+.panes-both .pane-python { grid-area: py; }
+.panes-both .pane-java { grid-area: java; }
+/* The seam between the two languages. */
+.panes-both::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 2px; margin-left: -1px;
+  background: var(--ink);
+  opacity: 0.85;
+}
+
+.contrast {
+  grid-area: diff;
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  max-width: 760px;
+  margin: 0;
+  padding: 12px 18px;
+  background: var(--raised);
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.panes-both .contrast { margin-top: 14px; }
+.contrast-label {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.contrast code { font-size: 0.9em; }
+.contrast-solo { justify-self: start; margin-top: 14px; border-width: 1px; border-color: var(--rule); }
+
+/* ---------------- pane: shared ---------------- */
+.pane { min-width: 0; display: flex; flex-direction: column; }
+.pane-body { display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.summary { margin: 0; font-size: 1.04rem; }
+.pane-missing { margin: 0; padding: 18px; color: var(--muted); }
+.notes { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.pitfall { margin: 0; }
+.pitfall strong { display: block; font-size: var(--step--1); letter-spacing: 0.04em; text-transform: uppercase; }
+
+.code { margin: 0; position: relative; }
+.code-bar { display: flex; align-items: center; gap: 12px; padding: 0 6px 0 14px; height: 36px; font-size: 0.82rem; }
+.code-file { font-weight: 700; }
+.code-lines { opacity: 0.7; margin-right: auto; }
+.btn-copy, .btn-expand {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.code pre {
+  margin: 0;
+  padding: 12px 0;
+  overflow-x: auto;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  tab-size: 4;
+  counter-reset: ln;
+}
+.code pre code { display: block; min-width: max-content; font: inherit; font-variation-settings: inherit; }
+.ln { display: block; padding-right: 16px; }
+.ln::before {
+  counter-increment: ln;
+  content: counter(ln);
+  display: inline-block;
+  width: 3.2em;
+  padding-right: 1.1em;
+  margin-right: 0.9em;
+  text-align: right;
+  user-select: none;
+}
+.code.is-collapsed pre { max-height: calc(1.6em * 30 + 12px); overflow-y: hidden; -webkit-mask-image: linear-gradient(#000 75%, transparent); mask-image: linear-gradient(#000 75%, transparent); }
+.btn-expand { display: block; width: 100%; border-radius: 0; padding: 8px; }
+
+.console-bar { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 8px 14px 0; }
+.console pre { margin: 0; padding: 8px 14px 12px; font-size: 0.84rem; line-height: 1.55; overflow-x: auto; white-space: pre; }
+.console-typed { margin: 0; padding: 6px 14px 0; font-size: 0.84rem; }
+.console-typed span { font-weight: 700; }
+.console-note { margin: 0; padding: 6px 14px 12px; font-size: 0.92rem; }
+.console-empty { font-style: italic; opacity: 0.7; }
+
+/* ---------------- pane: Python (IDLE) ---------------- */
+.pane-python { font-family: var(--f-body); color: var(--py-ink); }
+.pane-python .pane-head {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 0 0 8px;
+}
+.pane-python .pane-lang {
+  font-family: var(--f-py);
+  font-variation-settings: "CASL" 1, "wght" 800;
+  font-size: var(--step-1);
+  color: var(--py-blue);
+}
+/* Python cards use significant whitespace: the body sits on an indent guide. */
+.pane-python .pane-body {
+  padding: 2px 0 0 18px;
+  border-left: 2px dashed var(--py-guide);
+  margin-left: 4px;
+}
+.panes-both .pane-python { padding: 16px 18px 18px; background: var(--py-paper); border-radius: var(--radius-py); }
+
+.pane-python .code { background: var(--py-surface); border: 1px solid var(--py-rule); border-radius: var(--radius-py); overflow: hidden; }
+.pane-python .code-bar { background: var(--py-gutter); border-bottom: 1px solid var(--py-rule); color: var(--py-ink); font-family: var(--f-py); font-variation-settings: "CASL" 0.5, "wght" 500; }
+.pane-python .code pre { color: #111; font-family: var(--f-py-mono); font-variation-settings: "MONO" 1, "CASL" 0; }
+.pane-python .ln::before { color: var(--py-lineno); background: var(--py-gutter); border-right: 1px solid var(--py-rule); }
+.pane-python .btn-copy, .pane-python .btn-expand { color: var(--py-blue); background: #fff; border: 1px solid var(--py-rule); }
+.pane-python .btn-copy:hover, .pane-python .btn-expand:hover { border-color: var(--py-blue); }
+.pane-python .btn-expand { border-width: 1px 0 0; }
+
+.tk-keyword { color: var(--py-keyword); }
+.tk-builtin { color: var(--py-builtin); }
+.tk-string, .tk-docstring { color: var(--py-string); }
+.tk-comment { color: var(--py-comment); }
+.tk-definition { color: var(--py-definition); }
+.tk-decorator { color: var(--py-builtin); }
+.tk-self { color: var(--py-ink); font-style: italic; }
+.tk-number { color: inherit; }
+
+/* IDLE's shell: white, program output in blue, errors in red. */
+.pane-python .console { background: var(--py-surface); border: 1px solid var(--py-rule); border-radius: var(--radius-py); }
+.pane-python .console-bar { color: #5a6b61; }
+.pane-python .console pre { color: var(--py-stdout); font-family: var(--f-py-mono); font-variation-settings: "MONO" 1, "CASL" 0; }
+.pane-python .console-cmd { color: #6d7a72; }
+.pane-python .out-err { color: var(--py-comment); }
+.pane-python .console-typed { color: var(--py-ink); }
+
+.pane-python .notes li {
+  position: relative;
+  padding-left: 22px;
+}
+.pane-python .notes li::before {
+  content: "#";
+  position: absolute; left: 2px; top: 0;
+  font-family: var(--f-py-mono);
+  font-variation-settings: "MONO" 1;
+  color: var(--py-comment);
+  font-weight: 700;
+}
+.pane-python .notes code, .pane-python .summary code, .pane-python .pitfall code { font-size: 0.9em; padding: 0 3px; background: #fff; border-radius: 4px; }
+.pane-python .pitfall { padding: 10px 14px; background: #fff7d6; border: 1px solid #ecd68a; border-radius: var(--radius-py); }
+.pane-python .pitfall strong { color: #6b5208; }
+
+/* ---------------- pane: Java (UML class box + Darcula) ---------------- */
+.pane-java {
+  font-family: var(--f-body);
+  color: var(--j-ink);
+  background: var(--j-surface);
+  border: 1px solid var(--j-ink);
+  border-radius: var(--radius-j);
+}
+.pane-java .pane-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 14px;
+  background: var(--j-blue-dark);
+  color: #fff;
+  border-bottom: 1px solid var(--j-ink);
+}
+.pane-java .pane-lang { font-family: var(--f-java); font-weight: 700; font-size: var(--step-1); letter-spacing: 0.01em; }
+.pane-java .pane-stereo { font-family: var(--f-java); font-weight: 500; font-size: 0.9rem; opacity: 0.9; }
+/* UML compartments: each part of the pane is separated by a rule. */
+.pane-java .pane-body { gap: 0; }
+.pane-java .pane-body > * { border-bottom: 1px solid var(--j-rule); }
+.pane-java .pane-body > :last-child { border-bottom: 0; }
+.pane-java .summary { padding: 14px 16px; }
+.pane-java .pane-notes { padding: 14px 16px; display: grid; gap: 12px; }
+.pane-java .code { background: var(--j-code); border-bottom-color: var(--j-ink); }
+.pane-java .code-bar { background: #3c3f41; color: #bbbbbb; font-family: var(--f-java-mono); border-bottom: 1px solid #515658; }
+.pane-java .code pre { color: var(--j-fg); font-family: var(--f-java-mono); font-variation-settings: normal; font-size: 0.84rem; }
+.pane-java .ln::before { color: var(--j-lineno); background: var(--j-gutter); border-right: 1px solid #555; }
+.pane-java .btn-copy, .pane-java .btn-expand { color: #dfe1e3; background: #4c5052; border: 1px solid #5e6366; border-radius: 3px; }
+.pane-java .btn-copy:hover, .pane-java .btn-expand:hover { background: #5c6164; }
+.pane-java .btn-expand { border-width: 1px 0 0; border-radius: 0; }
+
+.pane-java .tk-keyword { color: var(--j-keyword); }
+.pane-java .tk-string { color: var(--j-string); }
+.pane-java .tk-number { color: var(--j-number); }
+.pane-java .tk-comment { color: var(--j-comment); font-style: italic; }
+.pane-java .tk-javadoc { color: var(--j-javadoc); font-style: italic; }
+.pane-java .tk-method-decl { color: var(--j-method); }
+.pane-java .tk-annotation { color: var(--j-annotation); }
+.pane-java .tk-field { color: var(--j-field); }
+.pane-java .tk-constant { color: var(--j-field); font-style: italic; }
+.pane-java .tk-type { color: var(--j-fg); }
+.key-java .tk-keyword { color: var(--j-keyword); }
+.key-java .tk-string { color: var(--j-string); }
+.key-java .tk-number { color: var(--j-number); }
+.key-java .tk-comment { color: var(--j-comment); font-style: italic; }
+.key-java .tk-method-decl { color: var(--j-method); }
+.key-java .tk-field { color: var(--j-field); }
+.key-java .tk-type { color: var(--j-fg); }
+
+/* IntelliJ's run panel. */
+.pane-java .console { background: var(--j-code); }
+.pane-java .console-bar { color: #9aa3ab; font-family: var(--f-java); letter-spacing: 0.08em; }
+.pane-java .console pre { color: var(--j-console); font-family: var(--f-java-mono); }
+.pane-java .console-cmd { color: #808080; }
+.pane-java .out-err { color: var(--j-err); }
+.pane-java .console-typed { color: #6a8759; }
+.pane-java .console-typed span { color: #9aa3ab; }
+.pane-java .console-note { color: var(--j-console); }
+
+.pane-java .notes li { position: relative; padding-left: 20px; }
+.pane-java .notes li::before {
+  content: "+";
+  position: absolute; left: 2px; top: -1px;
+  font-family: var(--f-java-mono);
+  font-weight: 600;
+  color: var(--j-orange-text);
+}
+.pane-java .notes code, .pane-java .summary code, .pane-java .pitfall code { font-family: var(--f-java-mono); font-size: 0.86em; padding: 0 3px; background: #e6ebf0; border-radius: 2px; }
+.pane-java .pitfall { padding: 10px 12px; border-left: 4px solid var(--j-orange); background: #fdf1e6; }
+.pane-java .pitfall strong { color: var(--j-orange-text); font-family: var(--f-java); }
+
+/* ---------------- empty + footer ---------------- */
+.empty { padding: 40px 28px; background: var(--raised); border: 1px dashed var(--ink); border-radius: 10px; max-width: 640px; }
+.empty-title { margin: 0 0 6px; font-size: var(--step-2); font-weight: 700; }
+.empty p { margin: 0 0 10px; }
+.empty-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.btn { font: inherit; font-weight: 700; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--ink); background: var(--ink); color: #fff; cursor: pointer; }
+.btn-quiet { background: transparent; color: var(--ink); }
+
+.foot { max-width: 1440px; margin: 0 auto; padding: 0 24px 48px; color: var(--muted); font-size: 0.92rem; }
+.foot p { max-width: 70ch; margin: 0; padding-top: 18px; border-top: 1px solid var(--rule); }
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 1540px) {
+  body[data-lang="both"] .layout { grid-template-columns: minmax(0, 1fr); }
+  body[data-lang="both"] .rail { display: none; }
+}
+@media (max-width: 980px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .rail { display: none; }
+  .panes-both { grid-template-columns: minmax(0, 1fr); grid-template-areas: "py" "java" "diff"; row-gap: 18px; }
+  .panes-both::before { display: none; }
+  .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .masthead { padding: 26px 16px 16px; }
+  .facets { grid-template-columns: minmax(0, 1fr); grid-template-areas: "search" "lang" "level" "topic"; padding: 14px; }
+  .segmented { width: 100%; }
+  .seg { flex: 1; }
+  .seg span { justify-content: center; width: 100%; padding: 0 8px; font-size: 0.92rem; }
+  .rung-blurb { display: none; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; margin-right: -14px; scrollbar-width: thin; }
+  .chip { flex: none; }
+  .status-row, .layout, .foot { padding-left: 16px; padding-right: 16px; }
+  .panes-both .pane-python { padding: 14px 12px; }
+  .pane-python .pane-body { padding-left: 12px; }
+  .concept-title { font-size: var(--step-2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concept { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Single-language view on wide screens: code on the left, output and notes beside it. */
+@media (min-width: 1100px) {
+  body:not([data-lang="both"]) .pane-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    grid-template-areas: "sum sum" "code out" "code notes";
+    grid-template-rows: auto auto 1fr;
+    column-gap: 18px;
+    align-items: start;
+  }
+  body:not([data-lang="both"]) .summary { grid-area: sum; }
+  body:not([data-lang="both"]) .code { grid-area: code; }
+  body:not([data-lang="both"]) .console { grid-area: out; }
+  body:not([data-lang="both"]) .pane-notes { grid-area: notes; display: grid; gap: 12px; }
+  body[data-lang="java"] .pane-java .pane-body { column-gap: 0; }
+  body[data-lang="java"] .pane-java .code { align-self: stretch; border-right: 1px solid var(--j-ink); }
+  body[data-lang="java"] .pane-java .console { border-bottom: 1px solid var(--j-ink); }
+}
+
+.console-shot { display: block; max-width: calc(100% - 28px); height: auto; margin: 8px 14px 0; border: 1px solid #00000026; image-rendering: auto; }
+.pane-java .console-shot { border-color: #ffffff26; }

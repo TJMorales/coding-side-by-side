@@ -1,0 +1,10 @@
+{
+  "summary": "Big-O notation describes how the number of steps an algorithm takes grows with the input size n. This program counts steps for O(n), O(log n), and O(n^2) code at three sizes.",
+  "notes": [
+    "steps += 1 inside each loop counts work directly, so the table is the same on every computer.",
+    "When n grows 10 times, linear_search grows 10 times, binary_search grows by only about 3 steps, and count_pairs grows 100 times.",
+    "time.perf_counter() measures real time, but the numbers change on every run and depend on the machine."
+  ],
+  "pitfall": "Running binary_search on an unsorted list gives no error. It just returns wrong answers, because the halving rule assumes items[mid] < target means the target is to the right.",
+  "keywords": ["big o", "time complexity", "linear search", "binary search", "nested loop", "log n", "n squared", "perf_counter", "efficiency"]
+}

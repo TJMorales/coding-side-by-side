@@ -1,0 +1,10 @@
+{
+  "summary": "FileWriter and Scanner write and read text files so data lasts after the program ends. try-with-resources makes sure the file is always closed.",
+  "notes": [
+    "new FileWriter(\"scores.txt\") erases the file first. new FileWriter(\"scores.txt\", true) adds to the end.",
+    "Values read from a file are Strings, so Integer.parseInt(parts[1]) converts them before adding.",
+    "throws IOException on main is required because file methods throw checked exceptions."
+  ],
+  "pitfall": "Without try-with-resources or out.close(), PrintWriter may never write its text to the file, so the file ends up empty.",
+  "keywords": ["FileWriter", "PrintWriter", "Scanner", "File", "try-with-resources", "IOException", "FileNotFoundException", "hasNextLine", "nextLine", "append"]
+}

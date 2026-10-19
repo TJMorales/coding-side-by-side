@@ -1,0 +1,45 @@
+{
+  "summary": "Turtle can call your functions when the user clicks or presses a key. You register each function once, and turtle runs it every time that event happens.",
+  "notes": [
+    "screen.onscreenclick(move_to_click) passes the function. Writing move_to_click() would call it once right away.",
+    "Key names are case-sensitive Tk names like \"Left\", \"Up\", \"space\", and \"a\".",
+    "screen.listen() is required for onkey(). Without it, key presses are ignored."
+  ],
+  "pitfall": "Writing screen.onkey(move(-STEP, 0), \"Left\") calls move once at startup and registers None, so the Left key does nothing.",
+  "keywords": [
+    "turtle",
+    "events",
+    "onscreenclick",
+    "onkey",
+    "listen",
+    "callback",
+    "keyboard",
+    "mouse",
+    "click"
+  ],
+  "run": false,
+  "gui_actions": [
+    [
+      "click",
+      100,
+      80
+    ],
+    [
+      "wait",
+      0.3
+    ],
+    [
+      "key",
+      "Right"
+    ],
+    [
+      "key",
+      "Right"
+    ],
+    [
+      "key",
+      "Right"
+    ]
+  ],
+  "shot_note": "After one click near the top left and three Right presses."
+}

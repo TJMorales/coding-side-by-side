@@ -1,0 +1,10 @@
+{
+  "summary": "Scope is where in the code a variable can be used. In Java, a variable exists only from its declaration to the closing brace of its block.",
+  "notes": [
+    "message is declared inside the if braces, so it is gone after the closing brace.",
+    "status is declared before the if, so it still exists after the if ends.",
+    "totalPoints is a static field of the class, so addPoints() and main() share it."
+  ],
+  "pitfall": "Using a variable outside the braces where it was declared causes the compile error: cannot find symbol.",
+  "keywords": ["scope", "block scope", "local variable", "static field", "cannot find symbol", "braces", "variable lifetime", "global"]
+}

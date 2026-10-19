@@ -1,0 +1,10 @@
+{
+  "summary": "A HashSet stores each item once and checks membership in O(1) on average by using hash codes. Your own class needs both equals() and hashCode() for a set to treat equal objects as duplicates.",
+  "notes": [
+    "hashCode() returns Objects.hash(studentId) because it uses the same field as equals(). Equal objects must have equal hash codes.",
+    "equals takes Object, not Student. Writing equals(Student other) overloads instead of overrides, and HashSet never calls it.",
+    "retainAll() changes the set to keep only items also in the other set: the intersection."
+  ],
+  "pitfall": "Overriding equals() without hashCode() compiles with no error, but HashSet.contains() usually returns false for an equal object because it looks in the wrong bucket.",
+  "keywords": ["HashSet", "Set", "hashCode", "equals", "Objects.hash", "override", "duplicates", "contains", "retainAll", "hash table"]
+}

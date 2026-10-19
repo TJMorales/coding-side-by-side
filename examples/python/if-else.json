@@ -1,0 +1,18 @@
+{
+  "summary": "if runs a block only when its condition is True. Use elif to check more conditions and else for everything left over.",
+  "notes": [
+    "Each if, elif, and else line ends with a colon.",
+    "The lines inside a branch are indented 4 spaces.",
+    "Only the first True branch runs. Python skips the rest."
+  ],
+  "pitfall": "Forgetting to indent the line after if causes IndentationError: expected an indented block.",
+  "keywords": [
+    "if",
+    "elif",
+    "else",
+    "condition",
+    "branch",
+    "decision",
+    "indentation"
+  ]
+}

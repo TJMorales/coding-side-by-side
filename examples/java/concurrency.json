@@ -1,0 +1,10 @@
+{
+  "summary": "Threads run parts of a program at the same time. When two threads change the same variable, synchronized or an AtomicInteger makes sure no update is lost.",
+  "notes": [
+    "sold++ is not one step. It reads, adds, and writes, and another thread can run in between. That is a race condition.",
+    "pool.shutdown() then pool.awaitTermination(...) waits for every task, the same job join() does for one Thread.",
+    "incrementAndGet() on an AtomicInteger is safe without synchronized."
+  ],
+  "pitfall": "A race condition may not show up on every run, so code that passed once can still be wrong. Calling run() instead of start() on a Thread runs the code on the main thread, so no second thread is created.",
+  "keywords": ["thread", "Thread", "synchronized", "AtomicInteger", "ExecutorService", "join", "race condition", "concurrency", "Runnable", "java.util.concurrent"]
+}

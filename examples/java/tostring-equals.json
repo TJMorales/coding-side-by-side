@@ -1,0 +1,11 @@
+{
+  "summary": "toString() sets the text println shows for your object, and equals() decides when two objects hold the same data. In Java, == on objects only checks if they are the same object.",
+  "notes": [
+    "When you override equals(), also override hashCode(), or HashSet and HashMap will not find matching objects.",
+    "equals(Object other) checks instanceof first, so a.equals(1001) returns false instead of throwing ClassCastException.",
+    "roster.contains(b) calls equals() on each item, so it finds a matching Student by id."
+  ],
+  "pitfall": "Writing public boolean equals(Student other) overloads instead of overrides, so contains() and HashSet still use the default identity check. With @Override the compiler reports \"method does not override or implement a method from a supertype\".",
+  "keywords": ["toString", "equals", "hashCode", "==", "@Override", "Object", "instanceof", "equality", "identity"],
+  "run": true
+}

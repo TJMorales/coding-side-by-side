@@ -1,0 +1,10 @@
+{
+  "summary": "A linked list stores values in separate nodes, each pointing to the next one. Adding at the front is O(1), but reaching index i takes i steps.",
+  "notes": [
+    "for (Node current = head; current != null; current = current.next) is the standard traversal loop.",
+    "insertAt sets newNode.next before current.next. Reversing those two lines loses the rest of the list.",
+    "The Node class is typed: its value is a String and next can only point to another Node or null."
+  ],
+  "pitfall": "Calling insertAt with an index past the end makes current become null, and current.next throws NullPointerException.",
+  "keywords": ["linked list", "node", "next", "null", "head", "traversal", "toString", "insert", "NullPointerException"]
+}

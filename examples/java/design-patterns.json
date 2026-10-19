@@ -1,0 +1,10 @@
+{
+  "summary": "The Strategy pattern passes the rule for a task into an object instead of writing every rule inside it. In Java, the strategy is an interface, and a lambda or method reference can fill it in.",
+  "notes": [
+    "GradingStrategy has one abstract method, so it is a functional interface. Any lambda with the same parameters and return type fits.",
+    "Main::dropLowest is a method reference: it passes the method without calling it.",
+    "LinkedHashMap keeps entries in the order you put them, so the output order is predictable."
+  ],
+  "pitfall": "Dividing two ints, such as (sum - min) / (scores.length - 1), drops the decimal part. Cast one side to double first: (double) (sum - min).",
+  "keywords": ["strategy pattern", "design pattern", "interface", "functional interface", "lambda", "method reference", "polymorphism", "open closed principle"]
+}

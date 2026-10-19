@@ -1,0 +1,18 @@
+{
+  "summary": "input() shows a prompt, waits for the user to type, and returns the text. Use it to get a name, a number, or any answer.",
+  "notes": [
+    "input() always returns a str. type(raw_age) shows <class 'str'>.",
+    "int() converts the text to a whole number. Use float() for a decimal."
+  ],
+  "pitfall": "Doing math on input() without int() causes TypeError: can only concatenate str (not \"int\") to str.",
+  "keywords": [
+    "input",
+    "int",
+    "float",
+    "convert",
+    "prompt",
+    "keyboard",
+    "read"
+  ],
+  "stdin": "Maya\n16"
+}

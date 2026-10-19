@@ -1,0 +1,10 @@
+{
+  "summary": "f-strings build text from values, with control over decimal places, column width, and alignment. Use them for reports, receipts, and tables.",
+  "notes": [
+    "{average:.2f} shows 2 decimal places. It does not change the value stored in average.",
+    "{courses[i]:<12} pads the text to 12 characters, lined up on the left.",
+    "{7 / 8:.1%} multiplies by 100 for you, so 0.875 prints as 87.5%."
+  ],
+  "pitfall": "Forgetting the f before the quotes prints the braces literally: \"{student}\" shows {student} instead of Jordan.",
+  "keywords": ["f-string", "format", "decimal places", ".2f", "width", "align", "padding", "percent", "round"]
+}

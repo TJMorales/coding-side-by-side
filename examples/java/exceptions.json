@@ -1,0 +1,10 @@
+{
+  "summary": "try/catch lets your program handle an error and keep running. throw reports an error from your own code when a value breaks the rules.",
+  "notes": [
+    "NumberFormatException is a kind of IllegalArgumentException, so its catch must come first.",
+    "finally runs every time, whether or not an exception was thrown.",
+    "new FileReader() can throw a checked exception, so the compiler makes you catch it or add throws to the method header."
+  ],
+  "pitfall": "Calling new FileReader(\"missing.txt\") with no try/catch causes the compile error: unreported exception FileNotFoundException; must be caught or declared to be thrown.",
+  "keywords": ["try", "catch", "finally", "throw", "throws", "checked exception", "IOException", "NumberFormatException", "IllegalArgumentException", "exception"]
+}

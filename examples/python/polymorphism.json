@@ -1,0 +1,11 @@
+{
+  "summary": "Polymorphism means one method call, like student.report(), runs the version that belongs to the object's actual class. You can loop over mixed objects and treat them the same way.",
+  "notes": [
+    "HonorsStudent overrides report() with the same name and parameters as Student.report().",
+    "The for loop never checks the type. Python looks up report() on each object when the line runs.",
+    "roster[0].weighted_average() raises AttributeError only when that line runs, not before."
+  ],
+  "pitfall": "Spelling an override differently, like def reprt(self), does not override anything. The loop quietly calls the parent's report() instead.",
+  "keywords": ["polymorphism", "override", "duck typing", "AttributeError", "subclass", "dynamic dispatch", "method lookup"],
+  "run": true
+}

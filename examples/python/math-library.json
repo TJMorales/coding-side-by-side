@@ -1,0 +1,10 @@
+{
+  "summary": "The math module has square roots, rounding, pi, and more. Import it once at the top of your program.",
+  "notes": [
+    "import math is required. Then you call functions as math.sqrt(), math.ceil(), and so on.",
+    "math.ceil(47 / 40) is 2 because it always rounds up.",
+    "abs(), round(), min(), and max() are built in, so they work without import math."
+  ],
+  "pitfall": "Calling sqrt(144) without math. in front raises NameError: name 'sqrt' is not defined.",
+  "keywords": ["math", "sqrt", "pow", "ceil", "floor", "pi", "abs", "round", "Math", "distance"]
+}

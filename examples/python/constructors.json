@@ -1,0 +1,11 @@
+{
+  "summary": "__init__ sets up a new object's fields. Default parameter values let one __init__ handle several ways of creating an object.",
+  "notes": [
+    "name=\"New student\" is used only when the caller leaves name out.",
+    "scores=None with an if check gives every Student a fresh empty list.",
+    "Student(\"Sam\", scores=[70]) uses a keyword argument to skip grade_level."
+  ],
+  "pitfall": "Writing scores=[] as the default makes every Student share one list, so appending a score to one student shows up for all of them.",
+  "keywords": ["constructor", "__init__", "default parameter", "keyword argument", "None", "optional argument"],
+  "run": true
+}

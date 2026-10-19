@@ -1,0 +1,20 @@
+{
+  "summary": "Java uses + - * / % for arithmetic. When both values are ints, / gives an int and drops the decimal.",
+  "notes": [
+    "7 / 2 is 3 because both values are ints. 7.0 / 2 is 3.5.",
+    "% gives the remainder. n % 2 == 0 means n is even.",
+    "Math.pow(2, 3) returns the double 8.0. Java has no ** operator."
+  ],
+  "pitfall": "Dividing two ints for an average drops the decimal with no error. Divide by 3.0 or cast with (double).",
+  "keywords": [
+    "math",
+    "operators",
+    "division",
+    "integer division",
+    "%",
+    "modulo",
+    "remainder",
+    "Math.pow",
+    "double"
+  ]
+}

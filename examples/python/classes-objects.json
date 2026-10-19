@@ -1,0 +1,11 @@
+{
+  "summary": "A class describes what data and methods an object has. You create objects from the class and each one keeps its own copy of the data.",
+  "notes": [
+    "self.name = name inside __init__ creates the name field on the new object.",
+    "maya.add_score(92) passes maya as self automatically. You never pass self yourself.",
+    "average() checks for an empty list first, because sum([]) / 0 raises ZeroDivisionError."
+  ],
+  "pitfall": "Forgetting self in a method header, like def add_score(score), causes TypeError: Student.add_score() takes 1 positional argument but 2 were given.",
+  "keywords": ["class", "object", "instance", "__init__", "self", "method", "field", "attribute"],
+  "run": true
+}

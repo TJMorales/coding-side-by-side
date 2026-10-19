@@ -1,0 +1,21 @@
+{
+  "summary": "A comparison like score >= 70 gives true or false. Use &&, ||, and ! to combine conditions.",
+  "notes": [
+    "The comparison operators are ==, !=, <, >, <=, and >=.",
+    "&& needs both sides true. || needs at least one side true.",
+    "Put a comparison in parentheses when you join it to a String with +."
+  ],
+  "pitfall": "Writing if (score = 85) causes error: incompatible types: int cannot be converted to boolean. Use == to compare.",
+  "keywords": [
+    "boolean",
+    "true",
+    "false",
+    "&&",
+    "||",
+    "!",
+    "==",
+    "!=",
+    "comparison",
+    "logic"
+  ]
+}

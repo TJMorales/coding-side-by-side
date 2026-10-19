@@ -1,0 +1,10 @@
+{
+  "summary": "A set stores each item once and checks membership in O(1) on average by using hash values. Your own class needs both __eq__ and __hash__ for a set to treat equal objects as duplicates.",
+  "notes": [
+    "__hash__ returns hash(self.student_id) because it uses the same field as __eq__. Equal objects must have equal hashes.",
+    "Without either method, Python compares objects by identity, so two separate Maya objects count as two students.",
+    "attendance & club is the intersection: students in both sets."
+  ],
+  "pitfall": "Defining __eq__ without __hash__ sets __hash__ to None, and adding the object to a set raises TypeError: unhashable type.",
+  "keywords": ["set", "hash", "__hash__", "__eq__", "hashable", "unhashable", "duplicates", "membership", "intersection", "hash table"]
+}

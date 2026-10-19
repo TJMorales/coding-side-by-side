@@ -1,0 +1,19 @@
+{
+  "summary": "A variable stores a value under a name. In Java you declare its type once, and it can only hold that type.",
+  "notes": [
+    "int testScore = 88; declares the type, the name, and the first value.",
+    "Reassign with testScore = testScore + 5; and do not repeat the type.",
+    "final means the variable cannot be reassigned after its first value."
+  ],
+  "pitfall": "Putting a String into an int variable causes error: incompatible types: String cannot be converted to int. The program will not compile.",
+  "keywords": [
+    "variable",
+    "declare",
+    "int",
+    "String",
+    "final",
+    "camelCase",
+    "assign",
+    "static typing"
+  ]
+}

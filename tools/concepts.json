@@ -1,0 +1,387 @@
+[
+ {
+  "id": "hello-output",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Display output",
+  "contrast": "Python's print() ends the line for you. Java has println() to end the line and print() to stay on it."
+ },
+ {
+  "id": "comments",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Comments",
+  "contrast": "Python uses # and docstrings. Java uses //, /* */, and /** */ Javadoc."
+ },
+ {
+  "id": "variables",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Variables",
+  "contrast": "Python figures out the type from the value, and a name can later hold a different type. Java makes you declare the type, and that variable's type never changes."
+ },
+ {
+  "id": "data-types",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Data types",
+  "contrast": "Python has int, float, str, bool. Java has primitives (int, double, char, boolean) plus objects like String."
+ },
+ {
+  "id": "user-input",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Read user input",
+  "contrast": "Python's input() always returns a string. Java's Scanner has a separate method for each type."
+ },
+ {
+  "id": "math",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Math operators",
+  "contrast": "In Python, 7 / 2 is 3.5 and 7 // 2 is 3. In Java, 7 / 2 is 3 because both values are ints."
+ },
+ {
+  "id": "booleans",
+  "level": "intro",
+  "topic": "Control flow",
+  "title": "Comparisons and logic",
+  "contrast": "Python spells logic as and, or, not. Java uses &&, ||, !."
+ },
+ {
+  "id": "if-else",
+  "level": "intro",
+  "topic": "Control flow",
+  "title": "Make decisions",
+  "contrast": "Python uses elif and indentation. Java uses else if, parentheses, and braces."
+ },
+ {
+  "id": "for-loops",
+  "level": "intro",
+  "topic": "Control flow",
+  "title": "Count with a for loop",
+  "contrast": "Python loops over range(). Java's for header has three parts: start; condition; update."
+ },
+ {
+  "id": "while-loops",
+  "level": "intro",
+  "topic": "Control flow",
+  "title": "Repeat with while",
+  "contrast": "Same idea in both. Java needs parentheses around the condition and braces around the body."
+ },
+ {
+  "id": "lists-arrays",
+  "level": "intro",
+  "topic": "Collections",
+  "title": "Lists and arrays",
+  "contrast": "A Python list can grow. A Java array has a fixed size set when you create it."
+ },
+ {
+  "id": "functions",
+  "level": "intro",
+  "topic": "Functions",
+  "title": "Functions and methods",
+  "contrast": "Python uses def with no types. Java methods live inside a class and declare a return type and parameter types."
+ },
+ {
+  "id": "strings-basics",
+  "level": "intro",
+  "topic": "Strings",
+  "title": "String basics",
+  "contrast": "Python uses len(s) and ==. Java uses s.length() and s.equals(other)."
+ },
+ {
+  "id": "errors",
+  "level": "intro",
+  "topic": "Errors & files",
+  "title": "Read an error message",
+  "contrast": "Python reports syntax errors before running but type mistakes only when that line runs. Java's compiler catches both before the program runs. A bad index crashes both while running."
+ },
+ {
+  "id": "string-methods",
+  "level": "intermediate",
+  "topic": "Strings",
+  "title": "String methods",
+  "contrast": "Strings are immutable in both. Python slices with s[1:4]; Java uses s.substring(1, 4)."
+ },
+ {
+  "id": "string-formatting",
+  "level": "intermediate",
+  "topic": "Strings",
+  "title": "Format output",
+  "contrast": "Python uses f-strings. Java uses printf or String.format with codes like %.2f."
+ },
+ {
+  "id": "list-methods",
+  "level": "intermediate",
+  "topic": "Collections",
+  "title": "Grow and change a list",
+  "contrast": "Python's list does it all. Java switches from arrays to ArrayList when the size needs to change."
+ },
+ {
+  "id": "loop-control",
+  "level": "intermediate",
+  "topic": "Control flow",
+  "title": "break and continue",
+  "contrast": "Both languages use the same keywords. Python also has for...else, which runs when the loop never hits break."
+ },
+ {
+  "id": "nested-loops",
+  "level": "intermediate",
+  "topic": "Control flow",
+  "title": "Nested loops",
+  "contrast": "Same structure in both. Indentation shows the nesting in Python; braces show it in Java."
+ },
+ {
+  "id": "2d-grids",
+  "level": "intermediate",
+  "topic": "Collections",
+  "title": "2D lists and arrays",
+  "contrast": "Python builds a grid as a list of lists. Java declares int[][], an array of arrays whose sizes are set when you create it."
+ },
+ {
+  "id": "dictionaries",
+  "level": "intermediate",
+  "topic": "Collections",
+  "title": "Key-value maps",
+  "contrast": "Python's dict uses d[key]. Java's HashMap uses put() and get()."
+ },
+ {
+  "id": "parameters-returns",
+  "level": "intermediate",
+  "topic": "Functions",
+  "title": "Parameters and return values",
+  "contrast": "Python can return several values as a tuple. A Java method returns one value of its declared type."
+ },
+ {
+  "id": "scope",
+  "level": "intermediate",
+  "topic": "Functions",
+  "title": "Variable scope",
+  "contrast": "In Python, a variable made inside an if or loop still exists after it, as long as that code ran. In Java, a variable lives only inside its braces."
+ },
+ {
+  "id": "exceptions",
+  "level": "intermediate",
+  "topic": "Errors & files",
+  "title": "Handle errors",
+  "contrast": "Python uses try/except. Java uses try/catch, and the compiler forces you to handle checked exceptions."
+ },
+ {
+  "id": "file-io",
+  "level": "intermediate",
+  "topic": "Errors & files",
+  "title": "Read and write files",
+  "contrast": "Python's with block closes the file. Java's try-with-resources does the same job."
+ },
+ {
+  "id": "random-numbers",
+  "level": "intermediate",
+  "topic": "Basics",
+  "title": "Random numbers",
+  "contrast": "Python's randint(1, 6) includes 6. Java's nextInt(6) gives 0 to 5, so you add 1."
+ },
+ {
+  "id": "math-library",
+  "level": "intermediate",
+  "topic": "Basics",
+  "title": "Math library",
+  "contrast": "Python needs import math. Java's Math class is always available."
+ },
+ {
+  "id": "classes-objects",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Classes and objects",
+  "contrast": "Python declares fields inside __init__ with self. Java declares fields at the top of the class with types."
+ },
+ {
+  "id": "constructors",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Constructors",
+  "contrast": "Python has one __init__ and uses default values. Java can overload several constructors with different parameters."
+ },
+ {
+  "id": "encapsulation",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Encapsulation",
+  "contrast": "Python marks private data with a leading underscore and uses @property. Java enforces private and uses getters and setters."
+ },
+ {
+  "id": "static-members",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Class vs instance members",
+  "contrast": "Python class variables sit in the class body. Java marks them static."
+ },
+ {
+  "id": "tostring-equals",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Print and compare objects",
+  "contrast": "Python uses __str__ and __eq__. Java overrides toString() and equals()."
+ },
+ {
+  "id": "inheritance",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Inheritance",
+  "contrast": "Python writes class Dog(Animal). Java writes class Dog extends Animal."
+ },
+ {
+  "id": "polymorphism",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Polymorphism and overriding",
+  "contrast": "Python checks methods at run time (duck typing). Java checks that the declared type has the method at compile time."
+ },
+ {
+  "id": "abstract-interfaces",
+  "level": "advanced",
+  "topic": "OOP",
+  "title": "Abstract classes and interfaces",
+  "contrast": "Python uses ABC and @abstractmethod. Java has abstract classes and a separate interface keyword."
+ },
+ {
+  "id": "recursion",
+  "level": "advanced",
+  "topic": "Algorithms",
+  "title": "Recursion",
+  "contrast": "Same logic in both. Python stops at about 1000 calls deep by default; Java's limit depends on stack size."
+ },
+ {
+  "id": "searching",
+  "level": "advanced",
+  "topic": "Algorithms",
+  "title": "Linear and binary search",
+  "contrast": "Same algorithms. Python uses // for the midpoint; Java's int division does it automatically."
+ },
+ {
+  "id": "sorting",
+  "level": "advanced",
+  "topic": "Algorithms",
+  "title": "Selection and insertion sort",
+  "contrast": "Python swaps with a, b = b, a. Java needs a temporary variable."
+ },
+ {
+  "id": "graphics-shapes",
+  "level": "advanced",
+  "topic": "Graphics",
+  "title": "Draw shapes",
+  "contrast": "Python's turtle draws by moving a pen. Java's Swing draws inside paintComponent with a Graphics object."
+ },
+ {
+  "id": "graphics-events",
+  "level": "advanced",
+  "topic": "Graphics",
+  "title": "Mouse and keyboard events",
+  "contrast": "Python's turtle registers callback functions. Java adds listener objects to a component."
+ },
+ {
+  "id": "merge-sort",
+  "level": "brilliant",
+  "topic": "Algorithms",
+  "title": "Merge sort",
+  "contrast": "Python slices make new lists easily. Java usually passes index ranges to avoid copying arrays."
+ },
+ {
+  "id": "big-o",
+  "level": "brilliant",
+  "topic": "Algorithms",
+  "title": "Measure growth with Big-O",
+  "contrast": "Both languages count steps the same way. To time code, Python uses time.perf_counter() and Java uses System.nanoTime(), but timings change on every run."
+ },
+ {
+  "id": "memoization",
+  "level": "brilliant",
+  "topic": "Algorithms",
+  "title": "Memoization and dynamic programming",
+  "contrast": "Python can memoize with @functools.cache. Java stores results in a HashMap or array by hand."
+ },
+ {
+  "id": "linked-list",
+  "level": "brilliant",
+  "topic": "Data structures",
+  "title": "Build a linked list",
+  "contrast": "Python nodes point with None at the end. Java uses null and a typed Node class."
+ },
+ {
+  "id": "stacks-queues",
+  "level": "brilliant",
+  "topic": "Data structures",
+  "title": "Stacks and queues",
+  "contrast": "Python uses list and collections.deque. Java uses ArrayDeque for both."
+ },
+ {
+  "id": "sets-hashing",
+  "level": "brilliant",
+  "topic": "Data structures",
+  "title": "Sets and hashing",
+  "contrast": "Python objects in a set need __hash__ and __eq__; defining only __eq__ makes them unhashable. Java objects need hashCode() and equals(); with only equals(), duplicates slip into the set with no error."
+ },
+ {
+  "id": "generics-typing",
+  "level": "brilliant",
+  "topic": "OOP",
+  "title": "Generics and type hints",
+  "contrast": "Python type hints are not enforced when the program runs. Java generics are checked by the compiler."
+ },
+ {
+  "id": "custom-sorting",
+  "level": "brilliant",
+  "topic": "OOP",
+  "title": "Custom sort order",
+  "contrast": "Python passes key= to sorted(). Java implements Comparable or passes a Comparator."
+ },
+ {
+  "id": "lambdas-streams",
+  "level": "brilliant",
+  "topic": "Functional",
+  "title": "Lambdas, map, and filter",
+  "contrast": "Python favors list comprehensions. Java uses lambdas with the Stream API."
+ },
+ {
+  "id": "iterators-generators",
+  "level": "brilliant",
+  "topic": "Functional",
+  "title": "Iterators and generators",
+  "contrast": "Python's yield builds an iterator in a few lines. Java implements the Iterator interface with hasNext() and next()."
+ },
+ {
+  "id": "data-classes",
+  "level": "brilliant",
+  "topic": "OOP",
+  "title": "Data classes and records",
+  "contrast": "Python's @dataclass writes __init__, __repr__, and __eq__, and frozen=True makes it unchangeable and hashable. Java's record writes the constructor, getters, toString(), equals(), and hashCode(), and is always unchangeable."
+ },
+ {
+  "id": "design-patterns",
+  "level": "brilliant",
+  "topic": "OOP",
+  "title": "Strategy pattern",
+  "contrast": "Python can pass plain functions as strategies. Java defines an interface, often filled with a lambda."
+ },
+ {
+  "id": "concurrency",
+  "level": "brilliant",
+  "topic": "Concurrency",
+  "title": "Threads and shared data",
+  "contrast": "Python uses threading.Lock. Java uses synchronized or classes from java.util.concurrent."
+ },
+ {
+  "id": "unit-testing",
+  "level": "brilliant",
+  "topic": "Testing",
+  "title": "Test your code",
+  "contrast": "Python ships unittest in the standard library. Java projects add JUnit; this example uses plain checks so it runs anywhere."
+ },
+ {
+  "id": "game-loop",
+  "level": "brilliant",
+  "topic": "Graphics",
+  "title": "Animation and game loop",
+  "contrast": "Python's turtle schedules frames with ontimer(). Java's Swing uses a javax.swing.Timer and repaint()."
+ }
+]
