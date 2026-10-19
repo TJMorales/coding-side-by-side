@@ -1,0 +1,10 @@
+{
+  "summary": "An accessor (getter) method returns a private field's value, and a mutator (setter) method changes it. A mutator can check a new value before it saves it.",
+  "notes": [
+    "private double gpa; means code in Main cannot read or change gpa directly.",
+    "setGpa only saves newGpa when it is between 0.0 and 4.0.",
+    "Getters return the field's type. Mutators like setGpa and promote are void."
+  ],
+  "pitfall": "Writing maya.gpa in Main causes the compile error: gpa has private access in Student. Use maya.getGpa() instead.",
+  "keywords": ["getter", "setter", "accessor", "mutator", "private", "void", "encapsulation", "validation"]
+}

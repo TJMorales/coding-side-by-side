@@ -1,0 +1,10 @@
+{
+  "summary": "self is the object a method is running on. Inside a method, self.name is the object's field, and a plain name is a local variable or a parameter.",
+  "notes": [
+    "name = name inside __init__ only assigns the parameter to itself. No field is created.",
+    "self.name = name copies the parameter into the object's field.",
+    "set_gpa(self, gpa) can use the same name for the parameter because self.gpa always means the field."
+  ],
+  "pitfall": "Leaving out self. in __init__ causes AttributeError: 'BrokenStudent' object has no attribute 'name' the first time you read the field.",
+  "keywords": ["self", "this", "__init__", "field", "attribute", "AttributeError", "local variable", "parameter"]
+}

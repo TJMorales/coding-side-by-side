@@ -89,14 +89,20 @@
         '<span class="rung-blurb">' + l.blurb + "</span></button>";
     }).join("");
 
+    // The sidebar is the only topic filter: each topic toggles, and lists the concepts it contains.
     const pool = concepts.filter((c) => state.levels.includes(c.level) && matchesQuery(c));
+    const shown = new Set(visible().map((c) => c.id));
     topicsEl.innerHTML =
-      '<button type="button" class="chip chip-all" data-topic="" aria-pressed="' + (state.topics.length === 0) + '">All topics</button>' +
+      '<button type="button" class="topic-all" data-topic="" aria-pressed="' + (state.topics.length === 0) + '">All topics <span class="topic-n">' + pool.length + "</span></button>" +
       topics.map((t) => {
-        const n = pool.filter((c) => c.topic === t).length;
+        const inTopic = pool.filter((c) => c.topic === t);
         const on = state.topics.includes(t);
-        return '<button type="button" class="chip" data-topic="' + H.esc(t) + '" aria-pressed="' + on + '"' + (n === 0 && !on ? " data-empty" : "") + ">" +
-          H.esc(t) + ' <span class="chip-n">' + n + "</span></button>";
+        const links = inTopic.filter((c) => shown.has(c.id));
+        return '<section class="topic' + (inTopic.length ? "" : " topic-empty") + '">' +
+          '<button type="button" class="topic-btn" data-topic="' + H.esc(t) + '" aria-pressed="' + on + '"' + (inTopic.length ? "" : " disabled") + ">" +
+          H.esc(t) + ' <span class="topic-n">' + inTopic.length + "</span></button>" +
+          (links.length ? "<ol>" + links.map((c) => '<li><a href="#c-' + c.id + '" data-rail="' + c.id + '">' + H.esc(c.title) + "</a></li>").join("") + "</ol>" : "") +
+          "</section>";
       }).join("");
 
     document.querySelectorAll('input[name="lang"]').forEach((r) => { r.checked = r.value === state.lang; });
@@ -240,21 +246,18 @@
         '<div class="empty-actions">' +
         (others ? '<button type="button" class="btn" data-act="all-levels">Show all levels</button>' : "") +
         '<button type="button" class="btn btn-quiet" data-act="clear">Clear filters</button></div></div>';
-      rail.innerHTML = "";
       return;
     }
 
-    let html = "", railHtml = "";
+    let html = "";
     LEVELS.forEach((l) => {
       const group = list.filter((c) => c.level === l.id);
       if (!group.length) return;
       if (state.levels.length > 1) html += '<h2 class="level-head" id="lv-' + l.id + '">' + l.label + ' <span>' + l.blurb + "</span></h2>";
       else html += '<h2 class="visually-hidden">' + l.label + "</h2>";
       html += group.map(conceptHTML).join("");
-      railHtml += '<p class="rail-level">' + l.label + "</p><ol>" + group.map((c) => '<li><a href="#c-' + c.id + '" data-rail="' + c.id + '">' + H.esc(c.title) + "</a></li>").join("") + "</ol>";
     });
     main.innerHTML = html;
-    rail.innerHTML = railHtml;
     observeRail();
   }
 

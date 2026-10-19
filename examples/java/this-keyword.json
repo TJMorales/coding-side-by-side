@@ -1,0 +1,10 @@
+{
+  "summary": "this is the object a method or constructor is running on. You need this.name when a parameter has the same name as the field, so Java can tell the two apart.",
+  "notes": [
+    "In BrokenStudent, name = name; assigns the parameter to itself. The field stays null and the numbers stay 0.",
+    "this.name = name; copies the parameter into the field.",
+    "setGpa(double gpa) uses this.gpa for the same reason."
+  ],
+  "pitfall": "Writing name = name; compiles with no error, so the bug only shows up later as null or 0 when you print the field.",
+  "keywords": ["this", "this keyword", "constructor", "field", "parameter", "shadowing", "null", "self"]
+}

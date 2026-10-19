@@ -1,0 +1,10 @@
+{
+  "summary": "A parameterized constructor lets you give an object its starting values in the same line that creates it. A class can keep its default constructor too, and Java picks the one whose parameters match your arguments.",
+  "notes": [
+    "Both constructors are named Student. Java tells them apart by their parameter lists.",
+    "name = studentName; copies the parameter into the field.",
+    "new Student(\"Maya\", 10, 3.8) must list the arguments in the same order and types as the parameters."
+  ],
+  "pitfall": "If you write only the parameterized constructor, Java no longer gives you a default one, so new Student() causes the compile error: constructor Student in class Student cannot be applied to given types.",
+  "keywords": ["constructor", "parameterized constructor", "default constructor", "overloading", "new", "parameter", "argument"]
+}

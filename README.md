@@ -1,6 +1,6 @@
 # Side by Side
 
-A code reference for high school computer science students. 55 concepts, each written in Python and Java, from `print` to threads, generics, memoization, and a game loop. Students filter by language, level, topic, and search, and can view both languages side by side.
+A code reference for high school computer science students. 59 concepts, each written in Python and Java, from `print` to threads, generics, memoization, and a game loop. Students filter by language, level, topic, and search, and can view both languages side by side.
 
 Live site: https://tjmorales.github.io/coding-side-by-side/
 

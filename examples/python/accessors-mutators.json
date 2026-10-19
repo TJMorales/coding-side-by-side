@@ -1,0 +1,10 @@
+{
+  "summary": "An accessor (getter) method returns a field's value, and a mutator (setter) method changes it. A mutator can check a new value before it saves it.",
+  "notes": [
+    "self._gpa uses a leading underscore to say: use the methods, not the field.",
+    "set_gpa only saves new_gpa when it is between 0.0 and 4.0.",
+    "maya.get_gpa() needs parentheses to call the method."
+  ],
+  "pitfall": "Writing maya.get_gpa without parentheses prints something like <bound method Student.get_gpa of ...> instead of the GPA.",
+  "keywords": ["getter", "setter", "accessor", "mutator", "method", "self", "private", "underscore", "validation"]
+}

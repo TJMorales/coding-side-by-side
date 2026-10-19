@@ -1,0 +1,10 @@
+{
+  "summary": "A class defines a new type with its own fields. new creates an object from the class and runs its constructor.",
+  "notes": [
+    "String name; declares a field. Every Student object has its own name.",
+    "public Student() is the default constructor. It has the same name as the class and no return type.",
+    "maya.name = \"Maya\" changes only maya. jordan keeps its own empty name."
+  ],
+  "pitfall": "Writing public void Student() turns the constructor into an ordinary method, so new Student() never runs it and name stays null.",
+  "keywords": ["class", "object", "field", "constructor", "default constructor", "new", "dot notation", "instance"]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "return sends a value back to the code that called the function, so you can store it, print it, or use it in math. print() only shows a value on the screen.",
+  "notes": [
+    "total = get_total(40, 45) stores the returned value in a variable.",
+    "In letter_grade, the first return that runs ends the function. The lines after it are skipped.",
+    "show_total has no return statement, so result is None."
+  ],
+  "pitfall": "Using print instead of return and then doing math with the result causes TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'.",
+  "keywords": ["return", "print", "None", "return value", "function", "def", "early return"]
+}

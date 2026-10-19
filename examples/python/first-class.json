@@ -1,0 +1,10 @@
+{
+  "summary": "A class defines a new type with its own fields. Each object you create from the class gets its own copy of those fields.",
+  "notes": [
+    "__init__(self) runs every time you call Student().",
+    "self.name = \"\" creates the name field on the new object.",
+    "maya.name = \"Maya\" changes only maya. jordan keeps its own empty name."
+  ],
+  "pitfall": "Writing maya = Student without parentheses stores the class itself, not a new object. Setting maya.name then changes the class, not a student.",
+  "keywords": ["class", "object", "field", "attribute", "__init__", "self", "dot notation", "instance"]
+}

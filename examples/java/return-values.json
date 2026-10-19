@@ -1,0 +1,10 @@
+{
+  "summary": "return sends a value back to the code that called the method, so you can store it or use it in math. The return type before the method name says what kind of value comes back, and void means nothing comes back.",
+  "notes": [
+    "static int getTotal means the method must return an int.",
+    "In letterGrade, the first return that runs ends the method. The lines after it are skipped.",
+    "total / 2.0 divides by a double, so the average keeps its decimal: 42.5."
+  ],
+  "pitfall": "Leaving out the last return in letterGrade causes the compile error: missing return statement. Every path through a non-void method must return a value.",
+  "keywords": ["return", "void", "return type", "method", "println", "missing return statement", "early return"]
+}

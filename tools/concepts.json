@@ -84,6 +84,13 @@
   "contrast": "Python uses def with no types. Java methods live inside a class and declare a return type and parameter types."
  },
  {
+  "id": "return-values",
+  "level": "intro",
+  "topic": "Functions",
+  "title": "Return a value",
+  "contrast": "Python functions return None if they reach the end without return. A Java method declares its return type, and a non-void method must return a value of that type on every path."
+ },
+ {
   "id": "strings-basics",
   "level": "intro",
   "topic": "Strings",
@@ -96,6 +103,34 @@
   "topic": "Errors & files",
   "title": "Read an error message",
   "contrast": "Python reports syntax errors before running but type mistakes only when that line runs. Java's compiler catches both before the program runs. A bad index crashes both while running."
+ },
+ {
+  "id": "first-class",
+  "level": "intro",
+  "topic": "OOP",
+  "title": "Your first class",
+  "contrast": "Python creates fields inside __init__ with self. Java declares fields at the top of the class, and a no-argument constructor sets each one to a starting value."
+ },
+ {
+  "id": "parameterized-constructor",
+  "level": "intro",
+  "topic": "OOP",
+  "title": "Parameterized constructor",
+  "contrast": "Python allows only one __init__, so default parameter values let it work with or without arguments. Java writes a second constructor with parameters, so a class can have both a default and a parameterized constructor."
+ },
+ {
+  "id": "accessors-mutators",
+  "level": "intro",
+  "topic": "OOP",
+  "title": "Accessor and mutator methods",
+  "contrast": "Java marks fields private, and the compiler blocks access from outside the class. Python marks them with a leading underscore by convention only. In both, mutators usually return nothing."
+ },
+ {
+  "id": "this-keyword",
+  "level": "intro",
+  "topic": "OOP",
+  "title": "The this keyword",
+  "contrast": "Python always writes self.field. Java needs this.field only when a parameter has the same name as the field."
  },
  {
   "id": "string-methods",
@@ -150,7 +185,7 @@
   "id": "parameters-returns",
   "level": "intermediate",
   "topic": "Functions",
-  "title": "Parameters and return values",
+  "title": "Multiple parameters and returns",
   "contrast": "Python can return several values as a tuple. A Java method returns one value of its declared type."
  },
  {
@@ -189,18 +224,11 @@
   "contrast": "Python needs import math. Java's Math class is always available."
  },
  {
-  "id": "classes-objects",
+  "id": "constructor-chaining",
   "level": "advanced",
   "topic": "OOP",
-  "title": "Classes and objects",
-  "contrast": "Python declares fields inside __init__ with self. Java declares fields at the top of the class with types."
- },
- {
-  "id": "constructors",
-  "level": "advanced",
-  "topic": "OOP",
-  "title": "Constructors",
-  "contrast": "Python has one __init__ and uses default values. Java can overload several constructors with different parameters."
+  "title": "Overloaded constructors and this()",
+  "contrast": "Java can overload several constructors and chain them with this(...). Python has one __init__ and uses default parameter values instead."
  },
  {
   "id": "encapsulation",
