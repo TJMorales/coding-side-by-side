@@ -166,11 +166,28 @@
   /* ---------- concept rendering ---------- */
   const levelOf = (id) => LEVELS.findIndex((l) => l.id === id);
 
+  // Split highlighted HTML into lines. A token that spans lines (a docstring or Javadoc)
+  // is closed at each line break and reopened on the next line, so every line is valid HTML.
+  function splitLines(html) {
+    const out = [];
+    let cur = "", open = [];
+    const re = /(<span class="[^"]*">)|(<\/span>)|(\n)|([^<\n]+)/g;
+    let m;
+    while ((m = re.exec(html))) {
+      if (m[1]) { open.push(m[1]); cur += m[1]; }
+      else if (m[2]) { open.pop(); cur += m[2]; }
+      else if (m[3]) { cur += "</span>".repeat(open.length); out.push(cur); cur = open.join(""); }
+      else cur += m[4];
+    }
+    out.push(cur);
+    return out;
+  }
+
   function codeBlock(lang, ex, cid) {
     const html = (lang === "python" ? H.python : H.java)(ex.code);
-    const lines = html.split("\n");
+    const lines = splitLines(html);
     const long = lines.length > COLLAPSE_AT;
-    const body = lines.map((l) => '<span class="ln">' + (l || " ") + "</span>").join("");
+    const body = lines.map((l) => '<span class="ln">' + (l.replace(/<[^>]+>/g, "") ? l : l + " ") + "</span>").join("");
     return '<figure class="code' + (long ? " is-collapsed" : "") + '">' +
       '<figcaption class="code-bar"><span class="code-file">' + LANGS[lang].file + '</span>' +
       '<span class="code-lines">' + lines.length + " lines</span>" +
