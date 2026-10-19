@@ -335,6 +335,10 @@
     renderConcepts();
   }
 
+  // Topics start open beside the content on wide screens and folded on phones.
+  const railBox = document.getElementById("rail-box");
+  if (railBox && !matchMedia("(min-width: 981px)").matches) railBox.open = false;
+
   readHash();
   update();
   window.addEventListener("hashchange", () => {

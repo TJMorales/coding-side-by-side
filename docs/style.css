@@ -649,10 +649,13 @@ body[data-lang="java"] .concept-title { font-family: var(--f-java); font-weight:
   padding: 48px 24px 44px;
   border-bottom: 1px solid var(--rule);
   background:
-    url("https://d8j0ntlcm91z4.cloudfront.net/user_3FHspHdiasmC0fwfZkWWBnKEGp0/hf_20261019_171323_fa3dc4b6-cfc2-4f5a-9248-cfa6a03d77fa.png") center / cover no-repeat,
+    url("hero.jpg") center / cover no-repeat,
     linear-gradient(90deg, #ffd21f 50%, #2b2b2b 50%);
 }
 .hero .masthead-top { margin-bottom: 28px; }
+@supports (background-image: url("hero.webp")) {
+  .hero { background-image: image-set(url("hero.webp") type("image/webp"), url("hero.jpg") type("image/jpeg")), linear-gradient(90deg, #ffd21f 50%, #2b2b2b 50%); }
+}
 /* On the photo: the Python half of the wordmark sits on yellow, the Java half on the dark IDE side. */
 .hero .wm-py { color: #0a3fd1; }
 .hero .wm-java { color: #ffffff; }
@@ -712,3 +715,8 @@ body[data-lang="java"] .concept-title { font-family: var(--f-java); font-weight:
 .topic { margin-bottom: 6px; }
 .topic ol { margin: 2px 0 8px 10px; }
 .topic-all { margin-bottom: 10px; }
+
+@media (max-width: 720px) {
+  .hero { min-height: 0; padding: 32px 16px 24px; }
+  .hero .facets { grid-template-columns: minmax(0, 1fr); grid-template-areas: "search" "lang" "level"; }
+}
