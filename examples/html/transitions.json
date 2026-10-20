@@ -1,0 +1,11 @@
+{
+  "summary": "Transitions are added in CSS. The HTML only needs elements that change state, like links and buttons people can hover or focus.",
+  "notes": [
+    "Each meeting is a link, so it can be reached with the Tab key as well as the mouse.",
+    "Hover a meeting or the RSVP button in the preview to see the colors fade.",
+    "The links fill their list items in the CSS, so the whole row is clickable."
+  ],
+  "pitfall": "Adding hover effects to a plain <div> or <li> that is not a link or button. Keyboard users can never trigger them.",
+  "keywords": ["hover", "focus", "link", "button", "interactive"],
+  "preview_height": 335
+}

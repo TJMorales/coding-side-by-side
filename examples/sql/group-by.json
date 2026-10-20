@@ -1,0 +1,10 @@
+{
+  "summary": "GROUP BY splits rows into groups that share a value and runs the aggregate once per group. HAVING keeps only the groups that match a condition.",
+  "notes": [
+    "Each column in SELECT should be either in GROUP BY or inside an aggregate like COUNT or AVG.",
+    "Grade 9 has 2 students but the average GPA uses only Diego, because Zoe's GPA is NULL.",
+    "WHERE filters rows before grouping. HAVING filters groups after the aggregates are calculated."
+  ],
+  "pitfall": "Putting an aggregate in WHERE, as in WHERE COUNT(*) >= 4, gives Parse error: misuse of aggregate: COUNT(). Move the condition to HAVING.",
+  "keywords": ["GROUP BY", "HAVING", "per group", "count per", "average per", "aggregate"]
+}

@@ -1,0 +1,18 @@
+{
+  "summary": "CSS controls the marker (bullet or number) and the spacing of list items.",
+  "notes": [
+    "list-style-type sets the marker: disc, circle, square, decimal, upper-alpha, none, and more.",
+    "The selector ul ul matches a list nested inside another list, so the inner bullets can look different.",
+    "The indent comes from padding-left on the list. The markers sit inside that padding."
+  ],
+  "pitfall": "Setting padding-left: 0 to remove the indent. The bullets then sit outside the page edge and seem to disappear.",
+  "keywords": [
+    "list-style-type",
+    "bullet style",
+    "marker",
+    "padding-left",
+    "indent",
+    "nested list",
+    "descendant selector"
+  ]
+}

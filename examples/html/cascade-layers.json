@@ -1,0 +1,11 @@
+{
+  "summary": "Cascade layers are set up in CSS. The HTML is a row of buttons, and each label names the layer that wins for that button.",
+  "notes": [
+    "The third button has an id and a class. Normally the id rule would win.",
+    "Compare each label with the rules in the CSS pane to see why it got that color.",
+    "type=\"button\" makes buttons that do nothing when clicked, which is all this demo needs."
+  ],
+  "pitfall": "Adding more ids or classes in the HTML to fight a style you cannot override. With layers you can put the styles in the right order instead.",
+  "keywords": ["button", "class", "id", "layers"],
+  "preview_height": 260
+}

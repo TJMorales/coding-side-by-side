@@ -1,0 +1,33 @@
+{
+  "summary": "git merge combines the commits from another branch into the current branch. Switch to the branch that should receive the changes first.",
+  "notes": [
+    "A fast-forward happens when the current branch has no new commits. Git moves the branch name forward and makes no merge commit.",
+    "A merge commit has two parents. In the graph, it is where two lines join.",
+    "--no-edit accepts the default merge message instead of opening an editor."
+  ],
+  "pitfall": "Merging while on the wrong branch merges in the wrong direction. Run git branch or git status before git merge.",
+  "keywords": [
+    "git merge",
+    "fast-forward",
+    "merge commit",
+    "--no-edit",
+    "git branch -d"
+  ],
+  "setup_note": "Starts on main with two commits. Two branches start from main: letter-grades (a change to gradebook.py) and readme-typo (a fix to README.md).",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz socres for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git switch -q -c letter-grades",
+    "printf 'print(\"Letter:\", \"A\" if average >= 90 else \"B\")\\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Print a letter grade\"",
+    "git switch -q main",
+    "git switch -q -c readme-typo",
+    "sed -i 's/socres/scores/' README.md",
+    "git add -A && git commit -q -m \"Fix typo in README\"",
+    "git switch -q main"
+  ]
+}

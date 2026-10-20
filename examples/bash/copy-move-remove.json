@@ -1,0 +1,10 @@
+{
+  "summary": "cp copies, mv moves or renames, and rm deletes. Each one takes the source first and the destination second.",
+  "notes": [
+    "mv old/notes-backup.txt old/notes-week1.txt renames the file, because the folder stays the same and only the name changes.",
+    "The second rm old/notes-week1.txt fails with rm: cannot remove 'old/notes-week1.txt': No such file or directory, because the first one already deleted it.",
+    "rm -r music-copy old deletes two folders and everything inside them. Check the names before you press Enter."
+  ],
+  "pitfall": "rm on a folder fails with rm: cannot remove 'music-copy': Is a directory. Add -r to remove a folder, and be careful: rm does not ask and does not use a trash can.",
+  "keywords": ["cp", "mv", "rm", "copy", "move", "rename", "delete", "remove", "cp -r", "rm -r", "Is a directory"]
+}

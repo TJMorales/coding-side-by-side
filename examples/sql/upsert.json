@@ -1,0 +1,10 @@
+{
+  "summary": "An upsert inserts a row, or updates the existing row if one with the same key is already there. Use it to save a value without checking first whether the row exists.",
+  "notes": [
+    "ON CONFLICT ... DO UPDATE is the syntax in SQLite and PostgreSQL. MySQL uses ON DUPLICATE KEY UPDATE, and SQL Server uses MERGE.",
+    "excluded.grade is the value from the row you tried to insert (88 or 92).",
+    "The conflict columns must match a PRIMARY KEY or UNIQUE constraint, here (student_id, course_id, semester)."
+  ],
+  "pitfall": "A plain INSERT of an existing key fails with Runtime error: UNIQUE constraint failed: enrollments.student_id, enrollments.course_id, enrollments.semester (19). INSERT OR REPLACE avoids the error but deletes the old row first, so any column you leave out becomes NULL.",
+  "keywords": ["upsert", "ON CONFLICT", "DO UPDATE", "DO NOTHING", "excluded", "INSERT OR REPLACE", "MERGE", "ON DUPLICATE KEY"]
+}

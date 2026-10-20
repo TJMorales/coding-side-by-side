@@ -1,0 +1,10 @@
+{
+  "summary": "Semantic tags can be styled by name, the same as p or h1. This page gives the header a colored band and the aside a left border.",
+  "notes": [
+    "header h1 matches only the h1 inside the header.",
+    "Links are inline elements, so they sit side by side in the nav. margin-right spaces them out.",
+    "Semantic tags have no special look by default. All of the style here comes from this file."
+  ],
+  "pitfall": "Expecting <aside> to appear as a sidebar on its own. Every one of these tags stacks top to bottom until you add layout CSS (flexbox or grid, later).",
+  "keywords": ["header", "nav", "main", "aside", "footer", "descendant selector", "layout", "sidebar"]
+}

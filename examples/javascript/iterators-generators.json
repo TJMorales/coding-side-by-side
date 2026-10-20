@@ -1,0 +1,11 @@
+{
+  "summary": "An iterator hands out values one at a time with next(). A generator function, written function*, uses yield to build an iterator in a few lines and makes each value only when it is asked for.",
+  "notes": [
+    "next() returns an object like { value: 3, done: false }. When nothing is left, it returns { value: undefined, done: true }.",
+    "A class becomes usable in for...of and [...x] by defining a [Symbol.iterator]() method that returns an object with next().",
+    "take(4).toArray() stops the endless generator after 4 values. take() is an iterator helper added in Node 22."
+  ],
+  "pitfall": "A generator can only be looped over once. A second for...of loop over the same generator object runs zero times with no error.",
+  "keywords": ["generator", "function*", "yield", "iterator", "next", "Symbol.iterator", "done", "for...of", "lazy", "iterator protocol", "take"],
+  "contrast": "JavaScript has yield like Python, but the function needs a * and next() returns { value, done } objects. A used-up iterator returns done: true instead of raising StopIteration (Python) or throwing NoSuchElementException (Java)."
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "Memoization saves the result of each function call so the same input is never computed twice. It turns naive recursive Fibonacci from exponential time into linear time.",
+  "notes": [
+    "memo.has(n) checks for a saved answer before doing any work. memo.get(n) and memo.set(n, result) read and save it.",
+    "fib(90) is about 2.9 quintillion, past Number.MAX_SAFE_INTEGER, so the regular number version rounds it to 2880067194370816000.",
+    "BigInt values like 1n add exactly at any size, but you cannot mix them with regular numbers: 1n + 1 throws TypeError."
+  ],
+  "pitfall": "Putting const memo = new Map() inside fibMemo creates a new empty Map on every call, so nothing is ever saved and the function is as slow as the naive version.",
+  "keywords": ["memoization", "dynamic programming", "Map", "has", "get", "set", "fibonacci", "recursion", "cache", "BigInt", "MAX_SAFE_INTEGER"],
+  "contrast": "JavaScript has no built-in cache like Python's @functools.cache, so you store results in a Map by hand, as Java does with a HashMap. Its numbers lose precision past 2 ** 53, where Python ints stay exact and Java's long overflows after fib(92)."
+}

@@ -1,0 +1,40 @@
+{
+  "summary": "git push uploads your commits to a remote. git pull downloads commits other people pushed and merges them into your branch.",
+  "notes": [
+    "git pull is git fetch followed by git merge. git fetch alone downloads without changing your files.",
+    "\"Your branch is up to date\" only means up to date with the last fetch. Run git pull to check for new work.",
+    "The pull made a merge commit because both Maya and Jordan had new commits."
+  ],
+  "pitfall": "git push fails with \"rejected ... (fetch first)\" when someone pushed before you. Run git pull, fix any conflicts, then push again.",
+  "keywords": [
+    "git push",
+    "git pull",
+    "git fetch",
+    "rejected",
+    "fetch first",
+    "origin",
+    "upstream"
+  ],
+  "setup_note": "Starts in Maya's clone of ../gradebook.git. Her teammate Jordan has his own clone in ../jordan and already pushed a commit Maya does not have.",
+  "setup": [
+    "git init -q ../seed",
+    "cd ../seed",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git clone -q --bare . ../gradebook.git",
+    "cd ../project",
+    "rm -rf ../seed",
+    "git clone -q ~/gradebook.git .",
+    "git clone -q ~/gradebook.git ../jordan",
+    "cd ../jordan",
+    "git config user.name \"Jordan Kim\"",
+    "git config user.email jordan@example.com",
+    "printf '\\nRun: python3 gradebook.py\\n' >> README.md",
+    "git add -A && git commit -q -m \"Add how to run\"",
+    "git push -q",
+    "cd ../project"
+  ]
+}

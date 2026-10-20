@@ -1,0 +1,11 @@
+{
+  "summary": "An accessor (getter) method returns a private field's value, and a mutator (setter) method changes it. A mutator can check a new value before it saves it.",
+  "notes": [
+    "#gpa is a private field. Inside the class you write this.#gpa, with the # every time.",
+    "setGpa only saves newGpa when it is between 0.0 and 4.0.",
+    "maya.getGpa() needs parentheses to call the method. Mutators like setGpa return nothing, so they give back undefined."
+  ],
+  "pitfall": "Writing maya.#gpa outside the class causes SyntaxError: Private field '#gpa' must be declared in an enclosing class, before any line runs. Use maya.getGpa() instead.",
+  "keywords": ["getter", "setter", "accessor", "mutator", "private", "#", "private field", "encapsulation", "validation"],
+  "contrast": "A # field is blocked outside the class like Java's private, not just marked by convention like Python's underscore. As in both, mutators usually return nothing, which in JavaScript means undefined."
+}

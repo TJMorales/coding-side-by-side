@@ -1,0 +1,164 @@
+[
+ {
+  "id": "select-columns",
+  "level": "intro",
+  "topic": "Querying",
+  "title": "Select columns"
+ },
+ {
+  "id": "where",
+  "level": "intro",
+  "topic": "Filtering",
+  "title": "Filter rows with WHERE"
+ },
+ {
+  "id": "and-or-not",
+  "level": "intro",
+  "topic": "Filtering",
+  "title": "Combine conditions with AND, OR, NOT"
+ },
+ {
+  "id": "order-limit",
+  "level": "intro",
+  "topic": "Querying",
+  "title": "Sort and limit results"
+ },
+ {
+  "id": "aliases-expressions",
+  "level": "intro",
+  "topic": "Querying",
+  "title": "Calculated columns and aliases"
+ },
+ {
+  "id": "create-table",
+  "level": "intro",
+  "topic": "Changing data",
+  "title": "Create a table"
+ },
+ {
+  "id": "insert",
+  "level": "intro",
+  "topic": "Changing data",
+  "title": "Insert rows"
+ },
+ {
+  "id": "update-delete",
+  "level": "intermediate",
+  "topic": "Changing data",
+  "title": "Update and delete rows"
+ },
+ {
+  "id": "aggregates",
+  "level": "intermediate",
+  "topic": "Summarizing",
+  "title": "COUNT, SUM, AVG, MIN, MAX"
+ },
+ {
+  "id": "group-by",
+  "level": "intermediate",
+  "topic": "Summarizing",
+  "title": "GROUP BY and HAVING"
+ },
+ {
+  "id": "inner-join",
+  "level": "intermediate",
+  "topic": "Joins",
+  "title": "Inner join"
+ },
+ {
+  "id": "left-join",
+  "level": "intermediate",
+  "topic": "Joins",
+  "title": "Left join"
+ },
+ {
+  "id": "null-values",
+  "level": "intermediate",
+  "topic": "Filtering",
+  "title": "Work with NULL"
+ },
+ {
+  "id": "like-in-between",
+  "level": "intermediate",
+  "topic": "Filtering",
+  "title": "LIKE, IN, and BETWEEN"
+ },
+ {
+  "id": "distinct",
+  "level": "intermediate",
+  "topic": "Querying",
+  "title": "Remove duplicates with DISTINCT"
+ },
+ {
+  "id": "subqueries",
+  "level": "advanced",
+  "topic": "Querying",
+  "title": "Subqueries"
+ },
+ {
+  "id": "keys-constraints",
+  "level": "advanced",
+  "topic": "Design",
+  "title": "Primary keys, foreign keys, and constraints"
+ },
+ {
+  "id": "case-expressions",
+  "level": "advanced",
+  "topic": "Querying",
+  "title": "CASE expressions"
+ },
+ {
+  "id": "indexes",
+  "level": "advanced",
+  "topic": "Performance",
+  "title": "Indexes and query plans"
+ },
+ {
+  "id": "views",
+  "level": "advanced",
+  "topic": "Design",
+  "title": "Views"
+ },
+ {
+  "id": "transactions",
+  "level": "advanced",
+  "topic": "Changing data",
+  "title": "Transactions"
+ },
+ {
+  "id": "window-functions",
+  "level": "brilliant",
+  "topic": "Summarizing",
+  "title": "Window functions"
+ },
+ {
+  "id": "ctes",
+  "level": "brilliant",
+  "topic": "Querying",
+  "title": "Common table expressions"
+ },
+ {
+  "id": "recursive-cte",
+  "level": "brilliant",
+  "topic": "Querying",
+  "title": "Recursive queries"
+ },
+ {
+  "id": "normalization",
+  "level": "brilliant",
+  "topic": "Design",
+  "title": "Normalization"
+ },
+ {
+  "id": "sql-injection",
+  "level": "brilliant",
+  "topic": "Security",
+  "title": "SQL injection and parameters"
+ },
+ {
+  "id": "upsert",
+  "level": "brilliant",
+  "topic": "Changing data",
+  "title": "Upsert"
+ }
+]

@@ -1,0 +1,11 @@
+{
+  "summary": "An abstract class shares code but leaves some methods for subclasses, and you cannot create objects from it. JavaScript has no keyword for this, so you check new.target in the constructor and throw.",
+  "notes": [
+    "new.target === Assignment is true only for new Assignment(...). For new Quiz(...), new.target is Quiz, so the check passes.",
+    "The base percent() throws an Error, so a subclass that forgets to write percent() fails when summary() calls it.",
+    "extraCredit is a plain object, not an Assignment, but it has percent(), so map() can use it. This is duck typing."
+  ],
+  "pitfall": "JavaScript does not check for missing methods ahead of time. A subclass without percent() is created with no error and fails only when percent() is called, here with Error: Quiz must write percent().",
+  "keywords": ["abstract class", "interface", "new.target", "duck typing", "throw", "TypeError", "subclass", "extends"],
+  "contrast": "Python's ABC and Java's abstract keyword block missing methods for you; JavaScript has neither, so you write the new.target check and throwing methods yourself. JavaScript has no interface keyword, so any object with the right methods fits, like Python's duck typing."
+}

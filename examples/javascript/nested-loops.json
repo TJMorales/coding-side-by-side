@@ -1,0 +1,11 @@
+{
+  "summary": "A nested loop is a loop inside another loop. Use it for rows and columns: tables, patterns, and grids.",
+  "notes": [
+    "The inner loop starts over at col = 1 each time the outer loop moves to its next row.",
+    "console.log() always ends the line, so the times table builds each row in line first. process.stdout.write() prints without ending the line.",
+    "col < row in the inner loop makes row 1 print 1 star, row 2 print 2 stars, and so on."
+  ],
+  "pitfall": "Calling console.log(row * col) inside the inner loop puts every number on its own line, because console.log() always ends the line.",
+  "keywords": ["nested loop", "inner loop", "outer loop", "rows", "columns", "times table", "pattern", "padStart", "process.stdout.write"],
+  "contrast": "Same structure as Java, with braces showing the nesting. console.log() always ends the line, so you build a row as a string or use process.stdout.write(), where Python uses print(end=\"\") and Java uses print()."
+}

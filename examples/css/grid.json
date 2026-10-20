@@ -1,0 +1,10 @@
+{
+  "summary": "display: grid turns an element into a grid. grid-template-columns sets the columns, gap sets the space between cells, and grid-column lets one item cover more than one column.",
+  "notes": [
+    "repeat(3, 1fr) is short for 1fr 1fr 1fr: three columns that split the width equally.",
+    "Items fill the grid left to right, then start a new row. You do not have to place each one.",
+    "grid-column: span 2 makes the featured card two columns wide, so only one more card fits in the first row."
+  ],
+  "pitfall": "Writing grid-template-columns: 3; and expecting three columns. It needs a size for each column, like repeat(3, 1fr).",
+  "keywords": ["grid", "display grid", "grid-template-columns", "fr", "repeat", "gap", "grid-column", "span", "columns", "rows"]
+}

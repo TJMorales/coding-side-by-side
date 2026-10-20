@@ -1,0 +1,10 @@
+{
+  "summary": "CSS colors can be written as names, hex codes, rgb(), or hsl(). Sizes use units: px is fixed, rem follows the root font size, and % follows the parent element.",
+  "notes": [
+    "#a33a00 is three hex pairs: a3 red, 3a green, 00 blue. rgb(46, 125, 50) writes the same idea in decimal.",
+    "In rgb(29 78 137 / 25%) the value after the slash is alpha (opacity), so the page background shows through.",
+    "Use rem for font sizes. If someone sets a larger default font in their browser, rem text grows with it and px text does not."
+  ],
+  "pitfall": "Writing a hex color without the # (color: a33a00;). The browser ignores the whole declaration.",
+  "keywords": ["color", "hex", "rgb", "rgba", "hsl", "alpha", "opacity", "px", "rem", "percent", "units", "named colors"]
+}

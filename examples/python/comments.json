@@ -2,8 +2,8 @@
   "summary": "A comment is a note for people reading your code. Python skips it when the program runs.",
   "notes": [
     "# starts a comment that runs to the end of the line.",
-    "A string in triple quotes at the top of a file or function is a docstring. It describes what that code does.",
-    "percent.__doc__ holds the docstring, which is what help(percent) shows."
+    "A string in triple quotes at the top of a file is a docstring. It describes what the file does.",
+    "__doc__ holds the file's docstring. Putting # in front of a line of code turns it off without deleting it."
   ],
   "pitfall": "Using // for a comment, as in Java, causes SyntaxError: invalid syntax. Python comments use #.",
   "keywords": [

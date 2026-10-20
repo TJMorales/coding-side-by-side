@@ -1,0 +1,10 @@
+{
+  "summary": "wc counts, sort orders lines, and uniq removes repeated lines. Together they answer questions like \"how many different names?\" and \"who scored highest?\"",
+  "notes": [
+    "wc notes.txt prints 3 numbers before the name: lines, words, and bytes.",
+    "In sort -t, -k3 -n -r, -t, splits on commas, -k3 sorts by the 3rd column, -n compares as numbers, and -r reverses so the highest is first.",
+    "tail -n +2 starts at line 2, which skips the header row name,grade,score. cut -d, -f2 keeps only the 2nd column."
+  ],
+  "pitfall": "uniq without sort misses duplicates that are not next to each other. uniq cs/roster.txt still has 10 lines because the second Ava and Leo are at the end. Use sort | uniq.",
+  "keywords": ["wc", "wc -l", "sort", "sort -n", "sort -r", "sort -k", "uniq", "uniq -c", "uniq -d", "count", "duplicates", "cut", "top scores"]
+}

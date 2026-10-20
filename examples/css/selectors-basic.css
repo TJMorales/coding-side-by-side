@@ -1,0 +1,32 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+/* Element selector: every p on the page. */
+p {
+  margin: 6px 0;
+  color: #444;
+}
+
+/* Class selector starts with a dot: every element with class="officer". */
+.officer {
+  font-weight: bold;
+  color: #1d4e89;
+}
+
+/* Id selector starts with #: the one element with id="president". */
+#president {
+  font-size: 22px;
+  color: #a33a00;
+}
+
+.new {
+  font-style: italic;
+}
+
+/* A group: one rule for several selectors, separated by commas. */
+h1, #president {
+  font-family: Georgia, serif;
+}

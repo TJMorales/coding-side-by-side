@@ -1,0 +1,12 @@
+{
+  "summary": "When a program crashes, Node prints the line that failed, the error type and reason, and a stack trace. Use them to find the bug.",
+  "notes": [
+    "Read the line that starts with TypeError: it says what was undefined and what you tried to read from it.",
+    "The \"at\" line below it also gives the line and column: main.js:11:48.",
+    "Lines before the crash still ran, so their output appears above the error."
+  ],
+  "pitfall": "Looking only at the line that crashed. scores[3] became undefined on that line, but in bigger programs the undefined value often comes from an earlier line, such as a misspelled name or a bad index.",
+  "keywords": ["error", "TypeError", "undefined", "stack trace", "crash", "line number", "debug", "runtime error", "Cannot read properties of undefined"],
+  "expect_error": true,
+  "contrast": "Like Python, JavaScript finds syntax errors before running but type mistakes only when that line runs. A bad index does not crash as it does in Python and Java: it gives undefined, and the crash comes later when you use that value."
+}

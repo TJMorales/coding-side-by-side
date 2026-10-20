@@ -1,0 +1,11 @@
+{
+  "summary": "JavaScript uses + - * / for arithmetic, % for the remainder, and ** for powers. / always keeps the decimal, so you round with Math.floor() or Math.trunc() when you want a whole number.",
+  "notes": [
+    "7 / 2 is 3.5. 6 / 2 prints 3, because JavaScript does not show .0 on whole numbers.",
+    "Math.floor(-3.5) is -4 (rounds down). Math.trunc(-3.5) is -3 (drops the decimal).",
+    "-7 % 2 is -1, not 1. The remainder takes the sign of the left number."
+  ],
+  "pitfall": "Testing for odd numbers with n % 2 === 1 misses negative odd numbers, because -7 % 2 is -1. Use n % 2 !== 0.",
+  "keywords": ["math", "operators", "division", "Math.floor", "Math.trunc", "%", "modulo", "remainder", "**", "power"],
+  "contrast": "JavaScript has one number type, so 7 / 2 is 3.5 as in Python, but there is no // operator: use Math.floor() or Math.trunc(). % keeps the sign of the left number like Java, so -7 % 2 is -1 (Python gives 1)."
+}

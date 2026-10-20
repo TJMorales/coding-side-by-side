@@ -1,0 +1,11 @@
+{
+  "summary": "toString() sets the text an object shows in a template literal or String(). JavaScript has no equals hook, so you write an equals() method and call it yourself.",
+  "notes": [
+    "console.log(a) prints the fields, Student { name: 'Maya', studentId: 1001 }. Use String(a) or a template literal to get toString().",
+    "=== and includes() both compare objects by identity, so roster.includes(b) is false.",
+    "roster.some((s) => s.equals(b)) checks each item with your own equals() method."
+  ],
+  "pitfall": "Comparing two students with === or == gives false even when their data matches, because both check whether they are the same object. Call a.equals(b) instead.",
+  "keywords": ["toString", "equals", "===", "==", "String()", "includes", "some", "instanceof", "equality", "identity"],
+  "contrast": "Python's == and Java's contains() both call your equality method, but JavaScript's === and includes() always check identity. JavaScript uses toString() in template literals, but console.log(object) shows the fields instead."
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "SELECT DISTINCT removes duplicate rows from a result, so each value appears once.",
+  "notes": [
+    "With more than one column, DISTINCT removes rows where every listed column matches. Morales appears once because all three of his courses are in room 2115.",
+    "COUNT(DISTINCT student_id) counts different students: 21 enrollments belong to 9 students.",
+    "DISTINCT treats NULLs as equal to each other, so several NULL rooms would show as one row."
+  ],
+  "pitfall": "DISTINCT applies to the whole row, not just the first column. SELECT DISTINCT teacher, name FROM courses still shows Morales three times because each course name is different.",
+  "keywords": ["DISTINCT", "unique", "duplicates", "COUNT DISTINCT", "remove duplicates"]
+}

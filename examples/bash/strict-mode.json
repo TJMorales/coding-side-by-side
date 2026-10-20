@@ -1,0 +1,20 @@
+{
+  "summary": "By default bash keeps going after an error, which can turn one mistake into many. set -euo pipefail makes a script stop at the first problem, and trap ... EXIT runs cleanup code however the script ends.",
+  "notes": [
+    "Each run that got as far as mkdir prints Cleanup: removed archive-tmp, and the ls afterward shows no archive-tmp folder. The EXIT trap ran even when the script stopped early.",
+    "The last line runs the same pipe at the prompt, where pipefail is off: ls fails, wc prints 0, and the exit code is 0, so the failure is hidden.",
+    "With no argument, the script stops at folder=\"$1\" before mkdir, so cleanup has nothing to remove and prints nothing."
+  ],
+  "pitfall": "With -e and pipefail, a grep that finds nothing exits 1 and stops the script, as in count=$(grep ERROR notes.txt | wc -l). Add || true after a command that is allowed to fail.",
+  "keywords": ["set -e", "set -u", "set -o pipefail", "set -euo pipefail", "strict mode", "trap", "EXIT", "cleanup", "unbound variable", "errexit", "nounset", "error handling"],
+  "mode": "script",
+  "filename": "archive.sh",
+  "session": [
+    "./archive.sh cs/project",
+    "./archive.sh music",
+    "./archive.sh games",
+    "./archive.sh",
+    "ls",
+    "ls games | wc -l; echo \"Exit code: $?\""
+  ]
+}

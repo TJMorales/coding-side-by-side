@@ -1,0 +1,10 @@
+{
+  "summary": "A variable stores text under a name so you can reuse it. Environment variables like HOME and USER are set for you, and export passes your own variables to programs you start.",
+  "notes": [
+    "wc -l < cs/roster.txt prints only the number. Without the <, wc also prints the file name.",
+    "bash -c '...' starts a new bash program. Single quotes keep $name from being filled in early, so the child shell reads it.",
+    "printenv lists every environment variable. PATH, HOME, and USER are the ones you will use most."
+  ],
+  "pitfall": "name = Maya with spaces fails with name: command not found, because bash reads name as a command and = and Maya as its arguments. Write name=Maya with no spaces.",
+  "keywords": ["variable", "$", "export", "environment", "env", "printenv", "HOME", "USER", "command substitution", "$( )", "quotes", "single quotes", "double quotes"]
+}

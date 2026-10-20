@@ -1,0 +1,33 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+h1, h2 {
+  color: #1d4e89;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* list-style-type changes the bullet or number style. */
+ul {
+  list-style-type: square;
+}
+
+/* The inner list matches "ul ul": a ul inside another ul. */
+ul ul {
+  list-style-type: circle;
+}
+
+/* Lists are indented with padding on the left by default. */
+ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
+}

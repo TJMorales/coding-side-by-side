@@ -1,0 +1,10 @@
+{
+  "summary": "CREATE TABLE makes a new, empty table. You list each column with its type and any rules, such as NOT NULL.",
+  "notes": [
+    "INTEGER PRIMARY KEY gives each row a unique id. In SQLite it fills in 1, 2, 3 automatically if you leave it out.",
+    "DEFAULT 0 is used when an INSERT does not give a value, so DECA's dues are 0.0.",
+    "SQLite is loose about types: it will store text in an INTEGER column. Most other databases reject that, so pick types as if they were strict."
+  ],
+  "pitfall": "Running the same CREATE TABLE twice gives Parse error: table clubs already exists. Use CREATE TABLE IF NOT EXISTS clubs (...) in scripts you run more than once.",
+  "keywords": ["CREATE TABLE", "column types", "INTEGER", "TEXT", "REAL", "PRIMARY KEY", "NOT NULL", "DEFAULT", ".schema"]
+}

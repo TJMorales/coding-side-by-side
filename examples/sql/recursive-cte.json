@@ -1,0 +1,10 @@
+{
+  "summary": "A recursive CTE refers to itself, so it can repeat a step until there are no new rows. Use it for sequences and for chains like prerequisites or an org chart.",
+  "notes": [
+    "The part before UNION ALL is the starting row. The part after it runs again on each new row until it returns nothing.",
+    "The prerequisite chain stops at Computer Science 1 because no row in prereq lists a course it requires.",
+    "The prereq CTE builds a small table from VALUES, so this example does not change the school database."
+  ],
+  "pitfall": "Leaving out WHERE n < 10 makes the counter run forever and the query never finishes. Add a stopping condition, or a LIMIT on the final SELECT while testing.",
+  "keywords": ["WITH RECURSIVE", "recursive CTE", "UNION ALL", "hierarchy", "tree", "sequence", "prerequisites"]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "CASE picks a value based on conditions, like an if/else inside a query. Use it to label, group, or convert values.",
+  "notes": [
+    "CASE checks each WHEN in order and uses the first one that is true, so WHEN grade >= 80 only sees grades under 90.",
+    "CASE grade_level WHEN 9 THEN ... compares one column to each value. CASE WHEN ... allows any condition.",
+    "Without ELSE, a row that matches no WHEN gets NULL."
+  ],
+  "pitfall": "NULL fails every comparison, so a NULL grade skips all the WHEN grade >= ... lines and gets the ELSE value 'F'. Put WHEN grade IS NULL first.",
+  "keywords": ["CASE", "WHEN", "THEN", "ELSE", "END", "if else", "letter grade", "conditional"]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "clamp(min, preferred, max) picks a size that follows the window width but stays between a minimum and a maximum. It replaces several media queries with one line.",
+  "notes": [
+    "In the preview (about 640px wide), 1rem + 4vw = 16 + 25.6 = 41.6px for the h1. That is between the min (28px) and max (56px), so 41.6px is used.",
+    "At 320px wide the formula gives 28.8px. At 1200px it gives 64px, so the max of 3.5rem (56px) is used instead.",
+    "Mixing rem and vw in the middle value (1rem + 4vw) keeps text growing when someone zooms in, which vw alone does not do."
+  ],
+  "pitfall": "Using only vw for font size (font-size: 5vw). Text becomes tiny on phones and huge on wide screens, and browser zoom has no effect on it.",
+  "keywords": ["clamp", "fluid typography", "vw", "viewport units", "min", "max", "responsive text", "rem", "ch"]
+}

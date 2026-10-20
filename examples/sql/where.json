@@ -1,0 +1,10 @@
+{
+  "summary": "WHERE keeps only the rows that match a condition. Rows where the condition is false are left out of the result.",
+  "notes": [
+    "SQL uses a single = to compare values. Use <> or != for not equal.",
+    "Put text values in single quotes: 'Morales'. Numbers need no quotes.",
+    "Text comparison with = is case sensitive: WHERE teacher = 'morales' returns no rows."
+  ],
+  "pitfall": "Forgetting the quotes around text, as in WHERE first_name = Maya, makes SQL look for a column named Maya: Parse error: no such column: Maya.",
+  "keywords": ["WHERE", "filter", "condition", "comparison", "=", "<>", ">="]
+}

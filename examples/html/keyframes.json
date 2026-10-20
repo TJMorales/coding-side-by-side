@@ -1,0 +1,11 @@
+{
+  "summary": "Keyframe animations are written in CSS. The HTML provides the elements to animate: here, a status dot and a progress bar.",
+  "notes": [
+    "The empty <span class=\"dot\"> is only decoration. The text next to it carries the meaning.",
+    "role=\"progressbar\" with aria-valuenow tells screen readers the bar shows 18 of 24. They cannot see the width.",
+    "Nothing in the HTML starts the animation. The CSS runs it as soon as the page loads."
+  ],
+  "pitfall": "Using motion as the only way to show information, like a blinking dot with no text. People who turn off animation, or use a screen reader, miss it.",
+  "keywords": ["animation", "progress bar", "role", "aria", "status"],
+  "preview_height": 220
+}

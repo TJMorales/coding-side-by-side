@@ -1,0 +1,21 @@
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+p { margin: 6px 0; }
+
+/* Specificity, weakest to strongest:
+   element (p) < class (.note) < id (#urgent). */
+
+/* The id rule is written first on purpose. It still wins,
+   because specificity is checked before order. */
+#urgent { color: #c62828; font-weight: bold; }
+
+.note { color: #2e7d32; }
+
+/* Element selector: the weakest, so any class or id rule beats it. */
+p { color: #555; }
+
+/* Same specificity as .note. When there is a tie, the later rule wins. */
+.reminder { color: #1d4e89; }
+
+/* color is inherited by children that do not set their own color. */
+.club-news { color: #6a1b9a; border-top: 2px solid #ccc; }
+.club-news h2 { font-size: 16px; margin: 6px 0; }

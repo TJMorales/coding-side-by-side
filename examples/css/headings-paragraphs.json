@@ -1,0 +1,10 @@
+{
+  "summary": "CSS controls how headings and paragraphs look: font, size, color, and spacing. The HTML level stays the same no matter how big you make it.",
+  "notes": [
+    "line-height: 1.5 sets the line spacing to 1.5 times the font size. A number with no unit scales with the text.",
+    "font-size on h1 and h2 replaces the browser's default sizes, so you never need to pick a heading level for its looks.",
+    "margin-top: 0 on p removes the default space above each paragraph."
+  ],
+  "pitfall": "Writing font-size: 32 with no unit. The browser ignores it; most lengths need a unit like px or rem.",
+  "keywords": ["font-family", "font-size", "line-height", "color", "margin", "typography", "heading style"]
+}

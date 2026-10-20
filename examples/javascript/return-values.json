@@ -1,0 +1,11 @@
+{
+  "summary": "return sends a value back to the code that called the function, so you can store it, print it, or use it in math. console.log() only shows a value on the screen.",
+  "notes": [
+    "const total = getTotal(40, 45); stores the returned value in a variable.",
+    "In letterGrade, the first return that runs ends the function. The lines after it are skipped.",
+    "showTotal has no return statement, so result is undefined."
+  ],
+  "pitfall": "Using console.log instead of return and then doing math with the result gives NaN with no error message, because undefined / 2 is NaN.",
+  "keywords": ["return", "console.log", "undefined", "return value", "function", "NaN", "early return"],
+  "contrast": "Like Python, a function that reaches the end without return still gives back a value: undefined instead of None. No return type is declared, so nothing checks that every path returns a value, as Java's compiler does."
+}

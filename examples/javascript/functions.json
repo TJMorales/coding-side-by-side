@@ -1,0 +1,11 @@
+{
+  "summary": "A function is a named block of code you can run many times. The function keyword defines it, and return sends a value back to the caller.",
+  "notes": [
+    "function percent(score, total) { ... } defines the function. The body goes in braces.",
+    "return ends the function and gives back a value.",
+    "A function with no return gives back undefined."
+  ],
+  "pitfall": "Calling percent(45) with one argument does not cause an error. total is undefined, and the function returns NaN.",
+  "keywords": ["function", "return", "parameter", "argument", "call", "undefined", "def", "method"],
+  "contrast": "JavaScript uses the function keyword with no types, like Python's def. Missing arguments become undefined instead of causing an error as in Python, or a compile error as in Java."
+}

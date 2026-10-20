@@ -1,0 +1,13 @@
+{
+  "summary": "if runs commands only when a test is true. [ ] (the test command) compares numbers and strings and checks files, and elif and else handle the other cases.",
+  "notes": [
+    "[ \"$score\" -ge 90 ] compares numbers. For strings use =, as in [ \"$letter\" = \"F\" ].",
+    "Every if ends with fi, and then goes on the same line as the test after a semicolon: if [ ... ]; then.",
+    "Put variables in double quotes inside [ ]. If $name is empty, [ -z \"$name\" ] still works, but [ -z $name ] can break."
+  ],
+  "pitfall": "Leaving out the spaces breaks the test. [\"$score\" -ge 90] fails with [92: command not found, because [ is a command and needs spaces around it like any other command.",
+  "keywords": ["if", "then", "else", "elif", "fi", "test", "[ ]", "[[ ]]", "-eq", "-ge", "-gt", "-lt", "-z", "-f", "-d", "compare", "condition"],
+  "mode": "script",
+  "filename": "grade.sh",
+  "session": ["./grade.sh Noah", "./grade.sh Leo", "./grade.sh Lucas", "./grade.sh Sofia", "./grade.sh Zoe", "./grade.sh"]
+}

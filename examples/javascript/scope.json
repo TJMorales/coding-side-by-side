@@ -1,0 +1,11 @@
+{
+  "summary": "Scope is where in the code a variable can be used. A variable made with let or const exists only from its declaration to the closing brace of its block.",
+  "notes": [
+    "message is declared inside the if braces, so it is gone after the closing brace. status is declared before the if, so it still exists after it.",
+    "var quiz is still there after the loop. It is 4, because the loop stops when quiz <= 3 becomes false.",
+    "addPoints() changes the outer totalPoints directly. reset() declares its own totalPoints with let, so the outer one stays 25."
+  ],
+  "pitfall": "Using a let variable above its declaration in the same block causes ReferenceError: Cannot access 'status' before initialization.",
+  "keywords": ["scope", "block scope", "let", "const", "var", "local variable", "global", "ReferenceError", "variable lifetime"],
+  "contrast": "JavaScript's let and const live only inside their braces, like Java. The older var ignores if and loop braces, like a Python variable. A function can change an outer variable without Python's global keyword."
+}

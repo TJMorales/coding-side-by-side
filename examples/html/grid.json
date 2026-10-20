@@ -1,0 +1,11 @@
+{
+  "summary": "CSS grid places items into rows and columns. In the HTML you only need a container and its child elements; the CSS decides where they go.",
+  "notes": [
+    "Each <article> is one project card and one grid item.",
+    "class=\"featured\" lets the CSS make the first card wider than the others.",
+    "The cards are in reading order in the HTML. Keep it that way so keyboard and screen reader order matches the screen."
+  ],
+  "pitfall": "Adding empty <div> elements to fill grid cells. Grid places items automatically, so you do not need placeholders.",
+  "keywords": ["grid", "grid container", "grid item", "article", "cards"],
+  "preview_height": 310
+}

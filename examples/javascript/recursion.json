@@ -1,0 +1,11 @@
+{
+  "summary": "A recursive function calls itself on a smaller input until it reaches a base case it can answer directly. Use it when a problem breaks into a smaller copy of itself.",
+  "notes": [
+    "Every recursive function needs a base case, like if (n <= 1) return 1;, that makes no further call.",
+    "n / 10 gives a decimal in JavaScript, so Math.floor(n / 10) is needed to drop the last digit.",
+    "depth(-1) counts down past 0 and never reaches n === 0, so Node throws RangeError."
+  ],
+  "pitfall": "Writing sumOfDigits(n / 10) without Math.floor keeps the decimal part, so sumOfDigits(2026) returns 10.885999999999992 instead of 10, with no error to warn you.",
+  "keywords": ["recursion", "recursive", "base case", "factorial", "call stack", "RangeError", "Maximum call stack size exceeded", "Math.floor"],
+  "contrast": "Python stops at about 1000 calls with RecursionError. Node's limit depends on the stack size, like Java, and running out gives RangeError: Maximum call stack size exceeded."
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS Club Announcements</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Announcements</h1>
+    <!-- Every paragraph matches the p rule. Some also match a class or id rule,
+         and the more specific rule wins the color. -->
+    <p>Only p matches: gray.</p>
+    <p class="note">p and .note match: .note is more specific, so green.</p>
+    <p class="note" id="urgent">p, .note, and #urgent match: the id wins, so red.</p>
+    <p class="note reminder">.note and .reminder tie: the rule written last wins, so blue.</p>
+    <!-- A rule on the parent is inherited only if the child has no rule of its own. -->
+    <section class="club-news">
+      <p>This p has its own gray rule, so the section's purple is not used.</p>
+      <h2>This h2 has no color rule, so it inherits purple.</h2>
+    </section>
+  </body>
+</html>

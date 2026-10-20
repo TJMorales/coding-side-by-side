@@ -1,0 +1,11 @@
+{
+  "summary": "The three cards share one class, team. A second class (games, robots) is a hook the CSS uses to change a variable for that card only.",
+  "notes": [
+    "class=\"team games\" gives the card both classes.",
+    "The HTML does not contain any colors. Every color comes from a variable in the CSS.",
+    "Adding a fourth team only needs a new class and one variable in the CSS."
+  ],
+  "pitfall": "Writing a style=\"\" attribute on each card to change its color. That spreads design choices across the HTML and makes them hard to update.",
+  "keywords": ["class", "variant", "theme", "cards"],
+  "preview_height": 250
+}

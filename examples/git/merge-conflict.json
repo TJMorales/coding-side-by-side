@@ -1,0 +1,32 @@
+{
+  "summary": "A merge conflict happens when two branches change the same lines. Git stops, marks both versions in the file, and waits for you to choose.",
+  "notes": [
+    "Between <<<<<<< HEAD and ======= is your branch's version. Between ======= and >>>>>>> is the other branch's version.",
+    "Delete all three marker lines and leave the text you want. In an editor, this is the same edit done by hand.",
+    "git merge --abort cancels the merge and puts everything back the way it was before."
+  ],
+  "pitfall": "Committing a file that still has <<<<<<< in it saves the markers into your code, and Python reports SyntaxError. Run cat or git diff to check before git add.",
+  "keywords": [
+    "merge conflict",
+    "CONFLICT",
+    "<<<<<<<",
+    "=======",
+    ">>>>>>>",
+    "git merge --abort",
+    "resolve"
+  ],
+  "setup_note": "Starts on main. main changed Liam's score to 94, and the branch retake-scores changed the same line to 97.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git switch -q -c retake-scores",
+    "sed -i 's/Liam,92/Liam,97/' scores.csv",
+    "git add -A && git commit -q -m \"Record Liam's retake score\"",
+    "git switch -q main",
+    "sed -i 's/Liam,92/Liam,94/' scores.csv",
+    "git add -A && git commit -q -m \"Fix Liam's score\""
+  ]
+}

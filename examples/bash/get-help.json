@@ -1,0 +1,10 @@
+{
+  "summary": "When you forget what a command does or which option you need, ask the command itself. --help prints a summary of every option, and help explains commands built into bash.",
+  "notes": [
+    "In the help text, [OPTION]... means options are optional and you can give more than one. Text in CAPITALS (FILE, DIRECTORY) is a placeholder for your own name.",
+    "man ls opens the full manual for ls. It is not installed here and it waits for keys (q quits), but on most Linux computers it is the most complete help.",
+    "Once you learn pipes, ls --help | head -n 5 does the first two steps in one command."
+  ],
+  "pitfall": "Typing an option that does not exist gives ls: invalid option -- 'j'. Read the Try 'ls --help' line and look up the right letter instead of guessing.",
+  "keywords": ["--help", "help", "man", "manual", "documentation", "options", "flags", "type", "builtin", "usage", "invalid option"]
+}

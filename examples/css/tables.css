@@ -1,0 +1,30 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+/* By default each cell has its own border with gaps between them.
+   collapse merges neighboring borders into one line. */
+table {
+  border-collapse: collapse;
+  background-color: white;
+}
+
+caption { font-weight: bold; font-size: 18px; text-align: left; margin-bottom: 8px; }
+
+th, td {
+  border: 1px solid #c9c2b4;
+  padding: 6px 12px;
+}
+
+/* Numbers line up best on the right. */
+td { text-align: right; }
+
+/* Only the header cells inside thead get the dark background. */
+thead th { background-color: #1d4e89; color: white; }
+
+/* Row headers stay left-aligned like names in a gradebook. */
+tbody th, tfoot th { text-align: left; }
+
+tfoot { font-weight: bold; background-color: #ffe9d6; }

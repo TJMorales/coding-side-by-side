@@ -1,0 +1,10 @@
+{
+  "summary": "xargs turns lines of input into arguments for another command. Use it when a command like rm, touch, or wc takes file names as arguments but you have the names as output from find, ls, or grep.",
+  "notes": [
+    "wc -l does not read file names from a pipe. find cs -name \"*.py\" | xargs wc -l runs wc -l with both names, so it counts lines in each file and prints a total.",
+    "With -I {}, xargs runs the command once per line: cp quiz1.txt quiz1.txt.bak, then quiz2, then quiz3.",
+    "find has its own safe version: find . -name \"*.bak\" -print0 | xargs -0 rm handles any file name, even ones with spaces or new lines."
+  ],
+  "pitfall": "File names with spaces split into two arguments. ls lab*.txt | xargs rm tries to remove lab and report.txt and fails with rm: cannot remove 'lab': No such file or directory.",
+  "keywords": ["xargs", "xargs -n", "xargs -I", "xargs -0", "xargs -t", "find", "arguments", "pipe to command", "batch", "-print0"]
+}

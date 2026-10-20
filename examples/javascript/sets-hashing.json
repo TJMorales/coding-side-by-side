@@ -1,0 +1,11 @@
+{
+  "summary": "A Set stores each value once and checks membership in O(1) on average. JavaScript compares objects in a Set by identity, so you key by a primitive id to treat equal students as duplicates.",
+  "notes": [
+    "new Set([...]) uses SameValueZero: 1042 equals 1042, but two separate Student objects are never equal, even with the same data.",
+    "attendance.set(s.studentId, s) keys the Map by a number, so the second Maya replaces the first instead of adding a new entry.",
+    "intersection() returns a new Set with the ids found in both sets. It is new in Node 22 and current browsers."
+  ],
+  "pitfall": "Putting objects in a Set and expecting duplicates to collapse gives no error. The set keeps both Mayas and has() returns false for a new Maya object, because writing an equals() method does not change how Set compares.",
+  "keywords": ["Set", "Map", "has", "add", "SameValueZero", "identity", "duplicates", "membership", "intersection", "hash table", "key"],
+  "contrast": "Python and Java let a class define its own hashing with __hash__/__eq__ or hashCode()/equals(). JavaScript has no such hook: Set and Map compare objects by identity, so you key them by a string or number id."
+}

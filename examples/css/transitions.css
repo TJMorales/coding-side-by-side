@@ -1,0 +1,34 @@
+:root { --blue: #1d4e89; --paper: #fdfaf3; }
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: var(--paper); }
+h1 { margin-top: 0; color: var(--blue); }
+
+.meetings { list-style: none; padding: 0; }
+
+.meetings a {
+  display: block;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  color: var(--blue);
+  background-color: white;
+  /* Animate these properties over 0.25 seconds when they change. */
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* The transition is on the normal rule, so it runs both ways: in and out. */
+.meetings a:hover, .meetings a:focus-visible {
+  background-color: var(--blue);
+  color: white;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+}
+
+button { font: inherit; padding: 8px 20px; border: none; border-radius: 4px;
+  background-color: #a33a00; color: white; transition: background-color 0.4s; }
+button:hover { background-color: #2e7d32; }
+
+/* Some people turn on "reduce motion" in their system settings.
+   Respect it by switching changes to instant. */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

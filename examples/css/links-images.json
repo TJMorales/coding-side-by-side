@@ -1,0 +1,10 @@
+{
+  "summary": "CSS can change how links and images look. Links get a color and underline style, and images can be switched from inline to block.",
+  "notes": [
+    "An <img> is inline by default, so text can sit next to it. display: block gives it its own line.",
+    "The a selector styles every link on the page.",
+    "text-decoration-thickness makes the underline thicker without removing it."
+  ],
+  "pitfall": "Removing the underline with text-decoration: none. Links then look like regular text, and people miss them.",
+  "keywords": ["a", "link color", "text-decoration", "underline", "img", "display block", "inline"]
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "A comment is a note for people reading your code. JavaScript skips it when the program runs.",
+  "notes": [
+    "// starts a comment that runs to the end of the line.",
+    "/* and */ wrap a block comment that can cover several lines.",
+    "/** */ is a JSDoc comment. Put it right above a function or at the top of a file to describe it."
+  ],
+  "pitfall": "Using # for a comment, as in Python, causes SyntaxError: Invalid or unexpected token. JavaScript comments use //.",
+  "keywords": ["comment", "//", "/*", "*/", "JSDoc", "/**", "block comment", "comment out"],
+  "contrast": "JavaScript comments look like Java's: //, /* */, and /** */ (called JSDoc). Python uses # instead, and JavaScript has no docstring that the program can read like Python's __doc__."
+}

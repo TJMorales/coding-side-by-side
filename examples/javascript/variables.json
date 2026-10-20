@@ -1,0 +1,11 @@
+{
+  "summary": "A variable stores a value under a name so you can use it later. Declare it once with let or const, then use the name.",
+  "notes": [
+    "let testScore = 88; declares the variable. Later assignments leave out let.",
+    "You never write a type. typeof testScore shows the type JavaScript chose from the value.",
+    "Use const for a value that never gets reassigned, and let for one that does."
+  ],
+  "pitfall": "Reassigning a const, as in maxScore = 90;, causes TypeError: Assignment to constant variable. Use let if the value needs to change.",
+  "keywords": ["variable", "let", "const", "assign", "=", "typeof", "camelCase", "reassign", "declare"],
+  "contrast": "Like Python, you never write a type, and a variable can later hold a different type. Like Java, you declare each variable once, with let (can change) or const (cannot be reassigned, like Java's final)."
+}

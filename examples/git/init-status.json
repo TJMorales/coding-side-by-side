@@ -1,0 +1,11 @@
+{
+  "summary": "git init turns a folder into a repository. git status tells you what changed and what Git will do next.",
+  "notes": [
+    "git init makes a hidden .git folder that stores the whole history.",
+    "Untracked files exist in the folder but Git is not saving their history yet.",
+    "Run git status often. It also suggests the next command to run."
+  ],
+  "pitfall": "Running git init in your home folder instead of the project folder makes Git track everything you own. Run it inside the project folder.",
+  "keywords": ["git init", "git status", "repository", "repo", "untracked"],
+  "setup_note": "Starts in an empty folder named project."
+}

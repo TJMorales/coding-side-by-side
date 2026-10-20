@@ -2,7 +2,7 @@
   "summary": "Python uses + - * / for arithmetic, plus // for whole-number division, % for the remainder, and ** for powers.",
   "notes": [
     "/ always returns a float: 7 / 2 is 3.5 and 6 / 2 is 3.0.",
-    "// drops the decimal part. 7 // 2 is 3.",
+    "// divides and rounds down. 7 // 2 is 3, and -7 // 2 is -4.",
     "% gives the remainder. n % 2 == 0 means n is even."
   ],
   "pitfall": "Using ^ for powers gives the wrong answer with no error. 2 ^ 3 is 1 in Python. Use 2 ** 3.",

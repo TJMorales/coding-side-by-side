@@ -1,0 +1,176 @@
+[
+ {
+  "id": "page-skeleton",
+  "level": "intro",
+  "topic": "Page structure",
+  "title": "Page skeleton"
+ },
+ {
+  "id": "headings-paragraphs",
+  "level": "intro",
+  "topic": "Text",
+  "title": "Headings and paragraphs"
+ },
+ {
+  "id": "links-images",
+  "level": "intro",
+  "topic": "Content",
+  "title": "Links and images"
+ },
+ {
+  "id": "lists",
+  "level": "intro",
+  "topic": "Content",
+  "title": "Lists"
+ },
+ {
+  "id": "selectors-basic",
+  "level": "intro",
+  "topic": "Selectors",
+  "title": "Select elements, classes, and ids"
+ },
+ {
+  "id": "colors-units",
+  "level": "intro",
+  "topic": "Styling",
+  "title": "Colors and units"
+ },
+ {
+  "id": "box-model",
+  "level": "intro",
+  "topic": "Layout",
+  "title": "The box model"
+ },
+ {
+  "id": "semantic-layout",
+  "level": "intro",
+  "topic": "Page structure",
+  "title": "Semantic layout tags"
+ },
+ {
+  "id": "forms",
+  "level": "intermediate",
+  "topic": "Forms",
+  "title": "Forms and inputs"
+ },
+ {
+  "id": "tables",
+  "level": "intermediate",
+  "topic": "Content",
+  "title": "Tables"
+ },
+ {
+  "id": "flexbox",
+  "level": "intermediate",
+  "topic": "Layout",
+  "title": "Flexbox"
+ },
+ {
+  "id": "grid",
+  "level": "intermediate",
+  "topic": "Layout",
+  "title": "CSS grid"
+ },
+ {
+  "id": "pseudo-classes",
+  "level": "intermediate",
+  "topic": "Selectors",
+  "title": "Pseudo-classes: states and positions"
+ },
+ {
+  "id": "cascade-specificity",
+  "level": "intermediate",
+  "topic": "Selectors",
+  "title": "Cascade and specificity"
+ },
+ {
+  "id": "positioning",
+  "level": "intermediate",
+  "topic": "Layout",
+  "title": "Positioning"
+ },
+ {
+  "id": "media-queries",
+  "level": "intermediate",
+  "topic": "Responsive",
+  "title": "Responsive layout with media queries"
+ },
+ {
+  "id": "custom-properties",
+  "level": "advanced",
+  "topic": "Styling",
+  "title": "Custom properties (CSS variables)"
+ },
+ {
+  "id": "transitions",
+  "level": "advanced",
+  "topic": "Motion",
+  "title": "Transitions"
+ },
+ {
+  "id": "keyframes",
+  "level": "advanced",
+  "topic": "Motion",
+  "title": "Keyframe animations"
+ },
+ {
+  "id": "accessible-markup",
+  "level": "advanced",
+  "topic": "Accessibility",
+  "title": "Accessible forms and images"
+ },
+ {
+  "id": "grid-areas",
+  "level": "advanced",
+  "topic": "Layout",
+  "title": "Grid template areas"
+ },
+ {
+  "id": "transforms",
+  "level": "advanced",
+  "topic": "Motion",
+  "title": "Transforms"
+ },
+ {
+  "id": "dark-mode",
+  "level": "advanced",
+  "topic": "Responsive",
+  "title": "Dark mode with prefers-color-scheme"
+ },
+ {
+  "id": "fluid-type",
+  "level": "brilliant",
+  "topic": "Responsive",
+  "title": "Fluid sizing with clamp()"
+ },
+ {
+  "id": "container-queries",
+  "level": "brilliant",
+  "topic": "Responsive",
+  "title": "Container queries"
+ },
+ {
+  "id": "has-selector",
+  "level": "brilliant",
+  "topic": "Selectors",
+  "title": "The :has() selector"
+ },
+ {
+  "id": "cascade-layers",
+  "level": "brilliant",
+  "topic": "Selectors",
+  "title": "Cascade layers"
+ },
+ {
+  "id": "dialog-popover",
+  "level": "brilliant",
+  "topic": "Content",
+  "title": "Dialog and popover"
+ },
+ {
+  "id": "scroll-snap",
+  "level": "brilliant",
+  "topic": "Layout",
+  "title": "Scroll snap"
+ }
+]

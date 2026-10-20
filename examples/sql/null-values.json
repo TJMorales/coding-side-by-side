@@ -1,0 +1,10 @@
+{
+  "summary": "NULL means a value is missing or unknown. It is not 0 and not empty text, and it needs IS NULL and IS NOT NULL to test.",
+  "notes": [
+    "Any comparison with NULL, even NULL = NULL, is unknown, so WHERE gpa = NULL matches no rows.",
+    "COALESCE(grade, 'Not graded') returns the first value that is not NULL.",
+    "A NULL grade is neither under 80 nor 80 and over, so it is left out of both results."
+  ],
+  "pitfall": "Writing WHERE gpa = NULL or WHERE gpa != NULL runs without an error but returns nothing. Use IS NULL or IS NOT NULL.",
+  "keywords": ["NULL", "IS NULL", "IS NOT NULL", "COALESCE", "IFNULL", "missing value", "blank"]
+}

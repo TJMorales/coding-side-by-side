@@ -1,0 +1,10 @@
+{
+  "summary": "@layer groups rules into layers with a set priority. A rule in a later layer beats a rule in an earlier layer, no matter how specific each selector is. Unlayered rules beat all layers.",
+  "notes": [
+    "@layer base, components, utilities; sets the order. Later in the list means higher priority.",
+    "The third button matches #join-games in base and .btn in components. The id is more specific, but components is the higher layer, so .btn wins and the button is blue.",
+    "Inside a single layer, the normal rules still apply: specificity first, then source order."
+  ],
+  "pitfall": "Forgetting that unlayered CSS beats every layer. A leftover rule outside the layers can override your whole layer setup, even with a weak selector.",
+  "keywords": ["@layer", "cascade layers", "layer order", "specificity", "cascade", "unlayered", "utilities", "components", "reset"]
+}

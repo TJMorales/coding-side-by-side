@@ -1,0 +1,25 @@
+{
+  "summary": "Saving work in Git takes two steps. git add picks the changes to save (staging), and git commit saves them as a snapshot with a message.",
+  "notes": [
+    "The staging area lets you commit some changes and leave others for a later commit.",
+    "git commit -m \"message\" sets the message on the command line. Write what the commit does, for example \"Add README\".",
+    "git add . means the current folder and everything in it. The dot is part of the command."
+  ],
+  "pitfall": "Running git commit before git add gives \"nothing added to commit but untracked files present\". Stage the files first.",
+  "keywords": [
+    "git add",
+    "git commit",
+    "stage",
+    "staging area",
+    "commit message",
+    "-m",
+    "snapshot",
+    "save"
+  ],
+  "setup_note": "Starts in a new repository with two files Git does not track yet: gradebook.py and README.md.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF"
+  ]
+}

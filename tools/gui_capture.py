@@ -62,10 +62,46 @@ exit 0
 """
 
 
+def capture_browser(cid, meta):
+    """JavaScript canvas examples: load the script into a page with a canvas in headless Chromium."""
+    os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers")
+    from playwright.sync_api import sync_playwright
+    code = (EX / "javascript" / f"{cid}.js").read_text()
+    host = ('<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{margin:0;background:#fff}canvas{display:block}</style></head>'
+            '<body><canvas id="screen" width="400" height="300"></canvas><script>' + code + '</script></body></html>')
+    errors = []
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        pg = b.new_page(viewport={"width": 800, "height": 600})
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
+        pg.set_content(host)
+        pg.wait_for_timeout(int(meta.get("gui_settle", 1.0) * 1000))
+        canvas = pg.locator("#screen")
+        box = canvas.bounding_box()
+        for a in meta.get("gui_actions", []):
+            if a[0] == "wait":
+                pg.wait_for_timeout(int(a[1] * 1000))
+            elif a[0] == "click":
+                pg.mouse.click(box["x"] + a[1], box["y"] + a[2])
+            elif a[0] == "key":
+                pg.keyboard.press(a[1])
+            elif a[0] == "keydown":
+                pg.keyboard.down(a[1]); pg.wait_for_timeout(int(a[2] * 1000)); pg.keyboard.up(a[1])
+            pg.wait_for_timeout(150)
+        pg.wait_for_timeout(300)
+        OUT.mkdir(exist_ok=True)
+        canvas.screenshot(path=str(OUT / f"javascript-{cid}.png"))
+        b.close()
+    return ("errors: " + "; ".join(errors)) if errors else ""
+
+
 def capture(lang, cid):
     meta = json.loads((EX / lang / f"{cid}.json").read_text())
     if meta.get("run", True):
         return None
+    if lang == "javascript":
+        return capture_browser(cid, meta) if meta.get("browser") else None
     with tempfile.TemporaryDirectory() as tmp:
         t = pathlib.Path(tmp)
         (t / "cap.sh").write_text(SCRIPT)
@@ -92,9 +128,9 @@ def capture(lang, cid):
 
 
 if __name__ == "__main__":
-    concepts = json.loads((ROOT / "tools" / "concepts.json").read_text())
+    concepts = json.loads((ROOT / "tools" / "tracks" / "code.json").read_text())
     ids = sys.argv[1:] or [c["id"] for c in concepts]
-    for lang in ["python", "java"]:
+    for lang in ["python", "java", "javascript"]:
         for cid in ids:
             if not (EX / lang / f"{cid}.json").exists():
                 continue

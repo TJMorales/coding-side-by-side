@@ -1,0 +1,164 @@
+[
+ {
+  "id": "where-am-i",
+  "level": "intro",
+  "topic": "Navigation",
+  "title": "Find your place: pwd, ls, cd"
+ },
+ {
+  "id": "paths",
+  "level": "intro",
+  "topic": "Navigation",
+  "title": "Absolute and relative paths"
+ },
+ {
+  "id": "make-files",
+  "level": "intro",
+  "topic": "Files",
+  "title": "Make files and folders"
+ },
+ {
+  "id": "copy-move-remove",
+  "level": "intro",
+  "topic": "Files",
+  "title": "Copy, move, and remove"
+ },
+ {
+  "id": "read-files",
+  "level": "intro",
+  "topic": "Files",
+  "title": "Read files: cat, head, tail"
+ },
+ {
+  "id": "echo-redirect",
+  "level": "intro",
+  "topic": "Input and output",
+  "title": "echo and redirection"
+ },
+ {
+  "id": "get-help",
+  "level": "intro",
+  "topic": "Navigation",
+  "title": "Get help: --help and man"
+ },
+ {
+  "id": "pipes",
+  "level": "intermediate",
+  "topic": "Input and output",
+  "title": "Pipes"
+ },
+ {
+  "id": "grep",
+  "level": "intermediate",
+  "topic": "Text",
+  "title": "Search text with grep"
+ },
+ {
+  "id": "find",
+  "level": "intermediate",
+  "topic": "Files",
+  "title": "Find files"
+ },
+ {
+  "id": "sort-uniq-wc",
+  "level": "intermediate",
+  "topic": "Text",
+  "title": "Count and sort: wc, sort, uniq"
+ },
+ {
+  "id": "permissions",
+  "level": "intermediate",
+  "topic": "System",
+  "title": "Permissions and chmod"
+ },
+ {
+  "id": "wildcards",
+  "level": "intermediate",
+  "topic": "Files",
+  "title": "Wildcards"
+ },
+ {
+  "id": "variables-env",
+  "level": "intermediate",
+  "topic": "Scripting",
+  "title": "Variables and environment"
+ },
+ {
+  "id": "first-script",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "Your first script"
+ },
+ {
+  "id": "script-args",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "Script arguments"
+ },
+ {
+  "id": "if-test",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "if and test"
+ },
+ {
+  "id": "loops",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "for and while loops"
+ },
+ {
+  "id": "functions",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "Functions"
+ },
+ {
+  "id": "exit-codes",
+  "level": "advanced",
+  "topic": "Scripting",
+  "title": "Exit codes, && and ||"
+ },
+ {
+  "id": "processes",
+  "level": "advanced",
+  "topic": "System",
+  "title": "Processes and jobs"
+ },
+ {
+  "id": "sed-awk",
+  "level": "brilliant",
+  "topic": "Text",
+  "title": "Edit text with sed and awk"
+ },
+ {
+  "id": "xargs",
+  "level": "brilliant",
+  "topic": "Input and output",
+  "title": "Build commands with xargs"
+ },
+ {
+  "id": "here-docs",
+  "level": "brilliant",
+  "topic": "Input and output",
+  "title": "Here documents"
+ },
+ {
+  "id": "strict-mode",
+  "level": "brilliant",
+  "topic": "Scripting",
+  "title": "Safer scripts: set -euo pipefail and trap"
+ },
+ {
+  "id": "arrays",
+  "level": "brilliant",
+  "topic": "Scripting",
+  "title": "Arrays"
+ },
+ {
+  "id": "path-aliases",
+  "level": "brilliant",
+  "topic": "System",
+  "title": "PATH and aliases"
+ }
+]

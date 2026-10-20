@@ -1,0 +1,11 @@
+{
+  "summary": "A string is text in quotes. Use length to count its characters, an index to get one character, and === to compare two strings.",
+  "notes": [
+    "song.length counts every character, including spaces.",
+    "song[0] is the first character. song[song.length - 1] is the last.",
+    "=== compares the text, and the comparison is case-sensitive."
+  ],
+  "pitfall": "Writing song.length() with parentheses, as in Java, causes TypeError: song.length is not a function.",
+  "keywords": ["string", "length", "index", "===", "concatenate", "+", "case-sensitive", "charAt"],
+  "contrast": "JavaScript uses s.length with no parentheses, where Python uses len(s) and Java uses s.length(). === compares the text like Python's ==, so you do not need Java's equals()."
+}

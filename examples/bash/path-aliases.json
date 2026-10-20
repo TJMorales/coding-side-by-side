@@ -1,0 +1,10 @@
+{
+  "summary": "When you type a command, bash looks for it in each folder listed in PATH. Add a folder to PATH to run your own scripts by name, and use alias to give a long command a short name.",
+  "notes": [
+    "export PATH=\"$HOME/bin:$PATH\" puts ~/bin first and keeps every folder that was already there. It lasts until you close the terminal. Add the line to ~/.bashrc to keep it.",
+    "Aliases also last only for this session. Put alias ll='ls -l' in ~/.bashrc so every new terminal has it.",
+    "shopt -s expand_aliases is only needed because this page runs your commands from a script. In a terminal you type in, aliases work without it."
+  ],
+  "pitfall": "export PATH=\"$HOME/bin\" without :$PATH replaces the whole list, and then even ls fails with ls: command not found. Close the terminal and open a new one to get the old PATH back.",
+  "keywords": ["PATH", "$PATH", "which", "type", "alias", "unalias", "~/.bashrc", "export", "command not found", "~/bin", "shopt", "expand_aliases"]
+}

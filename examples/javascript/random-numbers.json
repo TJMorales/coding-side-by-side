@@ -1,0 +1,11 @@
+{
+  "summary": "Math.random() gives a number from 0 up to 1, and a formula turns it into a whole number in any range. This example uses a seeded generator so the results repeat and you can test them.",
+  "notes": [
+    "Math.floor(random() * (max - min + 1)) + min includes both ends: randInt(1, 6) can return 1 through 6.",
+    "team[Math.floor(random() * team.length)] picks an index from 0 to 3, never 4.",
+    "mulberry32(42) restarts the sequence, so the first roll matches the first roll above."
+  ],
+  "pitfall": "Writing Math.floor(Math.random() * 6) for a die gives 0 to 5, so a 6 never appears and 0 does. Add 1. Math.round() instead of Math.floor() makes the end values half as likely.",
+  "keywords": ["random", "Math.random", "Math.floor", "seed", "dice", "randint", "nextInt", "random integer", "inclusive range", "mulberry32"],
+  "contrast": "JavaScript's Math.random() cannot be seeded and has no randint(1, 6) or nextInt(6): you write Math.floor(Math.random() * 6) + 1 yourself. Python's random.seed() and Java's new Random(42) have no built-in JavaScript version."
+}

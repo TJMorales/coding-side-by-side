@@ -1,0 +1,11 @@
+{
+  "summary": "String methods clean up, search, slice, and split text. Each one returns a new string, so you save the result in a variable.",
+  "notes": [
+    "course.slice(1, 4) includes index 1 and stops before index 4. slice(4) goes to the end.",
+    "indexOf() returns -1 when the text is not found. includes() returns true or false.",
+    "split(\",\") returns an array. names.join(\" | \") is called on the array, with the separator as the argument."
+  ],
+  "pitfall": "replace() changes only the first match: \"9-10-11\".replace(\"-\", \"/\") gives \"9/10-11\". Use replaceAll() to change every match.",
+  "keywords": ["trim", "toUpperCase", "toLowerCase", "slice", "substring", "indexOf", "includes", "replace", "replaceAll", "split", "join", "immutable"],
+  "contrast": "Strings are immutable in all three. JavaScript's s.slice(1, 4) works like Java's substring(1, 4), and join() is called on the array (names.join(\" | \")), the reverse of Python's \" | \".join(names)."
+}

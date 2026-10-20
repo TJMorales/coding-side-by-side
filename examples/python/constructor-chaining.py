@@ -4,8 +4,8 @@ class Student:
     def __init__(self, name="New student", grade_level=9, scores=None):
         self.name = name
         self.grade_level = grade_level
-        # Use None as the default, not []. A [] default is made once
-        # and would be shared by every Student.
+        # Use None as the default, not []. A [] default is made once.
+        # Storing it directly would share one list between every Student.
         if scores is None:
             scores = []
         # list(...) copies the list, so each Student owns its own scores.

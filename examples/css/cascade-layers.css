@@ -1,0 +1,25 @@
+/* Declare the layer order once, from lowest to highest priority.
+   (@layer is in all major browsers since 2022.) */
+@layer base, components, utilities;
+
+@layer base {
+  body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+  button { font: inherit; padding: 8px 14px; margin: 0 6px 8px 0; border: none; border-radius: 4px; color: white; }
+
+  /* An id selector, but it is in the lowest layer... */
+  #join-web, #join-games { background-color: #666; }
+}
+
+@layer components {
+  /* ...so this plain class in a higher layer beats it.
+     Between layers, layer order wins over specificity. */
+  .btn { background-color: #1d4e89; }
+}
+
+@layer utilities {
+  .danger { background-color: #c62828; }
+}
+
+/* Styles outside any layer beat all layered styles. */
+.special { background-color: #2e7d32; }
+h1 { color: #1d4e89; }

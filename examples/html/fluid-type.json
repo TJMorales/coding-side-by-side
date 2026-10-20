@@ -1,0 +1,11 @@
+{
+  "summary": "Fluid sizing is done entirely in CSS. The HTML is a normal page with a header and a paragraph; the CSS makes their sizes follow the window width.",
+  "notes": [
+    "There are no extra classes for small or large screens. One rule covers every width.",
+    "The viewport meta tag is still required so phones report their real width.",
+    "Open the page in a browser and resize the window to watch the heading change size."
+  ],
+  "pitfall": "Making a separate copy of a heading for phones and hiding one of them. Screen readers may read both.",
+  "keywords": ["responsive text", "hero", "heading", "viewport"],
+  "preview_height": 240
+}

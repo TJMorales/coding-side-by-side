@@ -1,0 +1,10 @@
+{
+  "summary": "A view is a saved SELECT with a name. You query it like a table, which hides a long join behind a short name.",
+  "notes": [
+    "A view stores the query, not the data. Every SELECT from roster reads the current tables.",
+    "Name columns with AS inside the view (c.name AS course) so the view has clear column names.",
+    "Remove a view with DROP VIEW roster. The tables it reads are not affected."
+  ],
+  "pitfall": "In SQLite, views are read-only. INSERT INTO roster ... gives Parse error: cannot modify roster because it is a view. Change the underlying tables instead.",
+  "keywords": ["CREATE VIEW", "view", "DROP VIEW", "saved query", "virtual table"]
+}

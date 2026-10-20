@@ -1,0 +1,10 @@
+{
+  "summary": "A SELECT can calculate new values from columns, and AS gives the result column a readable name.",
+  "notes": [
+    "|| joins text in SQLite and PostgreSQL. MySQL uses CONCAT(first_name, ' ', last_name).",
+    "Math with NULL gives NULL: Ethan's missing grade + 5 is still NULL.",
+    "In SQLite, 95 / 2 is 47 because both numbers are integers. Write 2.0 to get 47.5."
+  ],
+  "pitfall": "Writing first_name + ' ' + last_name does math, not text joining, and SQLite returns 0 for every row. Use ||.",
+  "keywords": ["AS", "alias", "expression", "calculated column", "||", "concatenate", "integer division"]
+}

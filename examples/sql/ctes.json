@@ -1,0 +1,10 @@
+{
+  "summary": "A common table expression (CTE) names a query with WITH so the main query can use it like a table. It breaks a long query into readable steps.",
+  "notes": [
+    "Separate several CTEs with commas after one WITH. A later CTE can read an earlier one.",
+    "A CTE can do the same job as a subquery in FROM, but each step gets a name and is read top to bottom.",
+    "Maya averages 95.0 and Noah 96.7. Ava's 87.5 is filtered out by high_avg."
+  ],
+  "pitfall": "A CTE only exists for the one statement it is attached to. Using course_avg in the next statement gives Parse error: no such table: course_avg. Use a view if you need it again.",
+  "keywords": ["WITH", "CTE", "common table expression", "temporary result", "named subquery"]
+}

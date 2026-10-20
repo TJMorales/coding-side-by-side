@@ -1,0 +1,10 @@
+{
+  "summary": "The cascade decides which rule wins when rules conflict. First the more specific selector wins (id beats class beats element). If they tie, the rule that comes later in the file wins.",
+  "notes": [
+    "#urgent is written above .note and p, but it wins because an id is more specific than a class or element.",
+    ".note and .reminder are both one class, so .reminder wins because it comes later.",
+    "The section's purple is inherited by the h2, but not by the p, because p { color: #555; } targets the p directly. A direct rule always beats an inherited value."
+  ],
+  "pitfall": "Using !important to force a style. It beats normal specificity, so the only way to override it later is another !important. Fix the selector instead.",
+  "keywords": ["cascade", "specificity", "!important", "inheritance", "inherit", "source order", "id", "class", "selector weight", "override"]
+}

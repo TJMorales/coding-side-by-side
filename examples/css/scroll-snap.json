@@ -1,0 +1,10 @@
+{
+  "summary": "Scroll snap makes a scrolling container stop with an item lined up, instead of anywhere in between. Put scroll-snap-type on the container and scroll-snap-align on each item.",
+  "notes": [
+    "scroll-snap-type: x mandatory means sideways scrolling always comes to rest on a card. proximity would only snap when you stop close to one.",
+    "width: 70% shows part of the next card. That edge tells people there is more to scroll.",
+    "scroll-behavior: smooth is only turned on when the person has not asked for reduced motion."
+  ],
+  "pitfall": "Putting scroll-snap-type on the cards instead of the scrolling container. Nothing snaps, and there is no error.",
+  "keywords": ["scroll-snap-type", "scroll-snap-align", "scroll-padding", "carousel", "slider", "overflow-x", "mandatory", "proximity", "scroll-behavior", "smooth scroll"]
+}

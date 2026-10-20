@@ -1,0 +1,10 @@
+{
+  "summary": "A pseudo-class starts with a colon and matches elements in a certain state (:hover, :focus-visible, :active) or position (:first-child, :nth-child()).",
+  "notes": [
+    "a:hover changes link color while the mouse is over it. Hover over Slides or Starter code in the preview.",
+    "Press Tab in the preview: :focus-visible draws an orange outline on the focused link, input, or button.",
+    "li:nth-child(odd) shades every other row, which makes long lists easier to scan."
+  ],
+  "pitfall": "Removing outlines with outline: none and nothing in its place. Keyboard users can no longer see where they are on the page.",
+  "keywords": [":hover", ":focus", ":focus-visible", ":active", ":first-child", ":nth-child", "odd", "even", "pseudo-class", "zebra stripes", "outline"]
+}

@@ -1,0 +1,13 @@
+{
+  "summary": "An array stores a list of values in one variable. Bash has indexed arrays (numbered from 0) and associative arrays (looked up by a name).",
+  "notes": [
+    "${#songs[@]} is the number of items. ${songs[-1]} is the last item.",
+    "\"${songs[@]}\" with double quotes is the safe way to loop. It keeps \"Blue in Green\" together as one item.",
+    "Associative arrays need declare -A first. Without it, bash treats Maya as the number 0 and every name writes to the same slot."
+  ],
+  "pitfall": "$songs without an index is only the first item, So What. Use \"${songs[@]}\" for all items and ${#songs[@]} for the count.",
+  "keywords": ["array", "arrays", "list", "${array[@]}", "${#array[@]}", "index", "mapfile", "readarray", "declare -A", "associative array", "dictionary", "+=", "slice"],
+  "mode": "script",
+  "filename": "playlist.sh",
+  "session": ["./playlist.sh"]
+}

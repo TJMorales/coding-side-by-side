@@ -1,0 +1,10 @@
+{
+  "summary": "A transition animates a property from its old value to its new value, for example when hover changes a color. You list which properties to animate and how long to take.",
+  "notes": [
+    "transition: background-color 0.25s ease means: when background-color changes, take 0.25 seconds to get there.",
+    "Put transition on the normal rule, not on :hover. Then the change animates on the way in and on the way out.",
+    "@media (prefers-reduced-motion: reduce) turns the animation off for people who set that option in their system."
+  ],
+  "pitfall": "Writing transition: all. It also animates properties you did not mean to change, such as layout sizes, which can look jumpy and slow the page.",
+  "keywords": ["transition", "transition-duration", "ease", "hover", "animation", "prefers-reduced-motion", "reduced motion", "timing function"]
+}

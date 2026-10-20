@@ -1,0 +1,11 @@
+{
+  "summary": "A static field is shared by the whole class, and a static method is called on the class itself. Fields set on this belong to one object.",
+  "notes": [
+    "static count = 0; exists once on Student, no matter how many objects you make.",
+    "maya.school is undefined. Static fields live on the class, not on its objects, so always write Student.school.",
+    "leo.school = ... adds a regular field to leo only. Student.school stays the same."
+  ],
+  "pitfall": "Writing this.count++ in the constructor leaves Student.count at 0. this.count starts as undefined, so this.count++ gives NaN on that one object.",
+  "keywords": ["static", "static field", "static method", "class variable", "instance variable", "shared", "counter"],
+  "contrast": "JavaScript marks shared members static like Java, but an object cannot read them: maya.school is undefined, while Python and Java both let you read the shared value through an object."
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "LIKE matches text patterns, IN checks a value against a list, and BETWEEN checks a range. Each one is shorter than writing several OR or AND conditions.",
+  "notes": [
+    "In LIKE, % matches any number of characters and _ matches exactly one. In SQLite, LIKE ignores upper and lower case for English letters, so '%A' also matches.",
+    "department IN ('Math', 'Science') means department = 'Math' OR department = 'Science'.",
+    "BETWEEN 80 AND 89 includes 80 and 89, so Lucas's 80 in course 1 is in the result."
+  ],
+  "pitfall": "Using * as a wildcard, as in LIKE 'M*', returns no rows because * is not special in LIKE. Use %.",
+  "keywords": ["LIKE", "wildcard", "%", "_", "IN", "BETWEEN", "pattern", "range", "contains", "starts with"]
+}

@@ -1,0 +1,31 @@
+/* Light theme colors. These are the default. */
+:root {
+  --bg: #fdfaf3;
+  --card: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --accent: #1d4e89;
+  --border: #c9c2b4;
+}
+
+/* When the device is set to dark mode, swap the values. Every rule
+   below uses the variables, so nothing else has to change. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --card: #1f242c;
+    --text: #e8e6e1;
+    --muted: #b0aca4;
+    --accent: #8db8ef;
+    --border: #3a414c;
+  }
+}
+
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: var(--bg); color: var(--text); }
+h1 { margin-top: 0; color: var(--accent); }
+a { color: var(--accent); }
+
+.card { padding: 16px; background-color: var(--card); border: 2px solid var(--border); border-radius: 8px; }
+.card h2 { margin-top: 0; }
+label { display: block; margin-bottom: 4px; color: var(--muted); }
+input { font: inherit; padding: 6px; width: 260px; }

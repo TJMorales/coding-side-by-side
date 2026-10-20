@@ -1,0 +1,11 @@
+{
+  "summary": "This page gives each paragraph a class so the CSS file can show a different color format or unit on each one.",
+  "notes": [
+    "The class names describe what each line demonstrates, which makes the CSS easier to read.",
+    "The text in each paragraph matches the value the CSS uses, so you can compare them.",
+    "Colors and sizes live in the CSS file, not in the HTML."
+  ],
+  "pitfall": "Trying to set colors in HTML with old attributes like <font color=\"red\">. That tag is obsolete; use CSS.",
+  "keywords": ["class", "color", "units", "style"],
+  "preview_height": 380
+}

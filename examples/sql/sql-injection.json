@@ -1,0 +1,10 @@
+{
+  "summary": "SQL injection happens when a program pastes user input into SQL text, letting the input change the query. Parameters keep input as data and stop it.",
+  "notes": [
+    "The injected query returns all 10 students. With a password check instead of a name, it would log in without the password.",
+    "The parameter query finds no student whose name is literally x' OR '1'='1, so it returns no rows.",
+    ".parameter set is a sqlite3 shell command. In Python, Java, and JavaScript you write ? in the SQL and pass the value separately, for example cursor.execute(\"... WHERE first_name = ?\", (name,))."
+  ],
+  "pitfall": "Escaping quotes by hand or checking input for ' is not enough. Always use placeholders (? or :name) for any value that comes from a user.",
+  "keywords": ["SQL injection", "parameter", "placeholder", "prepared statement", "bind", "?", ".parameter", "security"]
+}

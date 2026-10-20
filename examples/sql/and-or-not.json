@@ -1,0 +1,10 @@
+{
+  "summary": "AND, OR, and NOT combine conditions in a WHERE clause so you can ask questions with more than one rule.",
+  "notes": [
+    "AND keeps a row only if both conditions are true. OR keeps it if either one is true.",
+    "NOT flips a condition. WHERE NOT department = 'Technology' means the same as department <> 'Technology'.",
+    "AND is evaluated before OR. Use parentheses whenever you mix them."
+  ],
+  "pitfall": "Without the parentheses, grade_level = 11 OR grade_level = 12 AND gpa < 3.0 means 11th graders of any GPA, plus 12th graders under 3.0, so Leo and Lucas show up too.",
+  "keywords": ["AND", "OR", "NOT", "parentheses", "precedence", "multiple conditions"]
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "code",
+  "page": "index.html",
+  "nav": "Python \u00b7 Java \u00b7 JavaScript",
+  "langs": [
+   "python",
+   "java",
+   "javascript"
+  ],
+  "default_langs": [
+   "python",
+   "java"
+  ]
+ },
+ {
+  "id": "web",
+  "page": "web.html",
+  "nav": "HTML + CSS",
+  "langs": [
+   "html",
+   "css"
+  ],
+  "default_langs": [
+   "html",
+   "css"
+  ]
+ },
+ {
+  "id": "sql",
+  "page": "sql.html",
+  "nav": "SQL",
+  "langs": [
+   "sql"
+  ],
+  "default_langs": [
+   "sql"
+  ]
+ },
+ {
+  "id": "shell",
+  "page": "shell.html",
+  "nav": "Command line",
+  "langs": [
+   "bash"
+  ],
+  "default_langs": [
+   "bash"
+  ]
+ },
+ {
+  "id": "git",
+  "page": "git.html",
+  "nav": "Git",
+  "langs": [
+   "git"
+  ],
+  "default_langs": [
+   "git"
+  ]
+ }
+]

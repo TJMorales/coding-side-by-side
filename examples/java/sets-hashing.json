@@ -5,6 +5,6 @@
     "equals takes Object, not Student. Writing equals(Student other) overloads instead of overrides, and HashSet never calls it.",
     "retainAll() changes the set to keep only items also in the other set: the intersection."
   ],
-  "pitfall": "Overriding equals() without hashCode() compiles with no error, but HashSet.contains() usually returns false for an equal object because it looks in the wrong bucket.",
+  "pitfall": "Overriding equals() without hashCode() compiles with no error, as StudentNoHash shows. The set keeps both Mayas and contains() returns false, because each object keeps its default hash code and the set looks in the wrong bucket.",
   "keywords": ["HashSet", "Set", "hashCode", "equals", "Objects.hash", "override", "duplicates", "contains", "retainAll", "hash table"]
 }

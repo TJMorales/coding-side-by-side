@@ -1,0 +1,11 @@
+{
+  "summary": "When several CSS rules match the same element, the browser must pick one value for each property. Each paragraph here matches a different set of rules and says which one wins.",
+  "notes": [
+    "The second paragraph has class=\"note\", so it matches both p and .note.",
+    "The last two elements are inside <section class=\"club-news\"> to show inheritance.",
+    "Read each line, then find the matching rules in the CSS pane."
+  ],
+  "pitfall": "Adding an id to an element only to beat another rule. It works, but the next change then needs an even stronger selector.",
+  "keywords": ["cascade", "specificity", "class", "id", "inherit", "conflict"],
+  "preview_height": 285
+}

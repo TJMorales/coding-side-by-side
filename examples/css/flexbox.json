@@ -1,0 +1,10 @@
+{
+  "summary": "display: flex lays out an element's children in a row (or column). justify-content spaces them along the row, align-items lines them up across it, and gap adds space between them.",
+  "notes": [
+    "justify-content: space-between puts the first item at the start, the last at the end, and spreads the extra space between.",
+    "flex-wrap: wrap lets items move to a new line when the row is full. Without it they shrink to fit.",
+    "flex: 1 1 120px lets each card grow to share the leftover width equally."
+  ],
+  "pitfall": "Expecting align-items: center to center items left to right. In a row, justify-content controls left to right and align-items controls top to bottom.",
+  "keywords": ["flexbox", "display flex", "justify-content", "align-items", "gap", "flex-wrap", "flex", "flex-grow", "flex-basis", "row", "navbar"]
+}

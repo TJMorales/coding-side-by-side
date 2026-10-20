@@ -1,0 +1,11 @@
+{
+  "summary": "An arrow function such as (s) => s + 5 is a small unnamed function. JavaScript arrays filter and transform with filter(), map(), and reduce(), and each call returns a new array right away.",
+  "notes": [
+    "scores.filter((s) => s >= 70).map((s) => s + 5) chains two steps. The original scores array does not change.",
+    "scores.values() makes an iterator. Its filter() is lazy, like a Python filter object or a Java stream, so it can be read only once.",
+    "reduce((acc, s) => acc + s, 0) starts at 0, so an empty array returns 0 instead of failing."
+  ],
+  "pitfall": "Calling reduce() on an empty array with no starting value throws TypeError: Reduce of empty array with no initial value.",
+  "keywords": ["arrow function", "lambda", "=>", "filter", "map", "reduce", "Object.fromEntries", "spread", "iterator", "functional programming"],
+  "contrast": "JavaScript chains array methods like a Java stream, but each step runs right away and returns a real array that you can reuse. Python usually writes the same work as a list comprehension."
+}

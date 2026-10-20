@@ -1,0 +1,13 @@
+{
+  "summary": "A script is a text file of commands that bash runs in order. Write the steps once, then run them any time with one command.",
+  "notes": [
+    "#!/bin/bash must be the very first line. It tells Linux which program reads the rest of the file.",
+    "./report.sh means \"report.sh in this folder\". bash report.sh also works, and it does not need the execute bit.",
+    "Run from music, the script looks for music/cs/roster.txt, which does not exist, so those lines fail. The script keeps going after each error and still prints Report done."
+  ],
+  "pitfall": "Typing report.sh without ./ fails with report.sh: command not found. Bash only looks for commands in the folders listed in PATH, not in the current folder.",
+  "keywords": ["script", "shell script", "bash script", "shebang", "#!/bin/bash", ".sh", "run script", "./", "chmod +x"],
+  "mode": "script",
+  "filename": "report.sh",
+  "session": ["ls -l report.sh", "./report.sh", "cd music", "../report.sh"]
+}

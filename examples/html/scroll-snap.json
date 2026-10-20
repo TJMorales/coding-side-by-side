@@ -1,0 +1,11 @@
+{
+  "summary": "A scroll snap gallery is a normal list of cards inside one scrolling container. The CSS makes the container scroll sideways and stop on each card.",
+  "notes": [
+    "tabindex=\"0\" makes the gallery focusable, so you can click or Tab to it and use the arrow keys to scroll.",
+    "Scroll the strip sideways in the preview with a trackpad, Shift and the mouse wheel, or the arrow keys.",
+    "Every project is still in the HTML. Cards that are off screen are only scrolled out of view, not hidden."
+  ],
+  "pitfall": "Making a scrolling area that cannot get keyboard focus. People without a mouse or trackpad then cannot reach the hidden cards.",
+  "keywords": ["carousel", "slider", "gallery", "tabindex", "scroll", "aria-label"],
+  "preview_height": 255
+}

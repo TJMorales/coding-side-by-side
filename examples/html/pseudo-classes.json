@@ -1,0 +1,11 @@
+{
+  "summary": "Pseudo-classes style an element based on its state or position, so the HTML does not need extra classes. This page has a list, links, an input, and a button to try them on.",
+  "notes": [
+    "Move the mouse over the links and the button to see :hover.",
+    "Press Tab to move through the links, input, and button. The focused one gets an outline from :focus-visible.",
+    "type=\"button\" makes a button that does not submit a form."
+  ],
+  "pitfall": "Adding a class like \"first\" or \"odd\" to list items by hand. Then every time you add an item you have to fix the classes; :nth-child does it automatically.",
+  "keywords": ["hover", "focus", "state", "first-child", "nth-child", "button", "tab", "keyboard"],
+  "preview_height": 330
+}

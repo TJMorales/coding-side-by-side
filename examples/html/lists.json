@@ -1,0 +1,11 @@
+{
+  "summary": "Use <ul> for a list where order does not matter and <ol> for steps or rankings. Every item goes in its own <li>.",
+  "notes": [
+    "<ol> numbers its items automatically. If you add or remove a step, the numbers update.",
+    "A nested list goes inside an <li>. Here the Sensors and Motors list belongs to the Robotics item.",
+    "Only <li> elements can be direct children of <ul> or <ol>."
+  ],
+  "pitfall": "Typing the numbers yourself (\"1. Fill out...\") inside an <ol>. The page then shows each number twice.",
+  "keywords": ["ul", "ol", "li", "list", "bullet", "numbered list", "nested list", "unordered", "ordered"],
+  "preview_height": 380
+}

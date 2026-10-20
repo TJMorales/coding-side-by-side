@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS Club Box Model</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Every element is a box: content, then padding, then border, then margin. -->
+    <section class="card">
+      <h2>Next meeting</h2>
+      <p>Tuesday, 3:45 PM, Room 2115</p>
+    </section>
+
+    <!-- Both boxes below have width: 300px in the CSS.
+         They come out different sizes because of box-sizing. -->
+    <div class="box content-box">content-box: 300 + 40 padding + 8 border = 348px wide</div>
+    <div class="box border-box">border-box: 300px wide, padding and border included</div>
+  </body>
+</html>

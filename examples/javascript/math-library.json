@@ -1,0 +1,11 @@
+{
+  "summary": "The Math object has square roots, powers, rounding, pi, and more. It is always available, so you never import it.",
+  "notes": [
+    "Math.ceil(47 / 40) is 2 because it always rounds up. / gives 1.175 first, so no conversion is needed.",
+    "Math.round(area * 100) / 100 rounds to 2 decimal places.",
+    "Math.round(-2.5) is -2, not -3, because halves always round toward the larger number."
+  ],
+  "pitfall": "Writing math.sqrt(144) with a lowercase m causes ReferenceError: math is not defined. The object is Math.",
+  "keywords": ["Math", "Math.sqrt", "Math.pow", "Math.ceil", "Math.floor", "Math.round", "Math.abs", "Math.PI", "math", "distance"],
+  "contrast": "JavaScript's Math object is always available like Java's Math class, so there is no import as in Python. Math.round() sends halves up (2.5 becomes 3), where Python's round(2.5) gives 2."
+}

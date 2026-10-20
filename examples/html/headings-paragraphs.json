@@ -1,0 +1,11 @@
+{
+  "summary": "Headings (h1 to h6) give a page its outline, and p holds a paragraph of text. Browsers and screen readers use the heading levels to understand how the page is organized.",
+  "notes": [
+    "Use one <h1> for the page title, then <h2> for each section. Do not skip levels (h2 straight to h4).",
+    "Each <p> is its own paragraph. Pressing Enter in your code does not make a new paragraph on screen; a new <p> does.",
+    "<strong> and <em> add meaning (important, stressed). The bold and italic look comes from the browser's default styles."
+  ],
+  "pitfall": "Picking <h4> because it looks the right size. The heading level describes structure; change the size in CSS instead.",
+  "keywords": ["h1", "h2", "h3", "heading", "p", "paragraph", "strong", "em", "bold", "italic", "text"],
+  "preview_height": 330
+}

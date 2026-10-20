@@ -1,0 +1,11 @@
+{
+  "summary": "Adding parameters to the constructor lets you give an object its starting values in the same line that creates it. Default values let you still create an object with no arguments.",
+  "notes": [
+    "name = \"\" is a default value. It is used only when you leave that argument out.",
+    "new Student(\"Maya\", 10, 3.8) matches the arguments to the parameters in order.",
+    "new Student(\"Leo\", 9) leaves out gpa, so it uses the default 0.0."
+  ],
+  "pitfall": "Writing a second constructor in the same class causes SyntaxError: A class may only have one constructor. Use default values instead.",
+  "keywords": ["constructor", "parameter", "default value", "argument", "class", "object", "new"],
+  "contrast": "Like Python, a JavaScript class has only one constructor, so default parameter values let it work with or without arguments. Java writes a second constructor instead."
+}

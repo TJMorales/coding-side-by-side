@@ -1,0 +1,11 @@
+{
+  "summary": "Polymorphism means one method call, like student.report(), runs the version that belongs to the object's actual class. You can loop over mixed objects and treat them the same way.",
+  "notes": [
+    "HonorsStudent has no constructor, so JavaScript uses Student's constructor for it automatically.",
+    "The for...of loop never checks the type. JavaScript looks up report() on each object when the line runs.",
+    "toFixed(1) keeps one decimal place, so 81 prints as 81.0."
+  ],
+  "pitfall": "Calling a method the object does not have causes TypeError: roster[0].weightedAverage is not a function, and only when that line runs.",
+  "keywords": ["polymorphism", "override", "duck typing", "TypeError", "is not a function", "subclass", "dynamic dispatch"],
+  "contrast": "JavaScript works like Python here: there are no declared types, so any object with a report() method can go in the loop and no cast is needed. Java checks the declared type at compile time."
+}

@@ -2,7 +2,7 @@
   "summary": "When a Java program crashes while running, it prints a stack trace. It tells you the exception type, the reason, and the line number.",
   "notes": [
     "The first line names the exception: java.lang.ArrayIndexOutOfBoundsException.",
-    "The \"at\" line shows the method and the line: Main.main(Main.java:10).",
+    "The \"at\" line shows the method and the line: Main.main(Main.java:13).",
     "The compiler catches type and syntax mistakes, but a bad index is only found while running."
   ],
   "pitfall": "Reading only the word Exception and skipping the reason. \"Index 3 out of bounds for length 3\" tells you the exact bad index and the array size.",

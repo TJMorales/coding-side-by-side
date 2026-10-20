@@ -1,0 +1,11 @@
+{
+  "summary": "Constraints are rules the database enforces on every insert and update. A primary key keeps rows unique, a foreign key must point to a real row, and NOT NULL and CHECK limit what values are allowed.",
+  "notes": [
+    "PRIMARY KEY (student_id, course_id, semester) is a composite key: the three values together must be unique.",
+    "student_id INTEGER REFERENCES students(id) is a foreign key. SQLite ignores it unless you run PRAGMA foreign_keys = ON on each connection. Most other databases always enforce it.",
+    "A CHECK constraint tests a condition, for example grade INTEGER CHECK (grade BETWEEN 0 AND 100)."
+  ],
+  "pitfall": "Inserting a duplicate key gives Runtime error: UNIQUE constraint failed: enrollments.student_id, enrollments.course_id, enrollments.semester (19). The whole statement fails and no row is added.",
+  "keywords": ["PRIMARY KEY", "FOREIGN KEY", "REFERENCES", "UNIQUE", "NOT NULL", "CHECK", "constraint", "PRAGMA foreign_keys"],
+  "expect_error": true
+}

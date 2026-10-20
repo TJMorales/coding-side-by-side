@@ -1,0 +1,10 @@
+{
+  "summary": "The command line always works in one folder at a time. pwd shows it, ls lists its contents, and cd moves to another folder.",
+  "notes": [
+    "The prompt student@linux:~$ shows your user name, the computer name, and the folder you are in.",
+    "~ is a short name for your home folder, here /home/student.",
+    "cd with no folder name takes you home."
+  ],
+  "pitfall": "Folder names are case-sensitive on Linux. cd CS fails with No such file or directory when the folder is named cs.",
+  "keywords": ["pwd", "ls", "cd", "folder", "directory", "home", "navigate"]
+}

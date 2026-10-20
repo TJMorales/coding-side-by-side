@@ -1,0 +1,22 @@
+{
+  "summary": "Parameters pass values into a function, and return sends a result back. Use return when the caller needs the answer, not just printed text.",
+  "notes": [
+    "points = 5 is a default. curve(72) uses 5 and curve(98, 10) uses 10.",
+    "summarize() returns one array. const [low, high, average] = ... unpacks it into 3 variables.",
+    "Math.min(...scores) spreads the array into separate arguments, because Math.min() takes numbers, not an array."
+  ],
+  "pitfall": "Writing return alone on a line with the array on the next line returns undefined, because JavaScript ends the statement right after return. Start the value on the same line as return.",
+  "keywords": [
+    "parameter",
+    "argument",
+    "return",
+    "default parameter",
+    "destructuring",
+    "unpack",
+    "array",
+    "undefined",
+    "spread",
+    "multiple return values"
+  ],
+  "contrast": "Like Python, JavaScript has default parameter values (points = 5), so it needs no overloading as Java does. A function returns one value, but returning an array and unpacking it with const [low, high, average] works like Python's tuple."
+}

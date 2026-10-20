@@ -1,0 +1,11 @@
+{
+  "summary": "A Map matches keys to values, like names to scores. Use it when you look things up by a name instead of by a position.",
+  "notes": [
+    "scores.set(\"Ben\", 82) replaces the old value because keys are unique.",
+    "counts.get(food) ?? 0 gives 0 when get() returns undefined. Then + 1 counts the vote.",
+    "A plain object like { teacher: \"Ms. Rivera\" } works for fixed fields: room.number or room[\"teacher\"]. Use a Map when keys are added while the program runs."
+  ],
+  "pitfall": "Writing scores[\"Ben\"] on a Map gives undefined with no error, because square brackets read a plain property, not a Map entry. Use scores.get(\"Ben\").",
+  "keywords": ["Map", "set", "get", "has", "delete", "size", "object", "key", "value", "dictionary", "dict", "HashMap", "count"],
+  "contrast": "JavaScript's Map uses set() and get() like Java's HashMap, but keeps insertion order like a Python dict. A missing key gives undefined instead of Python's KeyError or Java's null."
+}

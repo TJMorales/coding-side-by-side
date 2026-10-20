@@ -1,0 +1,33 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+  font-size: 16px;
+}
+
+/* Every colored line has white text and a little space inside.
+   (padding is covered in the box model lesson.) */
+p {
+  color: white;
+  padding: 4px 8px;
+  margin: 6px 0;
+}
+
+/* Five ways to write a color. */
+.named { background-color: navy; }
+.hex { background-color: #a33a00; }               /* red, green, blue in hex pairs */
+.rgb { background-color: rgb(46, 125, 50); }      /* each channel 0 to 255 */
+.hsl { background-color: hsl(270, 50%, 40%); }    /* hue, saturation, lightness */
+.see-through { background-color: rgb(29 78 137 / 25%); color: #222; } /* last value is alpha */
+
+/* rem is relative to the root font size (usually 16px), so 1.5rem = 24px. */
+.big {
+  font-size: 1.5rem;
+  color: #1d4e89;
+}
+
+/* % is relative to the parent. Here, half the width of body. */
+.half {
+  width: 50%;
+  background-color: #555;
+}

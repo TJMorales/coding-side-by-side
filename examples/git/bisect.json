@@ -1,0 +1,37 @@
+{
+  "summary": "git bisect finds the commit that introduced a bug with a binary search. With git bisect run, a test script marks each commit good or bad for you.",
+  "notes": [
+    "Bisect halves the range every step. It checked 3 commits here and needs about 10 for 1,000 commits.",
+    "The test command must exit with 0 for good and 1 for bad. exit(1) in Python does that.",
+    "Without run, mark commits by hand with git bisect good and git bisect bad, then git bisect reset."
+  ],
+  "pitfall": "Forgetting git bisect reset leaves you on an old commit with no branch (detached HEAD). New commits made there are easy to lose.",
+  "keywords": [
+    "git bisect",
+    "bisect run",
+    "binary search",
+    "find bug",
+    "first bad commit",
+    "regression"
+  ],
+  "setup_note": "Starts with seven commits on main. test_gradebook.py checks that average([80, 90]) is 85. It passed in the first commit and fails now.",
+  "setup": [
+    "git init -q",
+    "printf '__pycache__/\\n' > .gitignore",
+    "cat > gradebook.py <<'EOF'\ndef average(scores):\n    return sum(scores) / len(scores)\nEOF",
+    "cat > test_gradebook.py <<'EOF'\nfrom gradebook import average\n\nresult = average([80, 90])\nif result == 85:\n    print(\"PASS\")\nelse:\n    print(\"FAIL: average([80, 90]) is\", result)\n    exit(1)\nEOF",
+    "git add -A && git commit -q -m \"Add average and its test\"",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add README\"",
+    "printf '\\n\\n%s' 'def letter(score):\n    return \"A\" if score >= 90 else \"B\"\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Add letter grade function\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "sed -i 's/sum(scores)/sum(scores[1:])/' gradebook.py",
+    "git add -A && git commit -q -m \"Skip the header row\"",
+    "printf '\\n\\ndef highest(scores):\\n    return max(scores)\\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Add highest score function\"",
+    "printf '\\nRun the test: python3 test_gradebook.py\\n' >> README.md",
+    "git add -A && git commit -q -m \"Explain how to run the test\""
+  ]
+}

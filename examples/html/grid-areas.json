@@ -1,0 +1,11 @@
+{
+  "summary": "A full page layout starts with semantic tags for each region. The CSS then names a grid area for each one and draws the layout as a map.",
+  "notes": [
+    "The wrapper div is the grid container. header, nav, main, aside, and footer are its grid items.",
+    "Keep the HTML in a sensible reading order. Screen readers and the Tab key follow the HTML, not the grid.",
+    "The h1 is inside main, because the club name in the header is repeated on every page."
+  ],
+  "pitfall": "Rearranging the HTML so it matches the visual layout. Leave the HTML in reading order and let grid-template-areas move things.",
+  "keywords": ["page layout", "header", "nav", "main", "aside", "footer", "holy grail layout", "sidebar"],
+  "preview_height": 270
+}

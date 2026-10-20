@@ -1,0 +1,11 @@
+{
+  "summary": "An array stores several values in order under one name. You get each value by its index, starting at 0.",
+  "notes": [
+    "scores[0] is the first value. scores[scores.length - 1] is the last.",
+    "scores.length has no parentheses. It is a property, not a method.",
+    "push() adds a value to the end, and length grows by 1."
+  ],
+  "pitfall": "Using scores[scores.length] gives undefined with no error. Doing math with it gives NaN, so the bug shows up later in a different line.",
+  "keywords": ["array", "index", "push", "length", "square brackets", "list", "[]", "undefined"],
+  "contrast": "A JavaScript array can grow like a Python list, and its size is scores.length with no parentheses, like a Java array. Reading past the end gives undefined instead of an error."
+}

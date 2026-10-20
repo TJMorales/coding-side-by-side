@@ -1,0 +1,10 @@
+{
+  "summary": "Tables start with no borders. Add borders and padding to the cells, and use border-collapse so neighboring borders become single lines.",
+  "notes": [
+    "border-collapse: collapse goes on the table, not on the cells.",
+    "text-align: right on td lines up the digits of the scores.",
+    "thead th matches only header cells inside thead, so the row headers in tbody keep a white background."
+  ],
+  "pitfall": "Putting the border on table only. That draws one outline around the outside and no lines between cells.",
+  "keywords": ["border-collapse", "table border", "th", "td", "padding", "text-align", "caption", "table style"]
+}

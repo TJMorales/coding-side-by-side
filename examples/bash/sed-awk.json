@@ -1,0 +1,10 @@
+{
+  "summary": "sed edits text line by line, most often to find and replace. awk splits each line into fields (columns) and runs a small program on them, which makes it good for reports from CSV files and logs.",
+  "notes": [
+    "Without -i, sed prints the changed text and leaves the file alone. With -i it rewrites the file, and there is no undo.",
+    "In awk, {print $1, $3} runs for every line that matches the pattern before it. The comma in print adds a space.",
+    "awk does decimal math, so the average prints 82.375. Bash $(( )) would give 82."
+  ],
+  "pitfall": "Using double quotes around an awk program lets bash replace $1 and $3 before awk sees them, so awk prints the wrong fields or nothing. Put awk programs in single quotes.",
+  "keywords": ["sed", "awk", "find and replace", "substitute", "s///", "sed -i", "sed -n", "fields", "columns", "-F", "NR", "END", "csv", "report"]
+}

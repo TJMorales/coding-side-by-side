@@ -1,0 +1,11 @@
+{
+  "summary": "Encapsulation keeps an object's data behind methods so the object can reject bad values. JavaScript uses a #private field with get and set accessors.",
+  "notes": [
+    "#gpa is truly private. Code outside the class cannot read or write it, and Object.keys() does not list it.",
+    "get gpa() and set gpa(value) share the name gpa, so maya.gpa reads and maya.gpa = 3.8 writes through them.",
+    "this.gpa = gpa in the constructor uses the setter, so a bad starting GPA is rejected too."
+  ],
+  "pitfall": "Writing maya.#gpa = 9.9 outside the class stops the whole file from running with SyntaxError: Private field '#gpa' must be declared in an enclosing class.",
+  "keywords": ["encapsulation", "private", "#", "private field", "get", "set", "getter", "setter", "validation", "RangeError"],
+  "contrast": "JavaScript's # fields are enforced like Java's private, but the get and set accessors are read and assigned like a field, the same way as Python's @property."
+}

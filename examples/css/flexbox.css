@@ -1,0 +1,35 @@
+body { font-family: system-ui, sans-serif; margin: 0; background-color: #fdfaf3; }
+
+/* display: flex lines up the children in a row. */
+.bar {
+  display: flex;
+  justify-content: space-between; /* push h1 left and nav right */
+  align-items: center;            /* center them vertically */
+  padding: 8px 24px;
+  background-color: #1d4e89;
+}
+
+.bar h1 { margin: 0; color: white; font-size: 22px; }
+
+/* gap puts space between items, with none on the outer edges. */
+.links { display: flex; gap: 16px; }
+.links a { color: white; }
+
+h2 { margin: 16px 24px 8px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;   /* start a new row instead of squeezing */
+  gap: 12px;
+  list-style: none;
+  padding: 0 24px;
+}
+
+/* flex: 1 1 120px means grow, shrink, and start from 120px wide. */
+.cards li {
+  flex: 1 1 120px;
+  padding: 12px;
+  background-color: white;
+  border: 2px solid #1d4e89;
+  border-radius: 6px;
+}

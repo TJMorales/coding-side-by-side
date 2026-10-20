@@ -1,0 +1,32 @@
+{
+  "summary": "A remote is another copy of the repository, usually on GitHub. git clone downloads one, and git remote lists and adds the names you use to reach them.",
+  "notes": [
+    "Here the remotes are folders on the same computer. With GitHub the URL looks like https://github.com/maya/gradebook.git, and the commands are the same.",
+    "origin is only a default name. git remote add gives any URL a name you choose.",
+    "A .git ending marks a bare repository: it stores history but has no working files, like the copy on GitHub."
+  ],
+  "pitfall": "Running git clone inside another repository puts one repository inside the other. cd to the folder where you keep projects first.",
+  "keywords": [
+    "git clone",
+    "git remote",
+    "origin",
+    "remote -v",
+    "git remote add",
+    "github",
+    "bare repository"
+  ],
+  "setup_note": "Starts in an empty folder. ../gradebook.git is the class repository with two commits, and ../backup.git is an empty repository.",
+  "setup": [
+    "git init -q ../seed",
+    "cd ../seed",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git clone -q --bare . ../gradebook.git",
+    "cd ../project",
+    "rm -rf ../seed",
+    "git init -q --bare ../backup.git"
+  ]
+}

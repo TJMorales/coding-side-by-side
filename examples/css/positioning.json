@@ -1,0 +1,10 @@
+{
+  "summary": "The position property changes how an element is placed. relative keeps it in place but makes it a reference point, absolute places it inside that reference point, and sticky keeps it on screen while you scroll.",
+  "notes": [
+    "The badge uses top: -10px and right: -10px, so it hangs over the card's top right corner.",
+    "Without position: relative on .card, the badge would be placed relative to the page instead.",
+    "Scroll inside the Fall schedule box: the blue heading stays at the top because of position: sticky."
+  ],
+  "pitfall": "Setting position: sticky with no top value. It then behaves like a normal element and never sticks.",
+  "keywords": ["position", "relative", "absolute", "fixed", "sticky", "top", "right", "z-index", "badge", "overflow"]
+}

@@ -1,0 +1,13 @@
+{
+  "summary": "A for loop repeats commands once for each item in a list. A while loop repeats as long as a test is true, and while read goes through a file line by line.",
+  "notes": [
+    "for file in cs/*.java runs once with the text cs/*.java, because no file matched. Check with [ -e \"$file\" ] if that can happen.",
+    "done < cs/grades.csv feeds the file into the whole while loop, so read gets the next line each time around.",
+    "$((honor + 1)) does whole-number math. The loop body runs between do and done."
+  ],
+  "pitfall": "Piping into a while loop (cat cs/grades.csv | while read ...) runs the loop in a separate shell, so honor is still 0 after done. Use done < cs/grades.csv instead.",
+  "keywords": ["for", "while", "loop", "do", "done", "while read", "IFS", "continue", "break", "for in", "C-style for", "iterate", "read file line by line"],
+  "mode": "script",
+  "filename": "loops.sh",
+  "session": ["./loops.sh"]
+}

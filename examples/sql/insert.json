@@ -1,0 +1,10 @@
+{
+  "summary": "INSERT INTO adds new rows to a table. You name the columns you are filling and give one set of values per row.",
+  "notes": [
+    "Separate several rows with commas after VALUES to insert them in one statement.",
+    "Columns you leave out get NULL (or their DEFAULT). The result shows NULL in those cells.",
+    "The id column is INTEGER PRIMARY KEY, so SQLite numbered the rows 1, 2, 3."
+  ],
+  "pitfall": "If the number of values does not match the number of columns, nothing is inserted: Parse error: 2 values for 3 columns.",
+  "keywords": ["INSERT INTO", "VALUES", "add row", "multiple rows", "NULL"]
+}

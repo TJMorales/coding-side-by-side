@@ -1,0 +1,11 @@
+{
+  "summary": "Positioning moves an element away from where it would normally appear. This page has a card with a corner badge and a scrolling schedule with a heading that stays visible.",
+  "notes": [
+    "The <span class=\"badge\"> is inside the card, which matters: absolute positioning measures from the nearest positioned ancestor.",
+    "The schedule box is short on purpose so it can scroll. Scroll inside it in the preview.",
+    "The badge text \"New\" is still in the HTML, so screen readers read it."
+  ],
+  "pitfall": "Using absolute positioning to build a whole page layout. Positioned elements leave the normal flow, so they overlap when text grows or the screen gets narrow.",
+  "keywords": ["position", "badge", "sticky header", "scroll"],
+  "preview_height": 330
+}

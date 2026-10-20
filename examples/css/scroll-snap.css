@@ -1,0 +1,37 @@
+:root { --blue: #1d4e89; }
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+h1 { margin: 0; color: var(--blue); }
+
+/* The gallery is a flex row that scrolls sideways. */
+.gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  /* x: snap while scrolling sideways. mandatory: always end on a snap point. */
+  scroll-snap-type: x mandatory;
+  /* Snap points sit 8px in from the edge, so the snapped card keeps a margin. */
+  scroll-padding-inline: 8px;
+}
+
+/* Each card is 70% of the gallery width, so part of the next card shows.
+   flex: none stops flexbox from shrinking the cards to fit. */
+.slide {
+  flex: none;
+  width: 70%;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  /* Line up the card's left edge with the snap position. */
+  scroll-snap-align: start;
+}
+.slide h2 { margin: 0 0 6px; font-size: 20px; }
+.slide p { margin: 0; }
+
+.gallery:focus-visible { outline: 3px solid #a33a00; outline-offset: 4px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .gallery { scroll-behavior: smooth; }
+}

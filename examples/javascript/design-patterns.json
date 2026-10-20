@@ -1,0 +1,11 @@
+{
+  "summary": "The Strategy pattern passes the rule for a task into an object instead of writing every rule inside it. In JavaScript, a strategy is usually just a function.",
+  "notes": [
+    "new Gradebook(dropLowest) passes the function itself. Writing dropLowest() would call it and pass the result.",
+    "strategy.name is the function's name as a string, used here to label each line.",
+    "book.strategy = dropLowest swaps the rule on an existing object without changing the Gradebook class."
+  ],
+  "pitfall": "Writing new Gradebook(dropLowest()) calls the function with no argument, so scores is undefined and it fails with TypeError: Cannot read properties of undefined (reading 'length').",
+  "keywords": ["strategy pattern", "design pattern", "first-class function", "arrow function", "callback", "function name", "open closed principle"],
+  "contrast": "JavaScript passes plain functions as strategies, like Python. Java needs an interface for the strategy, which a lambda or method reference then fills in."
+}

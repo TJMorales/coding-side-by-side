@@ -1,0 +1,11 @@
+{
+  "summary": "Template literals build text from values. toFixed(), padStart(), and padEnd() control decimal places, column width, and alignment for reports, receipts, and tables.",
+  "notes": [
+    "average.toFixed(2) returns the string \"87.46\". It does not change the value stored in average.",
+    "courses[i].padEnd(12) pads the text to 12 characters. padStart() works only on strings, so call toFixed() on a number first.",
+    "In `$${raised}` the first $ is a plain dollar sign. ${ starts the value."
+  ],
+  "pitfall": "Using quotes instead of backticks prints the braces literally: \"${student}\" shows ${student} instead of Jordan.",
+  "keywords": ["template literal", "backtick", "${}", "toFixed", "padStart", "padEnd", "toLocaleString", "format", "decimal places", "align"],
+  "contrast": "Template literals (`${average}`) work like Python's f-strings, but JavaScript has no format codes like :.2f or %.2f. You call methods instead: toFixed(2) for decimals and padStart() or padEnd() for width."
+}

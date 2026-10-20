@@ -1,0 +1,38 @@
+{
+  "summary": "In a feature branch workflow, every change goes on its own branch, gets pushed and reviewed, and is merged into main. Then everyone pulls main.",
+  "notes": [
+    "On GitHub, the review and merge happen in a pull request: it shows the branch's diff, collects comments, and has a Merge button that does what Jordan's merge and push do here.",
+    "--no-ff makes a merge commit even when a fast-forward is possible, which is what GitHub's default merge button does. It records that the feature came in as one unit.",
+    "Keep main working at all times. Unfinished work lives on branches until it is reviewed."
+  ],
+  "pitfall": "Starting a new branch from an old main leads to conflicts later. Run git switch main and git pull before git switch -c.",
+  "keywords": [
+    "feature branch",
+    "pull request",
+    "PR",
+    "code review",
+    "git push -u",
+    "workflow",
+    "github flow",
+    "--no-ff"
+  ],
+  "setup_note": "Starts in Maya's clone of ../gradebook.git, on main. Her teammate Jordan has his own clone in ../jordan.",
+  "setup": [
+    "git init -q ../seed",
+    "cd ../seed",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git clone -q --bare . ../gradebook.git",
+    "cd ../project",
+    "rm -rf ../seed",
+    "git clone -q ~/gradebook.git .",
+    "git clone -q ~/gradebook.git ../jordan",
+    "cd ../jordan",
+    "git config user.name \"Jordan Kim\"",
+    "git config user.email jordan@example.com",
+    "cd ../project"
+  ]
+}

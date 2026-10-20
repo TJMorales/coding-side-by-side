@@ -1,0 +1,33 @@
+body { font-family: system-ui, sans-serif; margin: 16px; background-color: #fdfaf3; }
+
+/* Wide main column, narrow sidebar. */
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+
+/* container-type: inline-size makes each slot a container that its
+   children can measure. (Container queries are new: 2023 in all browsers.) */
+.slot { container-type: inline-size; }
+
+.label { margin: 0 0 6px; font-size: 13px; color: #a33a00; font-family: monospace; }
+
+/* Default card layout (narrow): avatar above the text. */
+.member {
+  padding: 12px;
+  background-color: white;
+  border: 2px solid #1d4e89;
+  border-radius: 8px;
+}
+.avatar { width: 48px; height: 48px; }
+.member h2 { margin: 4px 0; font-size: 18px; }
+.member p { margin: 0; }
+
+/* When the nearest container is at least 300px wide,
+   put the avatar beside the text and make it bigger. */
+@container (min-width: 300px) {
+  .member {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .avatar { width: 72px; height: 72px; flex-shrink: 0; }
+  .member h2 { font-size: 22px; }
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "@container applies styles based on the width of the element's container instead of the whole screen. Mark a parent with container-type: inline-size, then write @container (min-width: ...) rules for its children.",
+  "notes": [
+    "In the preview, main is about 395px wide, so (min-width: 300px) is true and its card is a row. The aside is about 195px wide, so its card stays stacked.",
+    "A media query could not do this: both cards are on the same screen, at the same screen width.",
+    "If the whole page gets narrow enough that main is under 300px, its card stacks too."
+  ],
+  "pitfall": "Setting container-type on the card itself and querying it from the card's own rule. An element cannot respond to its own size; the container must be an ancestor.",
+  "keywords": ["@container", "container queries", "container-type", "inline-size", "responsive components", "media query", "component"]
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "Every HTML element is drawn as a rectangle. The box model describes the layers of that rectangle: content, padding, border, and margin.",
+  "notes": [
+    "<section> groups related content with its own heading.",
+    "<div> is a plain box with no meaning. Use it when no semantic tag fits, like these demo boxes.",
+    "Each box's text tells you how its width is calculated, so you can compare it with the preview."
+  ],
+  "pitfall": "Adding empty <br> tags or blank paragraphs to make space. Use margin and padding in CSS instead.",
+  "keywords": ["div", "section", "box", "container"],
+  "preview_height": 370
+}

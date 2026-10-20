@@ -1,0 +1,10 @@
+{
+  "summary": "A window function calculates across a set of related rows but keeps every row in the result. Use it for rankings, running totals, and comparing a row to its group.",
+  "notes": [
+    "OVER (PARTITION BY e.course_id ...) splits rows by course the way GROUP BY does, but without collapsing them into one row.",
+    "OVER () with nothing inside uses every row the query returns, so each CS1 row sees the CS1 average of 87.0.",
+    "On a tie, RANK gives both 7 and skips to 9. DENSE_RANK gives both 7 and continues with 8. ROW_NUMBER never ties."
+  ],
+  "pitfall": "You cannot filter on a window function in WHERE: WHERE RANK() OVER (...) = 1 gives Parse error: misuse of window function RANK(). Put the query in a CTE or subquery and filter the outer query.",
+  "keywords": ["window function", "OVER", "PARTITION BY", "RANK", "DENSE_RANK", "ROW_NUMBER", "ranking", "running total"]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "A worktree is a second folder connected to the same repository, with a different branch checked out. You can work on two branches at once without stashing.",
+  "notes": [
+    "All worktrees share one history, so the hotfix commit is visible from project right away.",
+    "A branch can be checked out in only one worktree at a time.",
+    "Next, merge hotfix into main the usual way, or push it and open a pull request."
+  ],
+  "pitfall": "Deleting the worktree folder with rm -r leaves Git thinking it still exists, and the branch stays locked. Use git worktree remove, or git worktree prune after an rm.",
+  "keywords": [
+    "git worktree",
+    "worktree add",
+    "worktree list",
+    "worktree remove",
+    "hotfix",
+    "two branches at once"
+  ],
+  "setup_note": "Starts on the branch letter-grades with one commit and an unfinished, uncommitted change to gradebook.py. README.md on main has a typo.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz socres for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git switch -q -c letter-grades",
+    "printf '%s' 'def letter(score):\n    return \"A\" if score >= 90 else \"B\"\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Add letter grade function\"",
+    "printf 'print(\"Letter:\", letter(average))\\n' >> gradebook.py"
+  ]
+}

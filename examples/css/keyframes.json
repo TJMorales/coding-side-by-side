@@ -1,0 +1,10 @@
+{
+  "summary": "@keyframes describes the steps of an animation, and the animation property runs it on an element. Unlike a transition, it does not need a state change like hover to start.",
+  "notes": [
+    "animation: pulse 1.2s ease-in-out infinite alternate fades the dot down and back up forever.",
+    "fill-up has only a from step. The to step is the element's normal width (75%), so the bar ends at 18 of 24.",
+    "With reduced motion turned on in the system settings, the animations stop and the bar shows at 75% right away."
+  ],
+  "pitfall": "Misspelling the animation name, such as animation: pluse 1s. Nothing moves and there is no error message.",
+  "keywords": ["@keyframes", "animation", "animation-name", "animation-duration", "infinite", "alternate", "from", "to", "prefers-reduced-motion", "loading bar"]
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "A while loop repeats as long as its condition is true. Use it when you do not know ahead of time how many times to repeat.",
+  "notes": [
+    "The condition goes in parentheses: while (savings < 100).",
+    "savings = savings + 30 changes the value the condition checks.",
+    "When the condition is false at the start, the body runs zero times."
+  ],
+  "pitfall": "Forgetting to change the variable in the condition makes an infinite loop. The program never stops. Press Ctrl+C to stop it.",
+  "keywords": ["while", "loop", "repeat", "condition", "infinite loop", "braces"],
+  "contrast": "JavaScript's while loop is written the same way as Java's: parentheses around the condition and braces around the body. Python uses a colon and indentation instead."
+}

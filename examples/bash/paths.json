@@ -1,0 +1,10 @@
+{
+  "summary": "A path tells a command where a file or folder is. An absolute path starts at / and always means the same place. A relative path starts from the folder you are in.",
+  "notes": [
+    "/home/student/cs/project/src is absolute: it starts at / (the top of the file system) and works no matter where you are.",
+    "In ../cs/project, .. means the folder above music, which is /home/student.",
+    "~/music is short for /home/student/music, so it works from any folder."
+  ],
+  "pitfall": "A relative path depends on where you are. ls src works inside cs/project but fails in music with ls: cannot access 'src': No such file or directory. Run pwd to check where you are.",
+  "keywords": ["path", "absolute path", "relative path", "..", ".", "~", "home", "cd", "pwd", "parent folder"]
+}

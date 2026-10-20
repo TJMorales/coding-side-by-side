@@ -20,10 +20,7 @@ class Student:
 
 
 broken = BrokenStudent("Maya", 10, 3.8)
-try:
-    print(broken.name)
-except AttributeError as error:
-    print("Broken:", error)
+print("Broken has a name field:", hasattr(broken, "name"))
 
 maya = Student("Maya", 10, 3.8)
 maya.set_gpa(3.9)

@@ -1,0 +1,10 @@
+{
+  "summary": "A media query applies CSS only when a condition is true, such as the screen being at least 500px wide. Start with phone styles, then add min-width queries for bigger screens.",
+  "notes": [
+    "The preview is about 640px wide, so (min-width: 500px) is true and (min-width: 900px) is false: you see two columns.",
+    "Narrower than 500px (a phone), neither query applies: one column. 900px or wider, both apply and the later one wins: four columns.",
+    "To test it, open the page in your browser and drag the window narrower and wider."
+  ],
+  "pitfall": "Putting the @media block above the normal rules. The normal rule comes later, so it wins and the media query seems to do nothing.",
+  "keywords": ["@media", "media query", "min-width", "max-width", "breakpoint", "responsive", "mobile first", "screen width"]
+}

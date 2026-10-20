@@ -1,0 +1,11 @@
+{
+  "summary": "A unit test runs a small piece of code with known inputs and checks the result. Node has a built-in assert module, and check() here runs each test and prints PASS or FAIL.",
+  "notes": [
+    "assert.strictEqual(actual, expected) throws an AssertionError if actual !== expected. check() catches it and prints FAIL.",
+    "assert.throws(() => letterGrade(101), RangeError) needs an arrow function, so the code runs inside assert.throws where the error can be caught.",
+    "Node also has node:test with test() blocks and a node --test command. Its report prints timings that change on every run."
+  ],
+  "pitfall": "Writing assert.throws(letterGrade(101), RangeError) calls letterGrade right away, so the RangeError is thrown before assert.throws can catch it and the test crashes. Wrap the call in () => ...",
+  "keywords": ["unit test", "assert", "strictEqual", "assert.throws", "AssertionError", "node:test", "test", "boundary testing", "testing"],
+  "contrast": "Python ships unittest with test classes, and Java projects add JUnit. Node ships both an assert module and a node:test runner, so no install is needed."
+}

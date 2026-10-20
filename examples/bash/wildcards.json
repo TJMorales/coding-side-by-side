@@ -1,0 +1,10 @@
+{
+  "summary": "Wildcards let you name many files with one pattern. * matches any characters, ? matches one character, and [abc] matches one character from a list.",
+  "notes": [
+    "The shell expands the pattern before the command runs, so ls never sees *.txt. It receives the list of matching names.",
+    "ls */*.txt finds cs/roster.txt and music/playlist.txt but not notes.txt, because the pattern requires a folder first.",
+    "* does not match names that start with a dot (hidden files like .bashrc). Use ls -a to see those."
+  ],
+  "pitfall": "A pattern with no matches is passed as typed. ls music/*.mp3 fails with ls: cannot access 'music/*.mp3': No such file or directory, which means no file matched.",
+  "keywords": ["wildcard", "glob", "*", "?", "[ ]", "pattern", "globbing", "all files", "*.txt", "expansion"]
+}

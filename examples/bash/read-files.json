@@ -1,0 +1,10 @@
+{
+  "summary": "cat prints a file, head prints the first lines, and tail prints the last lines. Use head and tail when a file is too long to read at once.",
+  "notes": [
+    "head and tail show 10 lines unless you give -n with a number.",
+    "Log files add new lines at the bottom, so tail shows the most recent events.",
+    "For a long file you want to scroll through, use less (press q to quit). It does not run on this page because it waits for keys."
+  ],
+  "pitfall": "cat on a folder fails with cat: cs: Is a directory. Use ls to see what is in a folder and cat to read a file.",
+  "keywords": ["cat", "head", "tail", "head -n", "tail -n", "read file", "print file", "less", "log", "first lines", "last lines"]
+}

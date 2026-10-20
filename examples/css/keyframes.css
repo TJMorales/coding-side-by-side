@@ -1,0 +1,35 @@
+:root { --blue: #1d4e89; --green: #2e7d32; }
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+h1 { margin-top: 0; color: var(--blue); }
+
+/* @keyframes names an animation and lists the steps. */
+@keyframes pulse {
+  from { opacity: 1; }
+  to { opacity: 0.25; }
+}
+@keyframes fill-up { from { width: 0; } }
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--green);
+  /* name, length, timing, repeat forever, go back and forth */
+  animation: pulse 1.2s ease-in-out infinite alternate;
+}
+
+.track { width: 320px; height: 20px; background-color: #e3ddd0; border-radius: 10px; }
+
+/* The final width is set here. The animation only runs from 0 to it. */
+.fill {
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--blue);
+  animation: fill-up 1.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot, .fill { animation: none; }
+}

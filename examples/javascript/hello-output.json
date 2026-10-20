@@ -1,0 +1,11 @@
+{
+  "summary": "console.log() displays text and values in the console. Every console.log() starts a new line.",
+  "notes": [
+    "Text goes in quotes. Single quotes, double quotes, and backticks all make strings.",
+    "Commas between values add a space automatically.",
+    "Statements usually end with a semicolon. JavaScript can insert missing ones, but writing them avoids surprises."
+  ],
+  "pitfall": "Writing console.Log with a capital L causes TypeError: console.Log is not a function. JavaScript is case-sensitive.",
+  "keywords": ["console.log", "print", "output", "process.stdout.write", "newline"],
+  "contrast": "JavaScript's console.log() works like Python's print(): it ends the line and puts spaces between values. In a browser it writes to the developer tools console, not the page."
+}

@@ -1,0 +1,30 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+h1 { margin-top: 0; color: #1d4e89; }
+
+/* Three equal columns. 1fr means one share of the free space. */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.projects article {
+  padding: 10px 12px;
+  background-color: white;
+  border: 2px solid #1d4e89;
+  border-radius: 6px;
+}
+
+.projects h2 { margin: 0 0 4px; font-size: 17px; }
+.projects p { margin: 0; }
+
+/* This card covers two columns. Grid moves the rest to fit around it. */
+.featured {
+  grid-column: span 2;
+  background-color: #ffe9d6;
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "addEventListener() tells the browser to call your function when an event happens, such as a click or a key press. Your function changes the data and then redraws the canvas.",
+  "notes": [
+    "canvas.addEventListener(\"click\", ...) passes a function, not an object. The browser gives it an event with offsetX and offsetY.",
+    "event.key is a readable name such as \"ArrowLeft\", \"a\", or \" \" for the space bar.",
+    "event.preventDefault() stops the browser's normal action for that key, which for arrow keys is scrolling the page."
+  ],
+  "pitfall": "Adding the keydown listener to the canvas instead of window does nothing, because a canvas cannot take keyboard focus unless you give it a tabindex attribute. Clicks still work, so the bug looks like broken arrow keys.",
+  "keywords": ["addEventListener", "click", "keydown", "event", "event.key", "offsetX", "preventDefault", "canvas", "listener", "callback"],
+  "run": false,
+  "browser": true,
+  "gui_actions": [["click", 100, 80], ["wait", 0.3], ["key", "ArrowRight"], ["key", "ArrowRight"], ["key", "ArrowRight"]],
+  "shot_note": "After one click near the top left and three Right presses.",
+  "contrast": "JavaScript registers plain functions like Python's turtle, not listener objects like Java's Swing. Like Swing, the canvas does not redraw on its own, so each listener calls draw()."
+}

@@ -1,0 +1,8 @@
+2026-09-08 08:00:01 INFO server started on port 8080
+2026-09-08 08:02:17 INFO GET /index.html 200
+2026-09-08 08:02:19 WARN slow response /grades 1840ms
+2026-09-08 08:05:44 ERROR database connection lost
+2026-09-08 08:05:45 INFO retrying database connection
+2026-09-08 08:05:47 INFO database connection restored
+2026-09-08 08:07:03 INFO GET /grades 200
+2026-09-08 08:09:30 ERROR file not found /missing.html

@@ -1,0 +1,34 @@
+{
+  "summary": "git rebase moves your branch so it starts from the newest commit of another branch. The result is a straight history with no merge commit.",
+  "notes": [
+    "Rebase copies each commit onto the new base, so every copied commit gets a new hash.",
+    "If a replayed commit conflicts, fix the file, git add it, and run git rebase --continue. git rebase --abort cancels.",
+    "Merge keeps the history exactly as it happened. Rebase rewrites it to look like you started later. Both end with the same files."
+  ],
+  "pitfall": "Do not rebase commits you already pushed and others pulled. Their copies have the old hashes, and the next pull mixes both versions. Rebase only local work.",
+  "keywords": [
+    "git rebase",
+    "rebase",
+    "linear history",
+    "--continue",
+    "--abort",
+    "replay"
+  ],
+  "setup_note": "Starts on main. The branch letter-grades has two commits, and main got one more commit after the branch started.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz socres for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "git switch -q -c letter-grades",
+    "printf '%s' 'def letter(score):\n    return \"A\" if score >= 90 else \"B\"\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Add letter grade function\"",
+    "printf 'print(\"Letter:\", letter(average))\\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Print the letter grade\"",
+    "git switch -q main",
+    "sed -i 's/socres/scores/' README.md",
+    "git add -A && git commit -q -m \"Fix typo in README\""
+  ]
+}

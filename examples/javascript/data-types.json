@@ -1,0 +1,11 @@
+{
+  "summary": "Every value has a type that decides what you can do with it. The basic types are number, string, and boolean, plus undefined for a variable with no value yet.",
+  "notes": [
+    "11 and 14.5 are both type number. There is no separate int or float.",
+    "true and false are lowercase. \"A\" is a string of length 1, and you can use single or double quotes.",
+    "Number.MAX_SAFE_INTEGER is 9007199254740991. Adding 2 prints 9007199254740992, which is wrong by 1."
+  ],
+  "pitfall": "Writing True with a capital T, as in Python, causes ReferenceError: True is not defined. JavaScript's booleans are true and false.",
+  "keywords": ["number", "string", "boolean", "undefined", "typeof", "true", "false", "integer", "decimal", "Number.MAX_SAFE_INTEGER"],
+  "contrast": "JavaScript has one number type for both 11 and 14.5, where Python has int and float and Java has int and double. Like Python, it has no char type: one letter is a string."
+}

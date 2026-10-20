@@ -1,0 +1,28 @@
+{
+  "summary": "The reflog is a local record of every commit HEAD has pointed to. It lets you find and restore commits that a reset or a deleted branch removed from the log.",
+  "notes": [
+    "HEAD@{0} is where you are now, HEAD@{1} is one move earlier, and so on.",
+    "git branch rescue HEAD@{1} is another way to recover: it puts a new branch on the lost commit.",
+    "The reflog is only on your computer, and Git deletes old entries after about 90 days."
+  ],
+  "pitfall": "The reflog only has commits. Changes you never committed are not in it, so git reset --hard on uncommitted work cannot be undone.",
+  "keywords": [
+    "git reflog",
+    "recover commit",
+    "lost commit",
+    "HEAD@{1}",
+    "undo reset",
+    "deleted branch"
+  ],
+  "setup_note": "Starts in a repository with three commits on main.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "printf 'print(\"Letter:\", \"A\" if average >= 90 else \"B\")\\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Print a letter grade\""
+  ]
+}

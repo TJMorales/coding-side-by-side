@@ -1,0 +1,32 @@
+{
+  "summary": "Arguments are the words you type after a script's name. Inside the script, $1 is the first, $2 the second, $# is how many there are, and $@ or $* is all of them.",
+  "notes": [
+    "\"the CS quiz\" is in quotes, so it arrives as one argument ($2). Without quotes it would be three.",
+    "./shoutout.sh Ava Smith gives 2 arguments, so Smith becomes the event. \"Ava Smith\" in quotes is 1 argument.",
+    "$0 is the name you used to run the script, here ./shoutout.sh. shift with no arguments left does nothing."
+  ],
+  "pitfall": "Forgetting quotes around an argument with spaces splits it. ./shoutout.sh Ava Smith prints Great job at Smith, Ava! because Smith became $2.",
+  "keywords": [
+    "arguments",
+    "parameters",
+    "$1",
+    "$2",
+    "$#",
+    "$@",
+    "$*",
+    "$0",
+    "shift",
+    "default value",
+    "${1:-}",
+    "command line arguments"
+  ],
+  "mode": "script",
+  "filename": "shoutout.sh",
+  "session": [
+    "./shoutout.sh Maya \"the CS quiz\"",
+    "./shoutout.sh Leo",
+    "./shoutout.sh",
+    "./shoutout.sh Ava Smith",
+    "./shoutout.sh \"Ava Smith\""
+  ]
+}

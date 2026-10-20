@@ -1,0 +1,10 @@
+{
+  "summary": "CSS can make a page easier or harder to use. Keep text contrast high, make click targets big enough, and never hide the keyboard focus outline.",
+  "notes": [
+    ":focus-visible with no element before it applies to anything focused by the keyboard. Press Tab in the preview to move through the fields.",
+    "Gray hint text is only readable if it is dark enough. WCAG AA asks for a contrast ratio of at least 4.5 to 1 for normal text.",
+    "Larger radio buttons (18px) are easier to hit with a finger or an unsteady mouse."
+  ],
+  "pitfall": "Writing :focus { outline: none; } because the outline looks ugly. Keyboard users then cannot tell which field they are in.",
+  "keywords": ["accessibility", "focus-visible", "outline", "contrast", "wcag", "target size", "fieldset", "legend", "a11y"]
+}

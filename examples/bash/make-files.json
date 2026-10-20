@@ -1,0 +1,10 @@
+{
+  "summary": "mkdir makes folders and touch makes empty files. Use them to set up a place for a new project.",
+  "notes": [
+    "mkdir -p projects/web/css makes web and css in one step, and it does not complain if they already exist.",
+    "ls -R shows each folder followed by its contents, so you can check the whole tree at once.",
+    "ls shows 'lab notes.txt' in quotes because the name has a space. The quotes are not part of the name."
+  ],
+  "pitfall": "touch lab notes.txt without quotes makes two files, lab and notes.txt. Put quotes around names with spaces, or use a dash or underscore instead (lab-notes.txt).",
+  "keywords": ["mkdir", "mkdir -p", "touch", "new folder", "new file", "create", "directory", "ls -R", "spaces in names"]
+}

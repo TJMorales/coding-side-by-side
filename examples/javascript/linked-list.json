@@ -1,0 +1,11 @@
+{
+  "summary": "A linked list stores values in separate nodes, each pointing to the next one. Adding at the front is O(1), but reaching index i takes i steps.",
+  "notes": [
+    "for (let current = this.head; current !== null; current = current.next) is the standard traversal loop.",
+    "insertAt sets newNode.next before current.next. Reversing those two lines loses the rest of the list.",
+    "A template literal like `Playlist: ${playlist}` calls toString(). console.log(playlist) would print the nested node objects instead."
+  ],
+  "pitfall": "Calling insertAt with an index past the end makes current become null, and current.next throws TypeError: Cannot read properties of null (reading 'next').",
+  "keywords": ["linked list", "node", "next", "null", "head", "traversal", "toString", "insert", "TypeError"],
+  "contrast": "JavaScript ends the list with null like Java, but its Node class has no types, so like Python's, next could hold anything. JavaScript also has undefined, and a missing next set to undefined would not stop a loop that checks !== null."
+}

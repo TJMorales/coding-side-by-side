@@ -1,0 +1,28 @@
+{
+  "summary": "git blame shows who last changed each line of a file and in which commit. Use it to find the commit that explains a line.",
+  "notes": [
+    "Each line starts with a short commit hash. Pass it to git show to see the whole commit.",
+    "blame shows the last change only. If a line was edited twice, git log -L 3,3:gradebook.py shows every version.",
+    "A ^ before a hash marks the first commit in the history. Lines you have not committed yet show 00000000 and Not Committed Yet."
+  ],
+  "pitfall": "The author in blame is whoever made the commit, which is not always who wrote the idea. Read the commit message before you blame a teammate.",
+  "keywords": [
+    "git blame",
+    "-L",
+    "who changed",
+    "author",
+    "line history",
+    "git show"
+  ],
+  "setup_note": "Starts with three commits on main. Maya Lopez made the first and last ones. Her teammate Jordan Kim made the middle one.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "sed -i 's/^print(\"Average:\", average)$/print(\"Average:\", round(average, 1))/' gradebook.py",
+    "git add -A && git -c user.name=\"Jordan Kim\" -c user.email=jordan@example.com commit -q -m \"Round the average to one decimal\"",
+    "sed -i 's/95\\]/95, 84]/' gradebook.py",
+    "git add -A && git commit -q -m \"Add Eli's score\""
+  ]
+}

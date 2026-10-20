@@ -1,0 +1,10 @@
+{
+  "summary": "Custom properties (CSS variables) store a value with a name like --club-blue. Read the value with var(--club-blue). Change it in one place and every rule that uses it updates.",
+  "notes": [
+    "Variables set on :root work everywhere on the page, so they are a good home for the site's colors and spacing.",
+    "The second value in var(--accent, var(--club-blue)) is a fallback. The web card has no --accent, so it uses blue.",
+    ".games { --accent: #a33a00; } changes the accent only inside the games card. The heading and border both follow it."
+  ],
+  "pitfall": "Leaving off the dashes or var(): color: club-blue; or color: --club-blue; is invalid and the browser ignores it.",
+  "keywords": ["custom properties", "css variables", "var()", "--", ":root", "fallback", "theme", "design tokens"]
+}

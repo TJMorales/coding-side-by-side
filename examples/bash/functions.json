@@ -1,0 +1,13 @@
+{
+  "summary": "A function gives a name to a group of commands so you can run them many times with different arguments. Bash functions return text with echo and success or failure with an exit code.",
+  "notes": [
+    "average prints 83, not 83.4, because $(( )) only does whole-number math and drops the decimal part.",
+    "is_passing has no echo. The exit code of its last command, [ \"$1\" -ge 70 ], is what if checks.",
+    "local total inside average is a separate variable, so the total=\"not set\" outside the function is unchanged."
+  ],
+  "pitfall": "return only sets an exit code from 0 to 255. return 92 does not give you 92 in a variable. Use echo inside the function and result=$(letter_grade 92) outside.",
+  "keywords": ["function", "functions", "local", "return", "echo", "$@", "$#", "arguments", "define function", "call function", "exit code"],
+  "mode": "script",
+  "filename": "grades.sh",
+  "session": ["./grades.sh"]
+}

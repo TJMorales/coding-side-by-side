@@ -1,0 +1,15 @@
+{
+  "summary": "A game loop repeats three steps every frame: update positions, check collisions, and draw. In the browser, requestAnimationFrame() runs the loop once per screen refresh.",
+  "notes": [
+    "requestAnimationFrame(gameLoop) schedules one more frame. gameLoop asks again at the end, so the loop keeps going without blocking the page.",
+    "requestAnimationFrame matches the screen's refresh rate, usually 60 times a second but 120 on some screens, so the ball can move faster there. Real games multiply speed by the time since the last frame.",
+    "keysDown is a Set of held keys. keydown adds a key and keyup removes it, so holding ArrowLeft moves the paddle smoothly every frame."
+  ],
+  "pitfall": "Using a while (true) loop instead of requestAnimationFrame freezes the tab, because the browser never gets a chance to draw the frame or handle key presses.",
+  "keywords": ["game loop", "animation", "requestAnimationFrame", "canvas", "keydown", "keyup", "Set", "collision", "clearRect", "bounce", "frame"],
+  "run": false,
+  "browser": true,
+  "gui_actions": [["click", 300, 200], ["keydown", "ArrowLeft", 0.8]],
+  "shot_note": "Mid-game, after holding the Left key.",
+  "contrast": "JavaScript runs the loop with requestAnimationFrame(), which the browser calls before each screen refresh, where Python uses ontimer() and Java uses a javax.swing.Timer. The canvas has no repaint(), so the loop clears and draws every frame itself."
+}

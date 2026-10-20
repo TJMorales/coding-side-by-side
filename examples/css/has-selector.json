@@ -1,0 +1,10 @@
+{
+  "summary": ":has() selects an element based on what it contains. li:has(input:checked) means \"a list item that has a checked input inside it\", which lets you style a parent based on its children.",
+  "notes": [
+    "The first two checklist rows are crossed out because their checkboxes are checked. Click a row in the preview to toggle it.",
+    ".card:has(.badge) gives only the Web track card an orange border, because only it contains a badge.",
+    ":has() takes any selector inside the parentheses, including states like :checked, :focus, and :invalid."
+  ],
+  "pitfall": "Writing li input:checked when you mean the li. That selects the checkbox, not the row, so the row style never changes.",
+  "keywords": [":has()", "has selector", "parent selector", ":checked", "checkbox", "relational selector", "contains"]
+}

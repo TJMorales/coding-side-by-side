@@ -1,0 +1,11 @@
+{
+  "summary": "Every web page starts with the same skeleton: a doctype, an html element, a head with information about the page, and a body with what people see.",
+  "notes": [
+    "<!DOCTYPE html> tells the browser to use modern HTML rules.",
+    "Everything inside <head> is information about the page. Only <body> content shows on screen.",
+    "The <link> tag loads style.css, so the CSS file styles this page."
+  ],
+  "pitfall": "Putting visible content like <h1> inside <head> instead of <body> is invalid HTML, and browsers move or ignore it.",
+  "keywords": ["doctype", "html", "head", "body", "title", "meta", "link", "skeleton", "boilerplate"],
+  "preview_height": 160
+}

@@ -1,0 +1,20 @@
+{
+  "summary": "Every command ends with an exit code: 0 means success and any other number means failure. && and || use that code to decide whether to run the next command, and exit sets your script's own code.",
+  "notes": [
+    "In the session, ./check-log.sh logs/server.log; echo \"Exit code: $?\" runs both commands on one line so $? is the script's code.",
+    "./check-log.sh logs/today.log && echo \"Safe to archive\" prints the message only because the script exited with 0.",
+    "{ echo ...; exit 2; } groups two commands so both run when the test fails. The spaces and the last ; are required."
+  ],
+  "pitfall": "$? changes after every command, even echo. Save it right away (status=$?) if you need it more than once, or the second check reads echo's 0.",
+  "keywords": ["exit code", "exit status", "$?", "exit", "&&", "||", "and", "or", "return code", "grep -q", "success", "failure"],
+  "mode": "script",
+  "filename": "check-log.sh",
+  "session": [
+    "./check-log.sh logs/server.log; echo \"Exit code: $?\"",
+    "echo \"2026-09-09 08:00:00 INFO server started\" > logs/today.log",
+    "./check-log.sh logs/today.log && echo \"Safe to archive\"",
+    "ls checked",
+    "./check-log.sh logs/old.log || echo \"Check failed\"",
+    "./check-log.sh logs/old.log; echo \"Exit code: $?\""
+  ]
+}

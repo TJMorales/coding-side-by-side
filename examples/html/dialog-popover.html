@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS Club Meeting Info</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Tuesday meeting</h1>
+    <!-- popovertarget names the id of the popover to open. No JavaScript needed. -->
+    <button type="button" popovertarget="room-info">Where is Room 2115?</button>
+
+    <!-- popover hides this until the button opens it. Click outside or press Esc to close it. -->
+    <div id="room-info" popover>
+      <p>Second floor, C hall, next to the library stairs.</p>
+      <button type="button" popovertarget="room-info" popovertargetaction="hide">Close</button>
+    </div>
+
+    <!-- open shows the dialog right away, as part of the page (not modal).
+         A modal dialog needs JavaScript: document.querySelector("dialog").showModal(). -->
+    <dialog open aria-labelledby="rsvp-title">
+      <h2 id="rsvp-title">RSVP</h2>
+      <p>Will you come to the hackathon on Nov 14?</p>
+      <!-- method="dialog" closes the dialog instead of sending the form to a server. -->
+      <form method="dialog">
+        <button value="yes">Yes</button>
+        <button value="no">Not this time</button>
+      </form>
+    </dialog>
+  </body>
+</html>

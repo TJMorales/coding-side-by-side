@@ -1,0 +1,11 @@
+{
+  "summary": "break stops a loop early and continue skips to the next pass. Use them when you are searching for something or need to skip bad data.",
+  "notes": [
+    "for (const score of scores) gives each item in order. const works because each pass gets a new score.",
+    "continue jumps to the next pass, so the \"Passing\" line is skipped for -1. break leaves the loop, so 75 is never checked.",
+    "Set a flag like foundFailing before break and check it after the loop."
+  ],
+  "pitfall": "Using break inside forEach(), as in scores.forEach((s) => { if (s < 60) break; }), causes SyntaxError: Illegal break statement. Use a for...of loop when you need break.",
+  "keywords": ["break", "continue", "for...of", "exit loop", "skip", "flag", "boolean", "search", "forEach"],
+  "contrast": "JavaScript uses break and continue the same way as Python and Java. Like Java, it has no for...else, so you use a boolean flag."
+}

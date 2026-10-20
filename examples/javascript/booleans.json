@@ -1,0 +1,11 @@
+{
+  "summary": "A comparison like score >= 70 gives true or false. Use &&, ||, and ! to combine conditions.",
+  "notes": [
+    "The comparison operators are ===, !==, <, >, <=, and >=.",
+    "&& needs both sides true. || needs at least one side true. ! flips one value.",
+    "Use === and !==. With ==, the number 85 equals the string \"85\"."
+  ],
+  "pitfall": "Writing if (score = 85) uses one =, which assigns. Because score is a const, it causes TypeError: Assignment to constant variable. Use === to compare.",
+  "keywords": ["boolean", "true", "false", "&&", "||", "!", "===", "!==", "==", "comparison", "logic"],
+  "contrast": "JavaScript uses &&, ||, and ! like Java. It compares with === and !==, because == converts types first, so 85 == \"85\" is true."
+}

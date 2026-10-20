@@ -1,0 +1,10 @@
+{
+  "summary": "Every running program is a process. You can start a command in the background with &, list your jobs, and stop one with kill.",
+  "notes": [
+    "In your own terminal, sleep 30 & also prints a line like [1] 4821: the job number and the process ID (PID). PIDs change every run, so this page hides them.",
+    "kill %1 uses the job number. kill 4821 uses a PID, which you can find with ps or pgrep sleep.",
+    "Press Ctrl+C to stop a command running in the foreground, and fg to bring a background job back to the front."
+  ],
+  "pitfall": "kill 1 without the % sends the signal to process ID 1, not job 1, and fails with kill: (1) - Operation not permitted. Write kill %1 for a job number.",
+  "keywords": ["process", "processes", "jobs", "background", "&", "kill", "ps", "fg", "bg", "Ctrl+C", "timeout", "PID", "sleep", "pgrep"]
+}

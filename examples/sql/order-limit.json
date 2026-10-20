@@ -1,0 +1,10 @@
+{
+  "summary": "ORDER BY sorts the result, and LIMIT keeps only the first rows. Together they answer questions like top 3 or bottom 5.",
+  "notes": [
+    "ORDER BY sorts ascending (ASC) unless you write DESC.",
+    "With two sort columns, the second one only breaks ties in the first.",
+    "SQLite puts NULL before every other value when sorting ascending. PostgreSQL puts NULL last, so add NULLS LAST or a WHERE gpa IS NOT NULL if it matters."
+  ],
+  "pitfall": "Using LIMIT without ORDER BY gives you whichever rows the database reads first, not the top rows. Always sort before you limit.",
+  "keywords": ["ORDER BY", "ASC", "DESC", "LIMIT", "OFFSET", "sort", "top"]
+}

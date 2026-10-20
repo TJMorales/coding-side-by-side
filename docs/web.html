@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side by Side: HTML and CSS</title>
+    <meta name="description" content="HTML and CSS side by side with a live preview, from a page skeleton to grid, container queries, and :has()." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=11" />
+    <style>.hero { background-image: url("https://d8j0ntlcm91z4.cloudfront.net/user_3FHspHdiasmC0fwfZkWWBnKEGp0/hf_20261020_122857_24653e42-f4b0-4410-99be-f0529f39234d.png"); }</style>
+  </head>
+  <body data-track="web">
+    <a class="skip" href="#concepts">Skip to concepts</a>
+
+    <header class="masthead hero hero-web hero-dark">
+      <nav class="pages" aria-label="Pages">
+        <a href="index.html">Python · Java · JavaScript</a>
+        <a href="web.html" aria-current="page">HTML + CSS</a>
+        <a href="sql.html">SQL</a>
+        <a href="shell.html">Command line</a>
+        <a href="git.html">Git</a>
+      </nav>
+      <div class="masthead-top">
+        <p class="wordmark" aria-label="Side by Side">
+          <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
+        </p>
+        <h1 class="page-title">HTML + CSS</h1>
+        <p class="tagline">HTML for structure, CSS for style, and a live preview of both. From your first page to container queries.</p>
+      </div>
+
+      <form class="facets" role="search" aria-label="Filter concepts" onsubmit="return false">
+        <div class="facet facet-search">
+          <label for="q">Search</label>
+          <input id="q" type="search" placeholder="Try: flexbox, form, hover, grid" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="facet facet-lang" role="group" aria-labelledby="lang-label">
+          <span class="facet-label" id="lang-label">Languages <span class="legend-hint">Pick one or more</span></span>
+          <div class="lang-toggle" id="langs"></div>
+        </div>
+        <fieldset class="facet facet-level">
+          <legend>Level <span class="legend-hint">Pick one or more</span></legend>
+          <div class="ladder" id="levels"></div>
+        </fieldset>
+      </form>
+    </header>
+
+    <div class="status-row">
+      <div class="status-text">
+        <p class="count" id="count" aria-live="polite"></p>
+        <p class="elsewhere" id="elsewhere"></p>
+      </div>
+      <div class="color-keys" id="color-keys" aria-label="Syntax color key"></div>
+    </div>
+
+    <div class="layout">
+      <nav class="rail" id="rail" aria-label="Topics and concepts">
+        <details class="rail-box" id="rail-box" open>
+          <summary>Topics</summary>
+          <div id="topics"></div>
+        </details>
+      </nav>
+      <main id="concepts" tabindex="-1"></main>
+    </div>
+
+    <footer class="foot">
+      <p>Each preview is the HTML and CSS above it, rendered live in your browser with scripts turned off.</p>
+    </footer>
+
+    <script src="highlight.js?v=11"></script>
+    <script src="data/web.js?v=11"></script>
+    <script src="data/index.js?v=11"></script>
+    <script src="app.js?v=11"></script>
+  </body>
+</html>

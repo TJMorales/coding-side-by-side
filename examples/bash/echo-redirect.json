@@ -1,0 +1,10 @@
+{
+  "summary": "echo prints text. A redirect sends a command's output into a file: > replaces the file, >> adds to the end, and 2> captures error messages.",
+  "notes": [
+    "Quotes keep a sentence together as one piece of text and protect characters like ! and ? from the shell.",
+    "> creates the file if it does not exist, so you do not need touch first.",
+    "ls missing.txt 2> errors.txt prints nothing on screen because the error went into errors.txt."
+  ],
+  "pitfall": "Using > when you meant >> erases the file. After echo \"Quiz moved to Tuesday.\" > reminders.txt, the first two reminders are gone and there is no undo.",
+  "keywords": ["echo", "redirect", ">", ">>", "2>", "append", "overwrite", "output to file", "stderr", "standard error"]
+}

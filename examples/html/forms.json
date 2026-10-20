@@ -1,0 +1,11 @@
+{
+  "summary": "A <form> collects input and sends it to a server. Each field needs a <label> so people (and screen readers) know what to type.",
+  "notes": [
+    "The label's for must match the input's id. Then clicking the label puts the cursor in the field.",
+    "name=\"email\" is the key the server receives. Without a name, the field's value is not sent.",
+    "required stops the form from submitting while the field is empty and shows a message."
+  ],
+  "pitfall": "Using placeholder instead of a label. The hint disappears as soon as someone types, and many screen readers do not read it.",
+  "keywords": ["form", "input", "label", "for", "id", "name", "type", "email", "checkbox", "select", "option", "button", "submit", "required", "placeholder"],
+  "preview_height": 400
+}

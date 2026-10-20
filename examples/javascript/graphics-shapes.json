@@ -1,0 +1,25 @@
+{
+  "summary": "The canvas 2D context draws shapes and text on a <canvas> element in the browser. You set a color with fillStyle or strokeStyle, then call a method such as fillRect() or arc().",
+  "notes": [
+    "Each fill uses the most recent ctx.fillStyle, the same way Java uses the most recent g.setColor(...).",
+    "ctx.beginPath() starts a new shape. Without it, arc() adds to the old path and fill() can repaint shapes you drew earlier.",
+    "The canvas draws once and keeps the pixels. Nothing calls your code again unless you draw again yourself."
+  ],
+  "pitfall": "Angles are radians, not degrees. ctx.arc(330, 60, 30, 0, 90) is meant to be a quarter circle but draws a full circle, because 90 radians is more than one full turn. A quarter circle ends at Math.PI / 2.",
+  "keywords": [
+    "canvas",
+    "getContext",
+    "2d",
+    "fillRect",
+    "arc",
+    "fillStyle",
+    "strokeStyle",
+    "fillText",
+    "beginPath",
+    "graphics",
+    "draw"
+  ],
+  "run": false,
+  "browser": true,
+  "contrast": "Canvas uses top-left (0, 0) with y going down like Java's Swing, not turtle's centered origin. Unlike Swing, canvas has no paintComponent: your script draws once when it runs, and you redraw yourself when something changes."
+}

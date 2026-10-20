@@ -1,0 +1,11 @@
+{
+  "summary": "this is the object a method or constructor is running on. Inside a class, this.name is the object's field, and a plain name is a local variable or a parameter.",
+  "notes": [
+    "In BrokenStudent, name = name; assigns the parameter to itself. The fields are never created, so they print as undefined.",
+    "this.name = name; copies the parameter into the object's field.",
+    "In maya.setGpa(3.9), this is maya, so this.gpa changes maya's field."
+  ],
+  "pitfall": "Copying a method out of its object, as in const update = maya.setGpa; update(4.0);, causes TypeError: Cannot set properties of undefined (setting 'gpa'). Called that way, this is undefined.",
+  "keywords": ["this", "this keyword", "constructor", "field", "parameter", "undefined", "self", "method"],
+  "contrast": "JavaScript always writes this.field, like Python's self.field, even when no parameter has the same name. Unlike both, this is set by how a method is called: maya.setGpa() sets it to maya, but a copied method loses it."
+}

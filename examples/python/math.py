@@ -6,7 +6,7 @@ print("7 * 2 =", 7 * 2)
 # / always gives a float, even when both values are ints.
 print("7 / 2 =", 7 / 2)
 
-# // divides and drops the decimal part. % gives the remainder.
+# // divides and rounds down to a whole number. % gives the remainder.
 print("7 // 2 =", 7 // 2)
 print("7 % 2 =", 7 % 2)
 

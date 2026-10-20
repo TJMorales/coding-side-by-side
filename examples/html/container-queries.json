@@ -1,0 +1,11 @@
+{
+  "summary": "A container query lets a component change its layout based on the space its container gives it, not the screen width. This page puts the same member card in a wide column and a narrow one so you can see both layouts at once.",
+  "notes": [
+    "Both <article class=\"member\"> cards have identical markup. Only the container around them differs.",
+    "The <svg> avatars are drawn inline, with aria-hidden=\"true\" because the name next to them already says who it is.",
+    "The .label lines are only there to name each container in the preview."
+  ],
+  "pitfall": "Expecting a container query to work without marking an ancestor as a container. Some ancestor needs container-type in the CSS, or the @container rule never matches.",
+  "keywords": ["container", "component", "card", "svg", "aria-hidden", "sidebar"],
+  "preview_height": 220
+}

@@ -1,0 +1,28 @@
+{
+  "summary": "A .gitignore file lists files and folders Git should not track, such as cache folders, logs, and passwords.",
+  "notes": [
+    "Commit .gitignore so everyone working on the project ignores the same files.",
+    "*.log ignores every file that ends in .log, in any folder.",
+    "Never commit passwords or API keys. Put them in a file that .gitignore lists."
+  ],
+  "pitfall": ".gitignore does not affect files Git already tracks. If you committed debug.log before, it keeps showing as modified. Run git rm --cached debug.log and commit to stop tracking it.",
+  "keywords": [
+    ".gitignore",
+    "ignore",
+    "__pycache__",
+    "*.log",
+    "untracked",
+    "git status --ignored"
+  ],
+  "setup_note": "Starts in a repository with one commit, plus two new untracked items: a __pycache__ folder and debug.log.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Start gradebook\"",
+    "mkdir __pycache__",
+    "touch __pycache__/gradebook.cpython-312.pyc",
+    "echo 'Average: 88.5' > debug.log"
+  ]
+}

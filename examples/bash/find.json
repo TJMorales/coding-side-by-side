@@ -1,0 +1,10 @@
+{
+  "summary": "find searches a folder and every folder inside it for files that match rules you give it, like a name pattern or a type.",
+  "notes": [
+    "The first argument is where to start. . means the current folder, so find . searches everything below where you are.",
+    "-type d lists folders and -type f lists files. You can combine rules: find . -type f -name \"*.txt\".",
+    "In -exec wc -l {} \\; the {} is replaced by each file name, and \\; marks the end of the command."
+  ],
+  "pitfall": "find . -name *.py without quotes lets the shell expand *.py first. In cs it finds only ./hello.py and misses ./project/src/main.py. Always quote the pattern: find . -name \"*.py\".",
+  "keywords": ["find", "search files", "find -name", "find -iname", "find -type", "find -exec", "locate file", "recursive", "wildcard"]
+}

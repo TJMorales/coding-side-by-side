@@ -1,0 +1,28 @@
+body { font-family: system-ui, sans-serif; margin: 16px; background-color: #fdfaf3; }
+
+/* Each quoted string is one row. Each word is one column.
+   Repeating a name makes that area cover more than one cell. */
+.page {
+  display: grid;
+  grid-template-columns: 140px 1fr 160px;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+  gap: 8px;
+}
+
+/* grid-area connects each element to a name from the map above. */
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+header, nav, main, aside, footer { padding: 12px; border-radius: 6px; background-color: white; border: 2px solid #c9c2b4; }
+header { background-color: #1d4e89; color: white; font-weight: bold; font-size: 20px; }
+nav a { display: block; color: #1d4e89; margin-bottom: 6px; }
+main h1 { margin: 0 0 6px; font-size: 22px; }
+main p { margin: 0; }
+aside { background-color: #ffe9d6; }
+footer { color: #555; font-size: 14px; }

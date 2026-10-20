@@ -22,7 +22,7 @@ class Assignment {
 }
 
 // A record writes the constructor, getters, toString(), equals(), and hashCode().
-// Every field is final, so a record cannot change after creation.
+// Every field is final, so no field can be reassigned after creation.
 record Grade(String student, int score) {
     // Compact constructor: no parameter list. It runs before the fields are set.
     Grade {

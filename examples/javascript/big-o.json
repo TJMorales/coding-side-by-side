@@ -1,0 +1,11 @@
+{
+  "summary": "Big-O notation describes how the number of steps an algorithm takes grows with the input size n. This program counts steps for O(n), O(log n), and O(n^2) code at three sizes.",
+  "notes": [
+    "steps++ inside each loop counts work directly, so the table is the same on every computer.",
+    "When n grows 10 times, linearSearch grows 10 times, binarySearch grows by only about 3 steps, and countPairs grows 100 times.",
+    "Array.from({ length: n }, (_, i) => i) builds the sorted array 0, 1, ..., n - 1, like Python's list(range(n))."
+  ],
+  "pitfall": "Using performance.now() to compare algorithms on small inputs gives different numbers on every run, and the first run is often slower while Node warms up. Count steps when you want a fair comparison.",
+  "keywords": ["big o", "time complexity", "linear search", "binary search", "nested loop", "log n", "n squared", "performance.now", "padStart", "efficiency"],
+  "contrast": "Steps are counted the same way in all three languages. To time code, JavaScript uses performance.now(), which returns milliseconds as a decimal, where Python uses time.perf_counter() and Java uses System.nanoTime()."
+}

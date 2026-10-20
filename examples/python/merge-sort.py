@@ -4,7 +4,7 @@
 def merge_sort(scores):
     # Base case: a list with 0 or 1 items is already sorted.
     if len(scores) <= 1:
-        return scores
+        return scores[:]
     mid = len(scores) // 2
     # Slices make new lists, so the original list is never changed.
     left = merge_sort(scores[:mid])

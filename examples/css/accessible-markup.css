@@ -1,0 +1,30 @@
+:root { --blue: #1d4e89; --orange: #a33a00; }
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+h1 { margin: 0 0 8px; color: var(--blue); font-size: 24px; }
+img { display: block; margin-bottom: 12px; }
+
+label { display: block; font-weight: bold; margin-bottom: 4px; }
+input, button { font: inherit; }
+#team { padding: 6px; width: 240px; border: 2px solid #555; }
+
+/* Hint text needs enough contrast to read: #555 on this background passes WCAG AA. */
+.hint { margin: 4px 0 12px; color: #555; font-size: 0.9rem; }
+
+fieldset { border: 2px solid #c9c2b4; width: 280px; }
+legend { font-weight: bold; }
+fieldset label { font-weight: normal; }
+
+/* Make radio buttons larger so they are easier to click or tap. */
+input[type="radio"] { width: 18px; height: 18px; vertical-align: middle; }
+
+button {
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+}
+
+/* A strong focus ring so keyboard users can always see where they are.
+   Press Tab in the preview to see it. */
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }

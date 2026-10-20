@@ -1,0 +1,11 @@
+{
+  "summary": "The class and id attributes give CSS a way to pick specific elements. Use a class for a group of elements and an id for one unique element.",
+  "notes": [
+    "id=\"president\" must appear only once on the page.",
+    "class=\"officer\" is on three paragraphs, so one CSS rule styles all three.",
+    "class=\"officer new\" gives one element two classes. It gets the styles of both."
+  ],
+  "pitfall": "Using the same id on two elements. The page still shows, but it is invalid HTML and links like href=\"#president\" only find the first one.",
+  "keywords": ["class", "id", "attribute", "multiple classes", "unique"],
+  "preview_height": 280
+}

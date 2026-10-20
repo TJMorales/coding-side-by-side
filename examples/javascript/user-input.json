@@ -1,0 +1,22 @@
+{
+  "summary": "rl.question() shows a prompt, waits for the user to type, and gives back the text. Use it to get a name, a number, or any answer.",
+  "notes": [
+    "await pauses until the user presses Enter. await only works inside an async function, so the code is wrapped in main().",
+    "The answer is always a string. typeof rawAge shows string.",
+    "Number(rawAge) converts the text to a number. rl.close() lets the program end."
+  ],
+  "pitfall": "Writing rawAge + 1 without Number() gives \"161\" with no error, because + joins two strings instead of adding.",
+  "keywords": [
+    "readline",
+    "readline/promises",
+    "question",
+    "await",
+    "async",
+    "input",
+    "Number",
+    "prompt",
+    "keyboard"
+  ],
+  "stdin": "Maya\n16\n",
+  "contrast": "Like Python's input(), rl.question() always gives back a string. Unlike Python and Java, reading input is asynchronous, so you write await inside an async function."
+}

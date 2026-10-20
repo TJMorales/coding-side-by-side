@@ -1,0 +1,11 @@
+{
+  "summary": "Accessible markup lets everyone use the page, including people using a screen reader or only a keyboard. Give images the right alt text and connect every form field to its label and hints.",
+  "notes": [
+    "The date image has alt text because it carries information. The divider line has alt=\"\" so screen readers skip it.",
+    "aria-describedby=\"team-hint\" points at the hint's id. A screen reader says \"Team name, edit text, required, 3 to 20 letters.\"",
+    "<legend> is read before each radio button, so \"New to coding\" is heard as part of the Experience level question."
+  ],
+  "pitfall": "Leaving alt off a decorative image instead of writing alt=\"\". Without alt, screen readers read the file name or the whole data: URI.",
+  "keywords": ["accessibility", "a11y", "alt", "alt text", "decorative image", "label", "aria-describedby", "fieldset", "legend", "radio", "screen reader", "wcag"],
+  "preview_height": 400
+}

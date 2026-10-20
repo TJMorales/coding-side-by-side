@@ -1,0 +1,11 @@
+{
+  "summary": "try/catch lets your program handle an error and keep running. throw reports an error from your own code when a value breaks the rules.",
+  "notes": [
+    "catch (error) catches every kind of error. error.name says which kind (Error, RangeError) and error.message gives the reason.",
+    "To handle only one kind, check error instanceof RangeError inside catch and throw the others again.",
+    "finally runs every time, whether or not an error was thrown."
+  ],
+  "pitfall": "Writing throw \"bad score\" with a plain string works, but error.message is then undefined. Throw new Error(\"bad score\") so the message is saved.",
+  "keywords": ["try", "catch", "finally", "throw", "Error", "RangeError", "TypeError", "NaN", "Infinity", "exception", "error handling", "instanceof"],
+  "contrast": "JavaScript uses try/catch/finally like Java, but catch takes no error type and catches everything, and no compiler makes you handle errors. Some mistakes are not errors at all: Number(\"abc\") is NaN and 170 / 0 is Infinity."
+}

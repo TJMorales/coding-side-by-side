@@ -1,0 +1,11 @@
+{
+  "summary": "Array methods add, remove, replace, and search items. Use them when the number of items changes while the program runs.",
+  "notes": [
+    "push() adds to the end. unshift() adds at the front and shifts everything else right.",
+    "pop() removes and returns the last item. shift() removes and returns the first.",
+    "splice(index, 1) removes one item at that index. There is no remove-by-value method, so find the index first."
+  ],
+  "pitfall": "playlist.splice(playlist.indexOf(\"Hello\"), 1) on a missing value removes the last song with no error, because indexOf() returns -1 and splice(-1, 1) counts from the end.",
+  "keywords": ["push", "pop", "unshift", "shift", "splice", "indexOf", "includes", "length", "array methods", "append", "remove"],
+  "contrast": "A JavaScript array grows and shrinks like a Python list, so there is no separate ArrayList as in Java. The names differ: push() instead of append(), and splice() removes by index because there is no remove-by-value method."
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "LEFT JOIN keeps every row from the left table, even when there is no match on the right. The right table's columns are NULL for those rows.",
+  "notes": [
+    "The left table is the one named in FROM. Here every student is kept.",
+    "WHERE e.student_id IS NULL finds rows that had no match: students with no classes.",
+    "COUNT(e.course_id) gives 0 for Zoe because her course_id is NULL. COUNT(*) would count her joined row and give 1."
+  ],
+  "pitfall": "A condition on the right table in WHERE, such as WHERE e.semester = 'Fall 2026', removes the NULL rows and turns the LEFT JOIN back into an inner join. Put that condition in the ON clause instead.",
+  "keywords": ["LEFT JOIN", "LEFT OUTER JOIN", "unmatched rows", "missing", "NULL", "outer join"]
+}

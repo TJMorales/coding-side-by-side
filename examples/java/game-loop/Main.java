@@ -7,7 +7,6 @@ import javax.swing.Timer; // the Swing Timer, not java.util.Timer
 public class Main extends JPanel {
     static final int WIDTH = 600, HEIGHT = 400;
     static final int FRAME_MS = 16; // about 60 frames per second
-
     private final Rectangle ball = new Rectangle(290, 190, 20, 20);
     private final Rectangle paddle = new Rectangle(250, HEIGHT - 40, 100, 20);
     private int dx = 4, dy = 3; // pixels moved per frame (y grows downward in Swing)

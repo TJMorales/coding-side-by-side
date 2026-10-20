@@ -1,0 +1,25 @@
+{
+  "summary": "git diff shows the exact lines that changed. Use it before you commit to check what you are about to save.",
+  "notes": [
+    "git diff compares your files with the staging area. git diff --staged compares the staging area with the last commit.",
+    "Lines starting with - were removed and lines starting with + were added. A changed line shows up as one of each.",
+    "The @@ line gives line numbers: -1,5 +1,5 means the 5 lines starting at line 1, before and after the change."
+  ],
+  "pitfall": "git diff prints nothing after you stage your changes, so it looks like nothing changed. Use git diff --staged to see staged changes.",
+  "keywords": [
+    "git diff",
+    "--staged",
+    "--cached",
+    "changes",
+    "compare",
+    "HEAD~1"
+  ],
+  "setup_note": "Starts in a repository with one commit that has gradebook.py, README.md, and scores.csv.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Start gradebook\""
+  ]
+}

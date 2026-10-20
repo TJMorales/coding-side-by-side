@@ -1,0 +1,31 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+.card {
+  padding: 16px;            /* space inside the border */
+  border: 4px solid #1d4e89;
+  margin-bottom: 24px;      /* space outside the border */
+  background-color: white;  /* the background fills content and padding */
+}
+
+/* Remove the default margins so the card's padding controls the spacing. */
+.card h2, .card p {
+  margin: 0;
+}
+
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 4px solid #a33a00;
+  margin-bottom: 12px;
+  background-color: #ffe9d6;
+}
+
+/* The default: width is only the content. Padding and border are added on. */
+.content-box { box-sizing: content-box; }
+
+/* width includes padding and border, so the box is exactly 300px. */
+.border-box { box-sizing: border-box; }

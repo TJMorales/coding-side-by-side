@@ -1,0 +1,10 @@
+{
+  "summary": "transform changes how an element is drawn: rotate() turns it, translate() moves it, and scale() resizes it. The rest of the layout acts as if the element had not moved.",
+  "notes": [
+    "rotate(-4deg) tilts the first note 4 degrees counterclockwise.",
+    "translate(0, 16px) moves the second note down 16px, but the board still saves space for it in its original spot.",
+    "A new transform replaces the old one. To keep both, list them together: transform: rotate(-4deg) scale(1.1);"
+  ],
+  "pitfall": "Writing two transform declarations in one rule, like transform: rotate(5deg); transform: scale(2);. The second replaces the first, so the element only scales.",
+  "keywords": ["transform", "rotate", "translate", "scale", "deg", "transform-origin", "hover", "skew"]
+}

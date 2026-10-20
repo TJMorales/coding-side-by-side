@@ -3,7 +3,7 @@
   "notes": [
     "// starts a comment that runs to the end of the line.",
     "/* and */ wrap a block comment that can cover several lines.",
-    "/** */ is a Javadoc comment. Put it right above a class or method to describe it."
+    "/** */ is a Javadoc comment. Put it right above a class to describe it."
   ],
   "pitfall": "Forgetting the closing */ turns the rest of the file into a comment, and javac reports error: unclosed comment.",
   "keywords": [

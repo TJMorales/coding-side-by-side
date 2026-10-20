@@ -1,0 +1,30 @@
+body { font-family: system-ui, sans-serif; margin: 24px; background-color: #fdfaf3; }
+
+.schedule { list-style: none; padding: 0; }
+.schedule li { padding: 6px 10px; }
+
+/* :nth-child(odd) matches the 1st, 3rd, 5th... item. */
+.schedule li:nth-child(odd) { background-color: #ede6d6; }
+
+/* :first-child matches only the first item. */
+.schedule li:first-child { font-weight: bold; color: #1d4e89; }
+
+a { color: #1d4e89; margin-right: 16px; }
+
+/* :hover applies while the mouse is over the element. */
+a:hover { color: #a33a00; text-decoration-thickness: 3px; }
+
+label { margin-right: 6px; }
+input, button { font: inherit; padding: 6px 10px; }
+
+button { background-color: #1d4e89; color: white; border: none; border-radius: 4px; }
+button:hover { background-color: #163b68; }
+
+/* :active applies while the button is being pressed. */
+button:active { background-color: #a33a00; }
+
+/* :focus-visible shows an outline when you reach an element with the keyboard. */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid #a33a00;
+  outline-offset: 2px;
+}

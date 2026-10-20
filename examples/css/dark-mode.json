@@ -1,0 +1,10 @@
+{
+  "summary": "@media (prefers-color-scheme: dark) applies CSS only when the device is in dark mode. Store the colors in custom properties, then change only the variables inside that query.",
+  "notes": [
+    "The preview uses the theme your system is set to. Change your system setting to see the other theme.",
+    "Dark mode is not just black and white swapped. The accent is a lighter blue (#8db8ef) so it stays readable on a dark background.",
+    "The input gets dark colors automatically because of the color-scheme meta tag in the HTML."
+  ],
+  "pitfall": "Changing the background to dark but forgetting a color set somewhere else, such as a link color. That text ends up dark on dark and unreadable.",
+  "keywords": ["dark mode", "prefers-color-scheme", "light mode", "theme", "custom properties", "color-scheme", "media query"]
+}

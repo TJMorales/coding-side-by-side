@@ -1,0 +1,10 @@
+{
+  "summary": "A selector chooses which elements a rule styles. p picks an element type, .officer picks a class, and #president picks one id.",
+  "notes": [
+    "A dot means class (.officer). A hash means id (#president). No symbol means element (p).",
+    "Diego has both .officer and .new, so his line is bold, blue, and italic.",
+    "h1, #president is a group: the comma means the rule applies to both."
+  ],
+  "pitfall": "Leaving off the dot (officer { }) looks for an <officer> element, which does not exist, so nothing changes and there is no error.",
+  "keywords": ["selector", "class selector", "id selector", "element selector", "type selector", "dot", "hash", "group selector", "comma"]
+}

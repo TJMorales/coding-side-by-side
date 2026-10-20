@@ -1,0 +1,10 @@
+{
+  "summary": "Aggregate functions turn many rows into one value: COUNT counts, SUM adds, AVG averages, and MIN and MAX find the smallest and largest.",
+  "notes": [
+    "COUNT(*) counts rows. COUNT(gpa) counts only rows where gpa is not NULL, so it gives 9, not 10.",
+    "AVG, SUM, MIN, and MAX skip NULL. Biology's average is 78.0 from 3 grades, not 58.5 from 4.",
+    "WHERE runs first, so the aggregates only see the rows it keeps."
+  ],
+  "pitfall": "SELECT first_name, MAX(gpa) FROM students runs in SQLite and picks the name from the max row, but PostgreSQL and SQL Server reject it because first_name is not aggregated. Use ORDER BY gpa DESC LIMIT 1 instead.",
+  "keywords": ["COUNT", "SUM", "AVG", "MIN", "MAX", "aggregate", "average", "total", "COUNT(*)"]
+}

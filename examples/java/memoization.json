@@ -3,7 +3,7 @@
   "notes": [
     "memo.containsKey(n) checks for a saved answer before doing any work.",
     "Map<Integer, Long> uses wrapper types because generics cannot hold int or long directly.",
-    "long is exact up to fib(92). Past that the value overflows and wraps to a negative number."
+    "long is exact up to fib(92). fib(93) overflows and wraps to a negative number, and every value after it is wrong."
   ],
   "pitfall": "Using memo.computeIfAbsent(n, k -> fibMemo(k - 1) + fibMemo(k - 2)) on a HashMap changes the map while it is being updated and throws ConcurrentModificationException. Use containsKey, get, and put.",
   "keywords": ["memoization", "dynamic programming", "HashMap", "containsKey", "fibonacci", "recursion", "cache", "long overflow"]

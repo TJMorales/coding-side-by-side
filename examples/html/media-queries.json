@@ -1,0 +1,11 @@
+{
+  "summary": "Media queries live in CSS, but the HTML must include the viewport meta tag or phones will pretend to be a wide desktop screen and ignore your phone layout.",
+  "notes": [
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> tells phones to use their real width.",
+    "The preview is about 640px wide, so it shows the tablet line and two columns.",
+    "The three .size lines are only there to show which layout is active. A real site would not need them."
+  ],
+  "pitfall": "Leaving out the viewport meta tag. On a phone the page then shows as a tiny zoomed-out desktop layout.",
+  "keywords": ["viewport", "meta viewport", "responsive", "mobile"],
+  "preview_height": 270
+}

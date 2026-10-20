@@ -1,0 +1,11 @@
+{
+  "summary": "sort() and toSorted() take a compare function (a, b) that returns a negative number, zero, or a positive number. Chaining two comparisons with || sorts by several fields at once.",
+  "notes": [
+    "b.grade - a.grade || a.name.localeCompare(b.name) sorts grades high to low, and when the grade difference is 0, falls back to names A to Z.",
+    "sort() changes the array in place. toSorted() (Node 20 and newer) returns a new sorted array.",
+    "Both are stable: items that compare as 0 stay in the order they already had."
+  ],
+  "pitfall": "Calling sort() with no compare function compares numbers as strings, so [10, 9, 1].sort() gives [1, 10, 9]. Always pass (a, b) => a - b for numbers.",
+  "keywords": ["sort", "toSorted", "compare function", "comparator", "localeCompare", "stable sort", "multiple fields", "tie-breaker", "reverse"],
+  "contrast": "JavaScript passes a compare function that returns negative, zero, or positive, like a Java Comparator, not a key function like Python's key=. Unlike both, JavaScript's sort() with no argument compares everything as strings."
+}

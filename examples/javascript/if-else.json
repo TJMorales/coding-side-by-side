@@ -1,0 +1,11 @@
+{
+  "summary": "if runs a block only when its condition is true. Use else if to check more conditions and else for everything left over.",
+  "notes": [
+    "The condition always goes in parentheses: if (score >= 90).",
+    "Braces mark the start and end of each branch. Indentation is for people only.",
+    "Only the first true branch runs. JavaScript skips the rest."
+  ],
+  "pitfall": "Putting a semicolon after the condition, as in if (score >= 90);, ends the if right there. The block below then runs every time.",
+  "keywords": ["if", "else if", "else", "condition", "branch", "decision", "braces"],
+  "contrast": "JavaScript's if, else if, and else look the same as Java's. Unlike Java, the condition does not have to be a boolean: 0, \"\", null, and undefined count as false."
+}

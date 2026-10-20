@@ -1,0 +1,11 @@
+{
+  "summary": "Merge sort splits an array in half, sorts each half recursively, and merges the two sorted halves. It runs in O(n log n) time on every input.",
+  "notes": [
+    "scores.slice(0, mid) and scores.slice(mid) make new arrays, so mergeSort returns a new array and leaves the original alone.",
+    "left[i] <= right[j] uses <= so equal scores keep their original order. That makes the sort stable.",
+    "result.push(...left.slice(i), ...right.slice(j)) copies the leftovers after one side runs out."
+  ],
+  "pitfall": "Forgetting the base case if (scores.length <= 1) makes the function call itself forever and ends with RangeError: Maximum call stack size exceeded.",
+  "keywords": ["merge sort", "divide and conquer", "recursion", "slice", "spread", "n log n", "stable sort", "merge"],
+  "contrast": "JavaScript's slice() copies part of an array like a Python slice, so this version matches Python's and returns a new array. Java usually passes index ranges and sorts in place to avoid copying."
+}

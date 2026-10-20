@@ -1,0 +1,22 @@
+{
+  "summary": "The popover attribute and the <dialog> element show content on top of the page. A button with popovertarget opens a popover with no JavaScript. A <dialog> holds a focused task like a confirmation or a short form.",
+  "notes": [
+    "Click \"Where is Room 2115?\" in the preview to open the popover. Click outside it or press Esc to close it.",
+    "<dialog open> shows the dialog as part of the page. To show it as a modal that blocks the rest of the page, JavaScript must call showModal(), so that is not in this preview.",
+    "<form method=\"dialog\"> closes the dialog when one of its buttons is clicked, with no JavaScript. The preview may block forms, so the RSVP buttons can do nothing there; on a normal page they close the dialog."
+  ],
+  "pitfall": "Writing popovertarget=\"#room-info\" with a #. The value is the plain id, room-info, or the button does nothing.",
+  "keywords": [
+    "popover",
+    "popovertarget",
+    "popovertargetaction",
+    "dialog",
+    "modal",
+    "showModal",
+    "method dialog",
+    "tooltip",
+    "overlay",
+    "Esc"
+  ],
+  "preview_height": 330
+}

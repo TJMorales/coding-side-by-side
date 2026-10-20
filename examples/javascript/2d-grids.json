@@ -1,0 +1,11 @@
+{
+  "summary": "A 2D array stores data in rows and columns, like a gradebook or a game board. You reach one cell with two indexes.",
+  "notes": [
+    "grades[1][2] means row 1, then column 2. Both start counting at 0.",
+    "grades.length is the number of rows. grades[0].length is the number of columns.",
+    "Array.from({ length: 3 }, () => Array(4).fill(0)) runs the arrow function 3 times, so it makes 3 separate rows."
+  ],
+  "pitfall": "Array(3).fill(Array(4).fill(0)) makes 3 references to one row. Changing wrong[0][0] changes column 0 in every row.",
+  "keywords": ["2D array", "array of arrays", "grid", "matrix", "rows", "columns", "Array.from", "fill", "nested array"],
+  "contrast": "JavaScript builds a grid as an array of arrays, like Python's list of lists, and the rows can grow. Array(3).fill(row) has the same shared-row bug as Python's [[0] * 4] * 3; Java's new int[3][4] does not."
+}

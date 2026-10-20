@@ -1,0 +1,10 @@
+{
+  "summary": "Forms need a little CSS to be readable: labels on their own lines, fields a consistent width, and a clear submit button.",
+  "notes": [
+    "font: inherit makes inputs and buttons use the page font. By default they use a smaller system font.",
+    "input[type=\"text\"] is an attribute selector. It matches only inputs whose type is text.",
+    "display: block on label stacks each label above its field."
+  ],
+  "pitfall": "Setting a border: none on inputs to look clean. People can no longer see where to type.",
+  "keywords": ["form style", "label", "input", "button", "font inherit", "attribute selector", "display block", "border-radius"]
+}

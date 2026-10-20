@@ -1,0 +1,30 @@
+{
+  "summary": "git log shows the history of the repository: who made each commit, when, and why. Options narrow the list or show the changes inside each commit.",
+  "notes": [
+    "Each commit has a hash, an ID of 40 letters and digits. The first 7 characters are enough to name a commit.",
+    "HEAD -> main in the log marks the commit you are on and the branch you are on.",
+    "git log -- scores.csv answers the question \"when did this file change?\""
+  ],
+  "pitfall": "A long git log can fill the screen. Use --oneline or a number like -5 to keep it short.",
+  "keywords": [
+    "git log",
+    "history",
+    "--oneline",
+    "-p",
+    "commit hash",
+    "author",
+    "HEAD"
+  ],
+  "setup_note": "Starts in a repository with four commits on main.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add README\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "echo 'Zoe,95' >> scores.csv",
+    "git add -A && git commit -q -m \"Add Zoe's score\""
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "Normalization means storing each fact in one place and linking tables with keys. The school database keeps students, courses, and enrollments in separate tables so nothing is copied.",
+  "notes": [
+    "In flat_schedule, moving the class means changing 5 rows. Miss one and the table says the same class meets in two rooms (an update anomaly).",
+    "Deleting the last 2 Personal Finance rows from flat_schedule would also delete the only record of who teaches it (a delete anomaly). In courses it stays.",
+    "First normal form: one value per cell. A column like courses = 'Biology, Algebra 2' breaks it; use one enrollment row per class instead."
+  ],
+  "pitfall": "Splitting tables without a shared key loses the connection between them. Each enrollment needs student_id and course_id, or you can no longer tell who is in which class.",
+  "keywords": ["normalization", "normal form", "1NF", "2NF", "3NF", "duplicate data", "update anomaly", "database design", "CREATE TABLE AS"]
+}

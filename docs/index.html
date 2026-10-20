@@ -3,52 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Side by Side: Python and Java Reference</title>
-    <meta name="description" content="A code reference for Python and Java, from your first print statement to threads, generics, and game loops. Compare both languages concept by concept." />
+    <title>Side by Side: Python, Java, and JavaScript</title>
+    <meta name="description" content="A code reference for Python, Java, and JavaScript, from your first print statement to threads, generics, and game loops. Compare the languages concept by concept." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css?v=7" />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=11" />
+    <style>.hero { background-image: url("hero.jpg"); background-image: image-set(url("hero.webp") type("image/webp"), url("hero.jpg") type("image/jpeg")); }</style>
   </head>
-  <body>
+  <body data-track="code">
     <a class="skip" href="#concepts">Skip to concepts</a>
 
-    <header class="masthead hero">
+    <header class="masthead hero hero-code hero-light">
+      <nav class="pages" aria-label="Pages">
+        <a href="index.html" aria-current="page">Python · Java · JavaScript</a>
+        <a href="web.html">HTML + CSS</a>
+        <a href="sql.html">SQL</a>
+        <a href="shell.html">Command line</a>
+        <a href="git.html">Git</a>
+      </nav>
       <div class="masthead-top">
-        <h1 class="wordmark" aria-label="Side by Side">
+        <p class="wordmark" aria-label="Side by Side">
           <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
-        </h1>
-        <p class="tagline">Python and Java, one concept at a time. From your first <code>print</code> to threads and game loops.</p>
+        </p>
+        <h1 class="page-title">Python · Java · JavaScript</h1>
+        <p class="tagline">Python, Java, and JavaScript, one concept at a time. From your first <code>print</code> to threads and game loops.</p>
       </div>
 
       <form class="facets" role="search" aria-label="Filter concepts" onsubmit="return false">
         <div class="facet facet-search">
           <label for="q">Search</label>
-          <input id="q" type="search" placeholder="Try: loop, constructor, HashMap, f-string" autocomplete="off" spellcheck="false" />
+          <input id="q" type="search" placeholder="Try: loop, constructor, HashMap, async" autocomplete="off" spellcheck="false" />
         </div>
-
-        <fieldset class="facet facet-lang">
-          <legend>Language</legend>
-          <div class="segmented" role="radiogroup">
-            <label class="seg seg-py"><input type="radio" name="lang" value="python" /><span>Python</span></label>
-            <label class="seg seg-both"><input type="radio" name="lang" value="both" /><span>Side by side</span></label>
-            <label class="seg seg-java"><input type="radio" name="lang" value="java" /><span>Java</span></label>
-          </div>
-        </fieldset>
-
+        <div class="facet facet-lang" role="group" aria-labelledby="lang-label">
+          <span class="facet-label" id="lang-label">Languages <span class="legend-hint">Pick one or more</span></span>
+          <div class="lang-toggle" id="langs"></div>
+        </div>
         <fieldset class="facet facet-level">
           <legend>Level <span class="legend-hint">Pick one or more</span></legend>
           <div class="ladder" id="levels"></div>
         </fieldset>
-
       </form>
     </header>
 
     <div class="status-row">
-      <p class="count" id="count" aria-live="polite"></p>
+      <div class="status-text">
+        <p class="count" id="count" aria-live="polite"></p>
+        <p class="elsewhere" id="elsewhere"></p>
+      </div>
       <div class="color-keys" id="color-keys" aria-label="Syntax color key"></div>
     </div>
 
@@ -63,11 +65,12 @@
     </div>
 
     <footer class="foot">
-      <p>Every example on this page was run with Python 3 and Java 21. Console output is copied from those runs, and graphics examples show a screenshot of the window they opened.</p>
+      <p>Every example on this page was run with Python 3, Java 21, and Node 22. Console output is copied from those runs, and graphics examples show a screenshot of the window or canvas they drew.</p>
     </footer>
 
-    <script src="highlight.js?v=7"></script>
-    <script src="data.js?v=7"></script>
-    <script src="app.js?v=7"></script>
+    <script src="highlight.js?v=11"></script>
+    <script src="data/code.js?v=11"></script>
+    <script src="data/index.js?v=11"></script>
+    <script src="app.js?v=11"></script>
   </body>
 </html>

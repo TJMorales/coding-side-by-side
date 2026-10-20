@@ -1,0 +1,16 @@
+{
+  "summary": "Transforms are a CSS effect, so the HTML is three ordinary cards. Each class name says which transform its card shows.",
+  "notes": [
+    "The h2 in each card names the transform function the CSS applies to it.",
+    "Hover any card in the preview: it grows a little, and the tilted card straightens.",
+    "A transform changes how an element looks, not what it is. Screen readers read the cards the same way."
+  ],
+  "pitfall": "Using transforms to fix layout problems, like shifting a box until it lines up. The space it takes up does not move, so other elements may overlap it.",
+  "keywords": [
+    "transform",
+    "card",
+    "hover",
+    "bulletin board"
+  ],
+  "preview_height": 240
+}

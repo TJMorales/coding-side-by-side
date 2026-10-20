@@ -1,0 +1,11 @@
+{
+  "summary": "A page can follow the light or dark setting of the person's device. The HTML only needs a color-scheme meta tag; the colors themselves are in the CSS.",
+  "notes": [
+    "The preview follows your own system setting. Switch your computer or phone between light and dark mode and the preview changes.",
+    "<meta name=\"color-scheme\" content=\"light dark\"> makes the input and scroll bars use dark colors in dark mode too.",
+    "The content is the same in both themes. Only the colors change."
+  ],
+  "pitfall": "Making a separate dark copy of the page. One page with two sets of colors in the CSS is much easier to keep up to date.",
+  "keywords": ["dark mode", "light mode", "color-scheme", "meta", "theme"],
+  "preview_height": 305
+}

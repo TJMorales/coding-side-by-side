@@ -1,0 +1,16 @@
+{
+  "summary": "Every file has an owner and permissions that say who can read (r), write (w), and execute (x) it. chmod changes them. A script needs x before you can run it as ./script.",
+  "notes": [
+    "-rw-r--r-- 1 student student reads as: a file; the owner (student) can read and write; the group and everyone else can only read.",
+    "In numbers, r = 4, w = 2, x = 1, added up for owner, group, others. 755 is rwxr-xr-x (a script) and 644 is rw-r--r-- (a normal file).",
+    "bash greet.sh works even without x because bash is the program being run, and it only needs to read the file."
+  ],
+  "pitfall": "Running a script without the execute bit fails with Permission denied (in your own terminal: bash: ./greet.sh: Permission denied). Run chmod +x greet.sh once and try again.",
+  "keywords": ["chmod", "chmod +x", "chmod 644", "chmod 755", "permissions", "ls -l", "rwx", "execute", "Permission denied", "owner", "group"],
+  "setup": [
+    "printf '#!/bin/bash\\necho \"Hello from greet.sh\"\\n' > greet.sh",
+    "chmod 644 greet.sh",
+    "touch -d '2026-09-08 08:15' greet.sh"
+  ],
+  "setup_note": "Starts with a two-line script named greet.sh that does not have execute permission."
+}

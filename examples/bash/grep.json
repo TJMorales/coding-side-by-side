@@ -1,0 +1,10 @@
+{
+  "summary": "grep searches text and prints the lines that match a pattern. Use it to find errors in a log, a name in a list, or a word in every file of a project.",
+  "notes": [
+    "grep miles prints nothing because the file has Miles with a capital M. grep -i miles finds both lines.",
+    "\"^A\" is a regular expression: ^ matches the start of a line, so Maya does not match even though it contains a.",
+    "In cat cs/grades.csv | grep \",10,\" | wc -l, the commas make 10 match only the grade column, not part of a score like 100. wc -l then counts the 10th graders."
+  ],
+  "pitfall": "When grep finds nothing it prints nothing, which looks the same as a command that did not run. Check spelling and capitals, or add -i, before you decide the text is not there.",
+  "keywords": ["grep", "search", "find text", "pattern", "grep -i", "grep -v", "grep -c", "grep -n", "grep -r", "regex", "regular expression", "case-insensitive"]
+}

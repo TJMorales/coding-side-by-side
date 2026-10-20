@@ -1,0 +1,28 @@
+{
+  "summary": "A hook is a script Git runs at a set moment, such as right before a commit. A pre-commit hook that exits with a non-zero code stops the commit.",
+  "notes": [
+    "The file name picks the moment: pre-commit, commit-msg, pre-push, and others. .git/hooks has samples ending in .sample.",
+    "git clone does not copy .git/hooks. Teams keep hooks in the repository and copy them in, or set git config core.hooksPath hooks.",
+    "git commit --no-verify skips the pre-commit hook. Use it only when you know why the hook failed."
+  ],
+  "pitfall": "A hook without execute permission does not run. Git prints a hint that the hook was ignored, and the commit goes through. Run chmod +x on it.",
+  "keywords": [
+    "git hooks",
+    "pre-commit",
+    ".git/hooks",
+    "chmod +x",
+    "--no-verify",
+    "core.hooksPath",
+    "automation"
+  ],
+  "setup_note": "Starts in a repository with one commit. The folder hooks/ holds a pre-commit script that is not installed yet.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "mkdir hooks",
+    "cat > hooks/pre-commit <<'EOF'\n#!/bin/sh\n# Stop the commit if a staged line adds the word TODO.\n# --no-color keeps color codes out of the text that grep reads.\nif git diff --cached --no-color -U0 | grep -q '^+.*TODO'; then\n  echo \"pre-commit: remove TODO before you commit\"\n  exit 1\nfi\nEOF",
+    "git add -A && git commit -q -m \"Start gradebook with hooks\""
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "An index lets the database find rows by a column without reading the whole table. EXPLAIN QUERY PLAN shows whether a query uses one.",
+  "notes": [
+    "EXPLAIN QUERY PLAN and its SCAN / SEARCH output are SQLite-specific. PostgreSQL and MySQL use EXPLAIN with a different format.",
+    "With 10 rows the speed difference is tiny. Indexes matter when a table has thousands or millions of rows.",
+    "Indexes speed up reads but slow down INSERT, UPDATE, and DELETE a little, because each index has to be updated too."
+  ],
+  "pitfall": "An index on last_name is not used for WHERE lower(last_name) = 'patel' or WHERE last_name LIKE '%tel'. The plan still says SCAN students.",
+  "keywords": ["CREATE INDEX", "index", "EXPLAIN QUERY PLAN", "EXPLAIN", "SCAN", "SEARCH", "performance", "speed"]
+}

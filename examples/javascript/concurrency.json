@@ -1,0 +1,11 @@
+{
+  "summary": "async functions and await let several tasks take turns on one thread, and Promise.all waits for all of them. Because only one piece of code runs at a time, this.sold++ needs no lock.",
+  "notes": [
+    "Each await pauses that booth and lets another booth run. Code between two awaits always runs without interruption.",
+    "booth() returns a Promise right away. Promise.all(booths) waits until every booth finishes and gives their results in the same order.",
+    "sellUnsafe() reads this.sold, awaits, then writes. All four booths read the same value before any writes, so the total is 100000 instead of 400000."
+  ],
+  "pitfall": "Forgetting await before Promise.all(...) moves on before the booths finish, so the total prints as 0 with no error.",
+  "keywords": ["async", "await", "Promise", "Promise.all", "event loop", "single thread", "race condition", "concurrency", "asynchronous"],
+  "contrast": "Python and Java threads can run at the same moment, so they need a Lock or synchronized. JavaScript runs your code on one thread and switches tasks only at await, so a counter is safe unless an await sits between reading and writing it."
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "git reset moves a branch back to an older commit and drops the newer ones. git revert keeps history and adds a new commit that undoes an old one.",
+  "notes": [
+    "Use reset only on commits you have not pushed. Use revert on commits other people already have.",
+    "reset --hard also resets your files. reset --soft keeps the changes staged, and plain reset keeps them unstaged.",
+    "git revert can undo any commit, not only the newest. Name it with its hash."
+  ],
+  "pitfall": "git reset --hard deletes uncommitted changes with no undo. Run git status first, and commit or stash anything you want to keep.",
+  "keywords": [
+    "git reset",
+    "git revert",
+    "--hard",
+    "--soft",
+    "undo commit",
+    "HEAD~1",
+    "rewrite history"
+  ],
+  "setup_note": "Starts with four commits on main. The first three were already pushed and the team has them. The newest commit, \"Add debug print\", was never pushed.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add README\"",
+    "sed -i '1a scores.remove(min(scores))' gradebook.py",
+    "git add -A && git commit -q -m \"Drop the lowest score\"",
+    "echo 'print(\"DEBUG\", scores)' >> gradebook.py",
+    "git add -A && git commit -q -m \"Add debug print\""
+  ]
+}

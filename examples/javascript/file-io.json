@@ -1,0 +1,11 @@
+{
+  "summary": "fs.writeFileSync() and fs.readFileSync() write and read text files so data lasts after the program ends. Each call opens and closes the file for you.",
+  "notes": [
+    "writeFileSync() erases the file first. appendFileSync() adds to the end.",
+    "Values read from a file are strings, so Number(score) converts them before adding.",
+    "ENOENT means \"no such file or directory\". It is the error code for a missing file."
+  ],
+  "pitfall": "Leaving out \"utf8\" makes readFileSync() return a Buffer of raw bytes, not a string, so text.trim() causes TypeError: text.trim is not a function.",
+  "keywords": ["fs", "require", "readFileSync", "writeFileSync", "appendFileSync", "file", "utf8", "ENOENT", "split", "text file"],
+  "contrast": "Node's readFileSync() and writeFileSync() open, use, and close the file in one call, so you do not need Python's with block or Java's try-with-resources. File access comes from the fs module; JavaScript in a web page cannot open files this way."
+}

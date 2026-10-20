@@ -1,0 +1,21 @@
+{
+  "summary": "A class defines a new type with its own fields. new creates an object from the class and runs its constructor.",
+  "notes": [
+    "constructor() runs every time you call new Student().",
+    "this.name = \"\" creates the name field on the new object. Writing name = \"\" without this. causes ReferenceError: name is not defined.",
+    "maya.name = \"Maya\" changes only maya. jordan keeps its own empty name. 0.0 prints as 0."
+  ],
+  "pitfall": "Writing const maya = Student(); without new causes TypeError: Class constructor Student cannot be invoked without 'new'.",
+  "keywords": [
+    "class",
+    "object",
+    "field",
+    "property",
+    "constructor",
+    "this",
+    "new",
+    "dot notation",
+    "instance"
+  ],
+  "contrast": "JavaScript creates fields inside constructor() with this.name, the way Python uses self.name inside __init__, and does not declare them at the top as Java does. Like Java, you create the object with new."
+}

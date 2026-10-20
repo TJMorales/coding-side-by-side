@@ -1,0 +1,25 @@
+{
+  "summary": "git restore undoes changes you have not committed. Without options it resets a file to the last commit; with --staged it only unstages the file.",
+  "notes": [
+    "git restore file throws away your edits to that file. Git cannot get them back, because they were never committed.",
+    "git restore --staged file is the undo for git add. The file keeps your edits.",
+    "git status prints these commands for you under each section, so you do not have to remember them."
+  ],
+  "pitfall": "git restore . resets every changed file in the folder at once. Check git status first so you do not lose work you meant to keep.",
+  "keywords": [
+    "git restore",
+    "--staged",
+    "undo",
+    "discard changes",
+    "unstage",
+    "git checkout --"
+  ],
+  "setup_note": "Starts in a repository with one commit that has gradebook.py, README.md, and scores.csv.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Start gradebook\""
+  ]
+}

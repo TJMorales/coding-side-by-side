@@ -1,0 +1,11 @@
+{
+  "summary": "Semantic tags name the parts of a page: header, nav, main, article, aside, and footer. They look like plain boxes, but screen readers and search engines use them to understand the page.",
+  "notes": [
+    "Screen reader users can jump straight to <nav> or <main>, so they skip content they do not need.",
+    "Use <main> once per page, for the content that is not repeated on every page.",
+    "<article> is for content that would make sense alone. <section> is for a themed part of a page with its own heading."
+  ],
+  "pitfall": "Building the whole page out of <div> elements with class names like \"header\". It looks the same but gives assistive technology nothing to work with.",
+  "keywords": ["header", "nav", "main", "article", "section", "aside", "footer", "semantic", "landmark", "div"],
+  "preview_height": 290
+}

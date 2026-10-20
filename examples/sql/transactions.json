@@ -1,0 +1,10 @@
+{
+  "summary": "A transaction groups several changes so they all happen or none of them do. BEGIN starts it, COMMIT saves it, and ROLLBACK cancels it.",
+  "notes": [
+    "After ROLLBACK, the 3 Jazz Band enrollments are back as if the DELETE never ran.",
+    "Use a transaction when changes depend on each other, like dropping one class and adding another. If the second step fails, ROLLBACK keeps the student from ending up with neither class.",
+    "Without BEGIN, SQLite commits each statement on its own as soon as it runs."
+  ],
+  "pitfall": "Running BEGIN while a transaction is already open gives Runtime error: cannot start a transaction within a transaction. Finish the first one with COMMIT or ROLLBACK.",
+  "keywords": ["BEGIN", "BEGIN TRANSACTION", "COMMIT", "ROLLBACK", "transaction", "undo", "atomic", "ACID"]
+}

@@ -1,0 +1,11 @@
+{
+  "summary": "JavaScript has no data class or record, so you write the constructor yourself. Object.freeze(this) makes an object that cannot change after creation.",
+  "notes": [
+    "Object.freeze(this) runs last in the constructor, after validation and after every field is set.",
+    "console.log(lab) prints Assignment { title: 'Lab 3', points: 60, tags: [ 'late ok' ] } with no toString() needed.",
+    "Object.freeze is shallow: a frozen object's array field can still be changed with push()."
+  ],
+  "pitfall": "Without \"use strict\" at the top of the file, g1.score = 100 on a frozen object is silently ignored. With it, you get TypeError: Cannot assign to read only property 'score' of object '#<Grade>'.",
+  "keywords": ["data class", "record", "Object.freeze", "immutable", "use strict", "equals", "constructor", "RangeError", "frozen"],
+  "contrast": "Python's @dataclass and Java's record write equality and printing for you. JavaScript writes none of it, so you add equals() yourself and use Object.freeze() for immutability, though console.log() already shows every field."
+}

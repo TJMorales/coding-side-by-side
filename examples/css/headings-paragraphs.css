@@ -1,0 +1,32 @@
+body {
+  font-family: Georgia, serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+  /* Extra space between lines makes paragraphs easier to read. */
+  line-height: 1.5;
+}
+
+/* Headings are bold and large by default. Set the size you want here
+   instead of choosing a different heading level. */
+h1 {
+  color: #1d4e89;
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+h2 {
+  color: #1d4e89;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+/* Paragraphs have a top and bottom margin by default. This removes the
+   top one so each paragraph sits close to its heading. */
+p {
+  margin-top: 0;
+}
+
+strong {
+  color: #a33a00;
+}

@@ -3,7 +3,6 @@ import java.util.ArrayList;
 class Student {
     private final String name;
     private final int studentId;
-
     Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
@@ -42,7 +41,6 @@ public class Main {
 
         // equals() compares the data.
         System.out.println("a.equals(b): " + a.equals(b));
-
         // == on objects checks whether both names point to the very same object.
         System.out.println("a == b: " + (a == b));
         System.out.println("a == c: " + (a == c));
@@ -51,7 +49,6 @@ public class Main {
         ArrayList<Student> roster = new ArrayList<>();
         roster.add(a);
         System.out.println("roster.contains(b): " + roster.contains(b));
-
         // Edge case: a Student is never equal to a plain number.
         System.out.println("a.equals(1001): " + a.equals(1001));
     }

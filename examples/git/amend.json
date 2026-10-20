@@ -1,0 +1,24 @@
+{
+  "summary": "git commit --amend replaces the most recent commit. Use it to fix the message or add a file you forgot.",
+  "notes": [
+    "Amend makes a new commit with a new hash. The old one is no longer on the branch.",
+    "--no-edit keeps the existing message. -m sets a new one.",
+    "To change an older commit, make a new commit that fixes it, or use git revert."
+  ],
+  "pitfall": "Amending a commit you already pushed makes git push fail with \"rejected (non-fast-forward)\". Only amend commits that are still local.",
+  "keywords": [
+    "git commit --amend",
+    "amend",
+    "fix commit message",
+    "--no-edit",
+    "forgot file"
+  ],
+  "setup_note": "Starts in a repository with one commit that has gradebook.py, README.md, and scores.csv.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Start gradebook\""
+  ]
+}

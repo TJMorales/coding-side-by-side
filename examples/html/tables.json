@@ -1,0 +1,11 @@
+{
+  "summary": "Use a <table> for data in rows and columns, like a gradebook. Each <tr> is a row, <th> is a header cell, and <td> is a data cell.",
+  "notes": [
+    "<thead>, <tbody>, and <tfoot> group the header rows, data rows, and summary row.",
+    "scope=\"col\" and scope=\"row\" tell screen readers which header goes with each cell, so a score is read as \"Byte Club, Code, 45\".",
+    "<caption> must be the first thing inside <table>."
+  ],
+  "pitfall": "Using a table to place things side by side on a page. Tables are for data; use flexbox or grid for layout.",
+  "keywords": ["table", "tr", "td", "th", "thead", "tbody", "tfoot", "caption", "scope", "row", "column", "gradebook"],
+  "preview_height": 260
+}

@@ -1,0 +1,10 @@
+{
+  "summary": "A CSS file is a list of rules. Each rule picks elements with a selector and sets properties for them.",
+  "notes": [
+    "body { } styles the whole visible page.",
+    "Each declaration is property: value; and ends with a semicolon.",
+    "Comments in CSS go between /* and */."
+  ],
+  "pitfall": "Forgetting a semicolon between two declarations makes the browser ignore the second one, with no error message.",
+  "keywords": ["rule", "selector", "declaration", "property", "value", "stylesheet", "comment"]
+}

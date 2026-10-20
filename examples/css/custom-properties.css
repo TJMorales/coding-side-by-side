@@ -1,0 +1,33 @@
+/* Custom properties start with two dashes. On :root they are
+   available to every element on the page. */
+:root {
+  --club-blue: #1d4e89;
+  --paper: #fdfaf3;
+  --space: 12px;
+  --radius: 8px;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: var(--paper);
+}
+
+h1 { margin-top: 0; color: var(--club-blue); }
+
+.teams { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space); }
+
+/* var(--accent, var(--club-blue)) uses --accent if it is set,
+   and falls back to --club-blue if it is not. */
+.team {
+  padding: var(--space);
+  border-radius: var(--radius);
+  border-top: 8px solid var(--accent, var(--club-blue));
+  background-color: white;
+}
+.team h2 { margin: 0; font-size: 18px; color: var(--accent, var(--club-blue)); }
+
+/* Setting a variable on one element changes it for that element
+   and its children only. */
+.games { --accent: #a33a00; }
+.robots { --accent: #2e7d32; }

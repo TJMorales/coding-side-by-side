@@ -1,0 +1,20 @@
+{
+  "summary": "grid-template-areas lets you draw a layout with names. Each string is a row, each name is a cell, and grid-area puts an element in the cells with its name.",
+  "notes": [
+    "\"header header header\" makes the header span all three columns. The footer does the same in the last row.",
+    "The middle row \"nav main aside\" places the three middle regions side by side, sized by grid-template-columns.",
+    "The shared card style is listed first. The header and aside rules come after it, so their background colors win the tie."
+  ],
+  "pitfall": "Drawing an area that is not a rectangle, such as an L shape. The browser rejects the whole grid-template-areas value and the items stack in order.",
+  "keywords": [
+    "grid-template-areas",
+    "grid-area",
+    "named areas",
+    "page layout",
+    "grid",
+    "header",
+    "sidebar",
+    "footer",
+    "grid layout"
+  ]
+}

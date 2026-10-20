@@ -1,0 +1,10 @@
+{
+  "summary": "padding is space inside the border, border is the outline, and margin is space outside it. box-sizing decides whether width includes the padding and border.",
+  "notes": [
+    "padding: 16px; with one value sets all four sides. margin-bottom sets only one side.",
+    "With the default box-sizing: content-box, the first demo box is 300 + 20 + 20 + 4 + 4 = 348px wide.",
+    "box-sizing: border-box keeps the box at the width you wrote. Many sites set it on every element for that reason."
+  ],
+  "pitfall": "Setting width: 100% and then adding padding. With content-box the element becomes wider than its parent and causes a sideways scroll bar.",
+  "keywords": ["box model", "padding", "border", "margin", "width", "box-sizing", "border-box", "content-box", "spacing"]
+}

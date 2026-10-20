@@ -1,0 +1,140 @@
+[
+ {
+  "id": "init-status",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Start a repository"
+ },
+ {
+  "id": "add-commit",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Stage and commit"
+ },
+ {
+  "id": "log",
+  "level": "intro",
+  "topic": "History",
+  "title": "Read the history"
+ },
+ {
+  "id": "diff",
+  "level": "intro",
+  "topic": "History",
+  "title": "See what changed"
+ },
+ {
+  "id": "gitignore",
+  "level": "intro",
+  "topic": "Basics",
+  "title": "Ignore files"
+ },
+ {
+  "id": "undo-working",
+  "level": "intro",
+  "topic": "Undo",
+  "title": "Undo changes you have not committed"
+ },
+ {
+  "id": "branches",
+  "level": "intermediate",
+  "topic": "Branches",
+  "title": "Create and switch branches"
+ },
+ {
+  "id": "merge",
+  "level": "intermediate",
+  "topic": "Branches",
+  "title": "Merge a branch"
+ },
+ {
+  "id": "merge-conflict",
+  "level": "intermediate",
+  "topic": "Branches",
+  "title": "Resolve a merge conflict"
+ },
+ {
+  "id": "clone-remote",
+  "level": "intermediate",
+  "topic": "Remotes",
+  "title": "Clone and remotes"
+ },
+ {
+  "id": "push-pull",
+  "level": "intermediate",
+  "topic": "Remotes",
+  "title": "Push and pull"
+ },
+ {
+  "id": "tags",
+  "level": "intermediate",
+  "topic": "History",
+  "title": "Tag a release"
+ },
+ {
+  "id": "rebase",
+  "level": "advanced",
+  "topic": "Branches",
+  "title": "Rebase"
+ },
+ {
+  "id": "stash",
+  "level": "advanced",
+  "topic": "Undo",
+  "title": "Stash work in progress"
+ },
+ {
+  "id": "reset-revert",
+  "level": "advanced",
+  "topic": "Undo",
+  "title": "Reset vs revert"
+ },
+ {
+  "id": "cherry-pick",
+  "level": "advanced",
+  "topic": "Branches",
+  "title": "Cherry-pick a commit"
+ },
+ {
+  "id": "blame",
+  "level": "advanced",
+  "topic": "History",
+  "title": "Find who changed a line"
+ },
+ {
+  "id": "amend",
+  "level": "advanced",
+  "topic": "Undo",
+  "title": "Fix the last commit"
+ },
+ {
+  "id": "bisect",
+  "level": "brilliant",
+  "topic": "History",
+  "title": "Find a bug with bisect"
+ },
+ {
+  "id": "reflog",
+  "level": "brilliant",
+  "topic": "Undo",
+  "title": "Recover lost commits with reflog"
+ },
+ {
+  "id": "hooks",
+  "level": "brilliant",
+  "topic": "Automation",
+  "title": "Hooks"
+ },
+ {
+  "id": "worktrees",
+  "level": "brilliant",
+  "topic": "Branches",
+  "title": "Worktrees"
+ },
+ {
+  "id": "feature-workflow",
+  "level": "brilliant",
+  "topic": "Remotes",
+  "title": "Feature branch workflow"
+ }
+]

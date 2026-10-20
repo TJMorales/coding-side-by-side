@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side by Side: Git</title>
+    <meta name="description" content="Git commands with real output from a real repository, from git init to rebase, bisect, and hooks." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&family=Red+Hat+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=11" />
+    <style>.hero { background-image: url("https://d8j0ntlcm91z4.cloudfront.net/user_3FHspHdiasmC0fwfZkWWBnKEGp0/hf_20261020_122858_e566dc8a-6a25-4349-96d8-4131b8dc9609.png"); }</style>
+  </head>
+  <body data-track="git">
+    <a class="skip" href="#concepts">Skip to concepts</a>
+
+    <header class="masthead hero hero-git hero-dark">
+      <nav class="pages" aria-label="Pages">
+        <a href="index.html">Python · Java · JavaScript</a>
+        <a href="web.html">HTML + CSS</a>
+        <a href="sql.html">SQL</a>
+        <a href="shell.html">Command line</a>
+        <a href="git.html" aria-current="page">Git</a>
+      </nav>
+      <div class="masthead-top">
+        <p class="wordmark" aria-label="Side by Side">
+          <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
+        </p>
+        <h1 class="page-title">Git</h1>
+        <p class="tagline">Version control with real output from a real repository. From <code>git init</code> to bisect and hooks.</p>
+      </div>
+
+      <form class="facets facets-solo" role="search" aria-label="Filter concepts" onsubmit="return false">
+        <div class="facet facet-search">
+          <label for="q">Search</label>
+          <input id="q" type="search" placeholder="Try: branch, merge, undo, remote" autocomplete="off" spellcheck="false" />
+        </div>
+
+        <fieldset class="facet facet-level">
+          <legend>Level <span class="legend-hint">Pick one or more</span></legend>
+          <div class="ladder" id="levels"></div>
+        </fieldset>
+      </form>
+    </header>
+
+    <div class="status-row">
+      <div class="status-text">
+        <p class="count" id="count" aria-live="polite"></p>
+        <p class="elsewhere" id="elsewhere"></p>
+      </div>
+      <div class="color-keys" id="color-keys" aria-label="Syntax color key"></div>
+    </div>
+
+    <div class="layout">
+      <nav class="rail" id="rail" aria-label="Topics and concepts">
+        <details class="rail-box" id="rail-box" open>
+          <summary>Topics</summary>
+          <div id="topics"></div>
+        </details>
+      </nav>
+      <main id="concepts" tabindex="-1"></main>
+    </div>
+
+    <footer class="foot">
+      <p>Every session ran with real Git in a fresh repository. Commit dates and the author are fixed so the output is the same on every run.</p>
+    </footer>
+
+    <script src="highlight.js?v=11"></script>
+    <script src="data/git.js?v=11"></script>
+    <script src="data/index.js?v=11"></script>
+    <script src="app.js?v=11"></script>
+  </body>
+</html>

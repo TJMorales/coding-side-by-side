@@ -1,0 +1,10 @@
+{
+  "summary": "SELECT reads data from a table. List the columns you want, then name the table with FROM.",
+  "notes": [
+    "Separate column names with commas.",
+    "SELECT * returns every column, in the order the table defines them.",
+    "Each statement ends with a semicolon."
+  ],
+  "pitfall": "Misspelling a column name causes Parse error: no such column: firstname.",
+  "keywords": ["SELECT", "FROM", "columns", "star", "query"]
+}

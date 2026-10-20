@@ -1,0 +1,11 @@
+{
+  "summary": "Flexbox is a CSS layout, so the HTML stays plain. You only need an element to be the container and its direct children to be the items.",
+  "notes": [
+    "Only direct children become flex items. The links are items of nav, not of header.",
+    "The officers are a <ul> because they are a list, even though they display as cards.",
+    "<br> is fine here for a line break inside a short item."
+  ],
+  "pitfall": "Putting display: flex on the items instead of their parent. Flexbox is turned on for the container.",
+  "keywords": ["flex container", "flex item", "nav", "ul", "cards"],
+  "preview_height": 280
+}

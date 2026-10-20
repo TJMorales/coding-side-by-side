@@ -1,0 +1,11 @@
+{
+  "summary": "A constructor sets up a new object's fields. JavaScript allows one constructor per class, so default parameter values and static factory methods give you several ways to create an object.",
+  "notes": [
+    "name = \"New student\" is used when the argument is missing or undefined. Passing null does not use the default.",
+    "A [] default is created again on every call, so it is not shared between objects like a Python default list.",
+    "static withScores(name, scores) is called on the class, Student.withScores(...), and returns a new Student."
+  ],
+  "pitfall": "Writing a second constructor in the same class causes SyntaxError: A class may only have one constructor. Use default parameters or a static factory method instead.",
+  "keywords": ["constructor", "default parameter", "static factory", "static", "new", "undefined", "overloading", "spread"],
+  "contrast": "JavaScript cannot overload constructors like Java, so it uses default parameter values like Python. It has no keyword arguments, so you pass undefined or write a static factory method to skip a parameter."
+}

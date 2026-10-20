@@ -1,0 +1,11 @@
+{
+  "summary": "The HTML for :has() is ordinary: checkboxes inside list items, and cards where only some contain a badge. The CSS styles the parents based on what is inside them.",
+  "notes": [
+    "The checked attribute makes the first two boxes start checked, so the preview shows both states.",
+    "Click a checklist item in the preview to see its row change style.",
+    "No classes like \"done\" are needed. The checkbox state is enough."
+  ],
+  "pitfall": "Adding a class such as \"done\" by hand to match the checkbox. It falls out of sync as soon as someone clicks the box.",
+  "keywords": ["checkbox", "checked", "label", "card", "badge"],
+  "preview_height": 330
+}

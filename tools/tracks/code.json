@@ -382,7 +382,7 @@
   "level": "brilliant",
   "topic": "OOP",
   "title": "Data classes and records",
-  "contrast": "Python's @dataclass writes __init__, __repr__, and __eq__, and frozen=True makes it unchangeable and hashable. Java's record writes the constructor, getters, toString(), equals(), and hashCode(), and is always unchangeable."
+  "contrast": "Python's @dataclass writes __init__, __repr__, and __eq__, and frozen=True makes it unchangeable and hashable. Java's record writes the constructor, getters, toString(), equals(), and hashCode(), and its fields can never be reassigned."
  },
  {
   "id": "design-patterns",

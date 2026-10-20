@@ -18,13 +18,13 @@ class Student:
 
     # Mutator (setter) methods change a field. This one rejects a bad value.
     def set_gpa(self, new_gpa):
-        if 0.0 <= new_gpa <= 4.0:
+        if new_gpa >= 0.0 and new_gpa <= 4.0:
             self._gpa = new_gpa
         else:
             print(f"Rejected GPA {new_gpa}. It must be 0.0 to 4.0.")
 
     def promote(self):
-        self._grade_level += 1
+        self._grade_level = self._grade_level + 1
 
 
 maya = Student("Maya", 10, 3.8)

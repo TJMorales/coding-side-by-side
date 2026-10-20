@@ -1,0 +1,27 @@
+{
+  "summary": "git stash sets uncommitted changes aside so you can switch tasks with a clean folder, then brings them back later.",
+  "notes": [
+    "-m gives the stash a name you can read in git stash list.",
+    "git stash pop applies the newest stash and deletes it. git stash apply applies it and keeps it in the list.",
+    "Stashes are local. They are not pushed and they are easy to forget, so pop them soon."
+  ],
+  "pitfall": "git stash skips untracked (new) files, so a new file stays in the folder. Use git stash -u to include them.",
+  "keywords": [
+    "git stash",
+    "stash pop",
+    "stash list",
+    "stash apply",
+    "-u",
+    "work in progress",
+    "save changes"
+  ],
+  "setup_note": "Starts in a repository with two commits on main. README.md has a typo.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz socres for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\""
+  ]
+}

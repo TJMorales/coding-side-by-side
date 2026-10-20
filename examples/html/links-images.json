@@ -1,0 +1,11 @@
+{
+  "summary": "The <a> tag makes a link and the <img> tag shows an image. A link needs href (where to go), and an image needs src (the file) and alt (a text description).",
+  "notes": [
+    "alt should say what the image shows or does. Screen readers read it aloud, and it appears if the image fails to load.",
+    "href=\"#contact\" jumps to the element with id=\"contact\" on the same page. mailto: opens an email app.",
+    "Set width and height on <img> so the page saves the right space before the image loads."
+  ],
+  "pitfall": "Leaving out alt. Screen readers then read the file name, and for a data: URI that is a long string of code.",
+  "keywords": ["a", "href", "link", "anchor", "img", "src", "alt", "image", "target", "_blank", "mailto", "data uri", "svg"],
+  "preview_height": 390
+}

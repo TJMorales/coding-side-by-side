@@ -1,0 +1,11 @@
+{
+  "summary": "Inheritance makes a new class that starts with all the fields and methods of an existing class. You add new methods or override old ones in the subclass.",
+  "notes": [
+    "class HonorsStudent extends Student names the one parent class, the same keyword as Java.",
+    "super(name, scores) must run before the constructor uses this.",
+    "super.describe() calls the parent's version of a method you have overridden."
+  ],
+  "pitfall": "Leaving out super(name, scores) causes ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor when you create the object.",
+  "keywords": ["inheritance", "extends", "subclass", "superclass", "super", "override", "instanceof"],
+  "contrast": "JavaScript writes extends and super like Java, but there is no @Override or protected: every field is public unless it uses #, and a # field is not visible to subclasses. Like Python, a missing super() call is caught only when the program runs."
+}

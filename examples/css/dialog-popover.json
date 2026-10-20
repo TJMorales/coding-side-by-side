@@ -1,0 +1,10 @@
+{
+  "summary": "Popovers and dialogs come with default styles: the browser centers a popover and draws a border. You can restyle them like any element, and ::backdrop styles the layer behind them.",
+  "notes": [
+    "[popover] is an attribute selector that matches any element with the popover attribute, open or closed.",
+    "::backdrop dims the page behind an open popover. Click the button in the preview to see it. It also appears behind a dialog opened with showModal().",
+    "dialog { position: static; } keeps this non-modal dialog in the normal flow, below the button."
+  ],
+  "pitfall": "Setting display: block on [popover]. That overrides the browser's display: none for closed popovers, so the popover is always visible.",
+  "keywords": ["popover", "dialog", "::backdrop", "backdrop", "attribute selector", "modal", "overlay", "box-shadow"]
+}

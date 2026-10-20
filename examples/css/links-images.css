@@ -1,0 +1,24 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 24px;
+  background-color: #fdfaf3;
+}
+
+/* Images are inline by default, like a word in a sentence.
+   display: block puts the logo on its own line. */
+img {
+  display: block;
+  margin-bottom: 8px;
+}
+
+h1 {
+  color: #1d4e89;
+  margin-top: 0;
+}
+
+/* Links are blue and underlined by default. Keep the underline so
+   people can tell a link apart from plain colored text. */
+a {
+  color: #a33a00;
+  text-decoration-thickness: 2px;
+}

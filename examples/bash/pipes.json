@@ -1,0 +1,10 @@
+{
+  "summary": "A pipe (|) connects two commands: the output of the first becomes the input of the second. Small commands chained with pipes can answer questions no single command can.",
+  "notes": [
+    "cat cs/roster.txt | sort | head -n 3 runs left to right: read the file, sort the names, keep the first 3.",
+    "ls cs | cat prints one name per line. ls checks if its output goes to a screen or a pipe and changes its format.",
+    "ls games | wc -l shows the error and then 0, because only normal output goes through the pipe. Error messages go straight to the screen."
+  ],
+  "pitfall": "Piping into a command that does not read input does nothing useful. cat notes.txt | echo prints an empty line because echo only prints its arguments.",
+  "keywords": ["pipe", "|", "pipeline", "chain commands", "wc -l", "sort", "head", "tail", "standard input", "stdin", "stdout"]
+}

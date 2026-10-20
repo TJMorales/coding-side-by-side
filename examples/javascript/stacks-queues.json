@@ -1,0 +1,11 @@
+{
+  "summary": "A stack removes the newest item first (LIFO). A queue removes the oldest item first (FIFO). JavaScript uses one array for both: push() and pop() for a stack, push() and shift() for a queue.",
+  "notes": [
+    "stack.length === 0 is checked first, so pop() never runs on an empty stack.",
+    "shift() moves every remaining item down one index, so it is O(n). That is fine for small queues; for very large ones, keep a head index instead of shifting.",
+    "ch in pairs checks whether ch is a key of the pairs object."
+  ],
+  "pitfall": "pop() and shift() on an empty array return undefined instead of throwing an error, so a bug can keep running quietly. Check length before you remove.",
+  "keywords": ["stack", "queue", "array", "push", "pop", "shift", "LIFO", "FIFO", "balanced brackets", "padEnd"],
+  "contrast": "JavaScript has no deque class like Python's collections.deque or Java's ArrayDeque; you use an array, and shift() from the front is O(n). Removing from an empty array returns undefined, where Python raises IndexError and Java's pop() throws NoSuchElementException."
+}

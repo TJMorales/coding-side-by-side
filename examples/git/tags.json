@@ -1,0 +1,29 @@
+{
+  "summary": "A tag is a permanent name for one commit, such as v1.0. Use tags to mark versions you turned in or released.",
+  "notes": [
+    "Unlike a branch, a tag does not move when you make new commits.",
+    "git push does not send tags. Use git push origin v1.0 for one tag or git push --tags for all of them.",
+    "git switch --detach v1.0 lets you look at the files as they were in that version."
+  ],
+  "pitfall": "git tag v1.0 without -a makes a lightweight tag with no message or date. Use -a and -m for versions you want to describe.",
+  "keywords": [
+    "git tag",
+    "-a",
+    "annotated tag",
+    "release",
+    "version",
+    "v1.0",
+    "git push --tags"
+  ],
+  "setup_note": "Starts in a repository with three commits on main.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\"",
+    "printf 'print(\"Highest:\", max(scores))\\n' >> gradebook.py",
+    "git add -A && git commit -q -m \"Print the highest score\""
+  ]
+}

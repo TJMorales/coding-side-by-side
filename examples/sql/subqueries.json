@@ -1,0 +1,10 @@
+{
+  "summary": "A subquery is a SELECT inside another statement. Use it when one question needs the answer to another question first, like comparing to an average.",
+  "notes": [
+    "A subquery after = or > must return one value. A subquery after IN can return a list.",
+    "The last query is a correlated subquery: it uses s.id from the outer query, so it runs once for each student.",
+    "If an = subquery returns more than one row, SQLite quietly uses the first row. PostgreSQL and SQL Server raise an error instead."
+  ],
+  "pitfall": "NOT IN returns no rows at all if the subquery's list contains a NULL. Add WHERE student_id IS NOT NULL inside the subquery, or use NOT EXISTS.",
+  "keywords": ["subquery", "nested query", "IN", "NOT IN", "EXISTS", "correlated subquery", "inner query"]
+}

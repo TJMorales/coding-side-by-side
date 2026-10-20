@@ -1,0 +1,11 @@
+{
+  "summary": "Linear search checks items one at a time. Binary search halves a sorted array on each step, so it needs far fewer comparisons on long arrays.",
+  "notes": [
+    "Math.floor((low + high) / 2) rounds down. JavaScript's / always keeps the decimal, so 11 / 2 is 5.5.",
+    "low = mid + 1 and high = mid - 1 skip mid, because it was already checked.",
+    "Each search returns an object { index, comparisons }, and const { index, comparisons } = ... unpacks it. -1 means not found."
+  ],
+  "pitfall": "Leaving out Math.floor gives no error. items[5.5] is undefined, so the search returns index -1 even for 88, which is in the array.",
+  "keywords": ["linear search", "binary search", "sequential search", "midpoint", "Math.floor", "sorted", "comparisons", "destructuring"],
+  "contrast": "JavaScript has one number type and / always keeps the decimal, so it needs Math.floor where Python uses // and Java's int division rounds down by itself. A decimal index gives undefined instead of an error."
+}

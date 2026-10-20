@@ -1,0 +1,13 @@
+{
+  "summary": "A here document (<< EOF) feeds several lines of text to a command, right from your script. Use it to print a block of text, write a file, or give input to a command without a separate file.",
+  "notes": [
+    "The ending marker must be alone on its line with nothing before or after it, not even spaces. EOF is a tradition; any word works.",
+    "With << 'EOF' in quotes, bash does not fill in $5 or $name, so the text prints exactly as written.",
+    "<<- only removes tab characters. If your editor turns tabs into spaces, the EOF line is not found."
+  ],
+  "pitfall": "If the closing EOF is indented with spaces or misspelled, bash reads to the end of the file and warns here-document at line 8 delimited by end-of-file (wanted `EOF'). Everything after it becomes text instead of commands.",
+  "keywords": ["here document", "heredoc", "<<", "<<-", "EOF", "here string", "<<<", "multi-line text", "write file", "cat <<"],
+  "mode": "script",
+  "filename": "welcome.sh",
+  "session": ["./welcome.sh Leo", "cat welcome.txt"]
+}

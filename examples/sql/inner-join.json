@@ -1,0 +1,10 @@
+{
+  "summary": "JOIN combines rows from two tables where the ON condition matches, such as an enrollment's course_id and a course's id.",
+  "notes": [
+    "JOIN and INNER JOIN mean the same thing.",
+    "AS e and AS c are table aliases. They let you write e.grade instead of enrollments.grade.",
+    "An inner join drops rows with no match: Zoe has no enrollments, so only Diego appears in the last result."
+  ],
+  "pitfall": "When both tables have a column with the same name, you must say which one. SELECT id FROM students JOIN courses ON ... gives Parse error: ambiguous column name: id.",
+  "keywords": ["JOIN", "INNER JOIN", "ON", "combine tables", "foreign key", "table alias", "relationship"]
+}

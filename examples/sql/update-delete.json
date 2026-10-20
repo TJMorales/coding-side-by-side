@@ -1,0 +1,10 @@
+{
+  "summary": "UPDATE changes values in rows that already exist, and DELETE removes rows. Both use WHERE to pick which rows.",
+  "notes": [
+    "UPDATE and DELETE print nothing in the sqlite3 shell. Run a SELECT to check the result.",
+    "The WHERE uses both student_id and course_id so only one enrollment changes, not all of Ethan's classes.",
+    "A WHERE that matches no rows is not an error. Nothing changes and nothing is printed."
+  ],
+  "pitfall": "Forgetting WHERE changes every row: DELETE FROM enrollments; empties the whole table, and UPDATE enrollments SET grade = 85; gives every student an 85. Run the WHERE as a SELECT first.",
+  "keywords": ["UPDATE", "SET", "DELETE", "DELETE FROM", "change data", "remove rows"]
+}

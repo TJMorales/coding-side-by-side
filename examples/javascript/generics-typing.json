@@ -1,0 +1,11 @@
+{
+  "summary": "JavaScript has no generics or static types. JSDoc comments like @template T and @param {T[]} items describe types for your editor, and a runtime check with typeof is the only thing that stops a wrong type while the program runs.",
+  "notes": [
+    "@template T in a JSDoc comment declares a type variable, like <T> in Java. Node ignores every comment.",
+    "TypeScript is a separate language that adds real type checking to JavaScript, with syntax like class Box<T>. Its checker reports new Box<string>(404) as an error before the code runs.",
+    "typeof s === \"number\" checks the actual type of a value while the program runs."
+  ],
+  "pitfall": "Expecting a JSDoc type to stop bad data. Without the typeof check, average([88, \"95\", 72]) returns 296524 with no error, because 88 + \"95\" joins the two into the string \"8895\", then \"889572\", and / turns that back into a number.",
+  "keywords": ["generics", "types", "JSDoc", "@template", "@param", "@returns", "typeof", "TypeScript", "type checking", "TypeError"],
+  "contrast": "Java's compiler checks generics, and Python stores hints that tools like mypy check. Plain JavaScript has no type syntax at all, so types live in JSDoc comments or in TypeScript."
+}

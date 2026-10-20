@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS Club Sign-ups</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Hackathon sign-ups</h1>
+    <!-- This dot fades in and out to show the meeting is happening now. -->
+    <p class="live"><span class="dot"></span> Meeting in progress: Room 2115</p>
+
+    <!-- The bar fills once when the page loads. role and aria values let
+         screen readers announce the progress. -->
+    <p>18 of 24 spots filled</p>
+    <div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="24" aria-valuenow="18" aria-label="Hackathon spots filled">
+      <div class="fill"></div>
+    </div>
+  </body>
+</html>

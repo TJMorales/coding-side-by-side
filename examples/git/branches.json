@@ -1,0 +1,26 @@
+{
+  "summary": "A branch is a separate line of commits. You can try a change on a branch while main stays as it was.",
+  "notes": [
+    "A branch is a name that points at a commit. Each new commit moves the current branch forward.",
+    "git switch -c name creates and switches in one step. git switch name moves to a branch that already exists.",
+    "Older tutorials use git checkout -b name. It does the same thing as git switch -c name."
+  ],
+  "pitfall": "Switching with uncommitted changes that conflict with the other branch fails with \"Your local changes ... would be overwritten\". Commit or stash first.",
+  "keywords": [
+    "git branch",
+    "git switch",
+    "-c",
+    "git checkout -b",
+    "branch",
+    "HEAD"
+  ],
+  "setup_note": "Starts in a repository with two commits on main.",
+  "setup": [
+    "git init -q",
+    "cat > gradebook.py <<'EOF'\nscores = [88, 92, 79, 95]\naverage = sum(scores) / len(scores)\nprint(\"Average:\", average)\nEOF",
+    "cat > README.md <<'EOF'\n# Gradebook\nQuiz scores for Period 3.\nEOF",
+    "git add -A && git commit -q -m \"Add gradebook script\"",
+    "cat > scores.csv <<'EOF'\nname,score\nAva,88\nLiam,92\nNoah,79\nZoe,95\nEOF",
+    "git add -A && git commit -q -m \"Add quiz scores\""
+  ]
+}
