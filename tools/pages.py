@@ -8,7 +8,7 @@ import json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-VERSION = "12"
+VERSION = "13"
 CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_3FHspHdiasmC0fwfZkWWBnKEGp0/"
 
 BASE_FONTS = "family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1"
@@ -168,13 +168,7 @@ def main():
     for tr in tracks:
         cfg = PAGES[tr["id"]]
         nav = nav_html(tr["id"])
-        hero_style = ""
-        if cfg["hero"]:
-            if cfg.get("hero_fallback"):
-                url = f'image-set(url("{cfg["hero"]}") type("image/webp"), url("{cfg["hero_fallback"]}") type("image/jpeg"))'
-                hero_style = f'<style>.hero {{ background-image: url("{cfg["hero_fallback"]}"); background-image: {url}; }}</style>'
-            else:
-                hero_style = f'<style>.hero {{ background-image: url("{cfg["hero"]}"); }}</style>'
+        hero_style = ""  # heroes are CSS gradients (style.css, .hero-<track>)
         html = TEMPLATE.format(
             title=cfg["title"], desc=cfg["desc"], fonts=BASE_FONTS + cfg["fonts"], v=VERSION, hero_style=hero_style,
             track=tr["id"], nav=nav, h1=H1[tr["id"]], tagline=cfg["tagline"], search=cfg["search"],
