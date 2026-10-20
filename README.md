@@ -1,6 +1,16 @@
 # Side by Side
 
+A code reference for high school computer science students, in five pages:
 
+| Page | Languages | Concepts |
+| --- | --- | --- |
+| index.html | Python, Java, JavaScript (side by side) | 59 |
+| web.html | HTML + CSS with a live preview | 29 |
+| sql.html | SQL (sqlite3, sample school database) | 27 |
+| shell.html | Linux command line and bash | 27 |
+| git.html | Git | 23 |
+
+Students filter by language, level, topic, and search; search also counts matches on the other pages. Every example runs during the build (`python3 tools/build.py`), so the output shown is real.
 
 Live site: https://tjmorales.github.io/coding-side-by-side/
 
