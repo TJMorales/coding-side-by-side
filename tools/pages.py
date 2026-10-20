@@ -8,7 +8,7 @@ import json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-VERSION = "11"
+VERSION = "12"
 CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_3FHspHdiasmC0fwfZkWWBnKEGp0/"
 
 BASE_FONTS = "family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1"
@@ -18,7 +18,7 @@ PAGES = {
         "file": "index.html", "title": "Side by Side: Python, Java, and JavaScript",
         "desc": "A code reference for Python, Java, and JavaScript, from your first print statement to threads, generics, and game loops. Compare the languages concept by concept.",
         "tagline": "Python, Java, and JavaScript, one concept at a time. From your first <code>print</code> to threads and game loops.",
-        "hero": "hero.webp", "hero_fallback": "hero.jpg", "tone": "light",
+        "hero": CDN + "hf_20261020_122858_3eb90c95-ce51-45de-93b4-b0d73fd13090.png", "tone": "light",
         "fonts": "&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Fira+Code:wght@400;600",
         "search": "Try: loop, constructor, HashMap, async",
     },
@@ -72,30 +72,34 @@ TEMPLATE = """<!DOCTYPE html>
   <body data-track="{track}">
     <a class="skip" href="#concepts">Skip to concepts</a>
 
-    <header class="masthead hero hero-{track} hero-{tone}">
-      <nav class="pages" aria-label="Pages">
+    <header class="topnav">
+      <a class="topnav-brand" href="index.html" aria-label="Side by Side, home">
+        <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
+      </a>
+      <button type="button" class="topnav-toggle" aria-expanded="false" aria-controls="topnav-menu">Menu</button>
+      <nav class="topnav-menu" id="topnav-menu" aria-label="Languages">
+        <ul class="topnav-list">
 {nav}
+        </ul>
       </nav>
-      <div class="masthead-top">
-        <p class="wordmark" aria-label="Side by Side">
-          <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
-        </p>
-        <h1 class="page-title">{h1}</h1>
-        <p class="tagline">{tagline}</p>
-      </div>
-
-      <form class="facets{facet_class}" role="search" aria-label="Filter concepts" onsubmit="return false">
-        <div class="facet facet-search">
-          <label for="q">Search</label>
-          <input id="q" type="search" placeholder="{search}" autocomplete="off" spellcheck="false" />
-        </div>
-{lang_facet}
-        <fieldset class="facet facet-level">
-          <legend>Level <span class="legend-hint">Pick one or more</span></legend>
-          <div class="ladder" id="levels"></div>
-        </fieldset>
-      </form>
     </header>
+
+    <div class="hero hero-{track}">
+      <div class="hero-card">
+        <h1 class="page-title" id="page-title">{h1}</h1>
+        <p class="tagline">{tagline}</p>
+        <form class="facets" role="search" aria-label="Filter concepts" onsubmit="return false">
+          <div class="facet facet-search">
+            <label for="q">Search</label>
+            <input id="q" type="search" placeholder="{search}" autocomplete="off" spellcheck="false" />
+          </div>
+          <fieldset class="facet facet-level">
+            <legend>Level <span class="legend-hint">Pick one or more</span></legend>
+            <div class="ladder" id="levels"></div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
 
     <div class="status-row">
       <div class="status-text">
@@ -134,22 +138,36 @@ FOOT = {
     "shell": "Every session ran in bash 5 on Linux as the user student, in a real terminal. The output is what the commands printed.",
     "git": "Every session ran with real Git in a fresh repository. Commit dates and the author are fixed so the output is the same on every run.",
 }
-H1 = {"code": "Python · Java · JavaScript", "web": "HTML + CSS", "sql": "SQL", "shell": "Linux command line and bash", "git": "Git"}
+H1 = {"code": "Python + Java", "web": "HTML + CSS", "sql": "SQL", "shell": "Linux command line and bash", "git": "Git"}
+
+
+# The menu is the only place to choose a language. Code-page items carry the language in the
+# link; app.js marks the current one and keeps the chosen levels when you switch.
+CODE_ITEMS = [("python", "Python"), ("java", "Java"), ("javascript", "JavaScript")]
+COMPARE = [("python,java", "Python + Java"), ("python,javascript", "Python + JavaScript"),
+           ("java,javascript", "Java + JavaScript"), ("python,java,javascript", "All three")]
+OTHER = [("web", "web.html", "HTML &amp; CSS"), ("sql", "sql.html", "SQL"), ("shell", "shell.html", "Command line"), ("git", "git.html", "Git")]
+
+
+def nav_html(current):
+    i = "          "
+    out = []
+    for lang, label in CODE_ITEMS:
+        out.append(f'{i}<li><a class="topnav-link nav-{lang}" href="index.html#lang={lang}" data-nav-lang="{lang}">{label}</a></li>')
+    sub = "".join(f'\n{i}    <li><a href="index.html#lang={v}" data-nav-lang="{v}">{t}</a></li>' for v, t in COMPARE)
+    out.append(f'{i}<li class="topnav-compare">\n{i}  <button type="button" class="topnav-link" id="compare-btn" aria-expanded="false" aria-controls="compare-menu">Compare</button>'
+               f'\n{i}  <ul class="compare-menu" id="compare-menu" hidden>{sub}\n{i}  </ul>\n{i}</li>')
+    for tid, page, label in OTHER:
+        cur = ' aria-current="page"' if tid == current else ""
+        out.append(f'{i}<li><a class="topnav-link" href="{page}" data-nav-page{cur}>{label}</a></li>')
+    return "\n".join(out)
 
 
 def main():
     tracks = json.loads((ROOT / "tools" / "tracks.json").read_text())
     for tr in tracks:
         cfg = PAGES[tr["id"]]
-        nav = "\n".join(
-            f'        <a href="{t["page"]}"' + (' aria-current="page"' if t["id"] == tr["id"] else "") + f'>{t["nav"]}</a>'
-            for t in tracks)
-        lang_facet = ""
-        if len(tr["langs"]) > 1:
-            lang_facet = ('        <div class="facet facet-lang" role="group" aria-labelledby="lang-label">\n'
-                          '          <span class="facet-label" id="lang-label">Languages <span class="legend-hint">Pick one or more</span></span>\n'
-                          '          <div class="lang-toggle" id="langs"></div>\n'
-                          '        </div>')
+        nav = nav_html(tr["id"])
         hero_style = ""
         if cfg["hero"]:
             if cfg.get("hero_fallback"):
@@ -159,8 +177,8 @@ def main():
                 hero_style = f'<style>.hero {{ background-image: url("{cfg["hero"]}"); }}</style>'
         html = TEMPLATE.format(
             title=cfg["title"], desc=cfg["desc"], fonts=BASE_FONTS + cfg["fonts"], v=VERSION, hero_style=hero_style,
-            track=tr["id"], tone=cfg["tone"], nav=nav, h1=H1[tr["id"]], tagline=cfg["tagline"], search=cfg["search"],
-            lang_facet=lang_facet, facet_class="" if lang_facet else " facets-solo", foot=FOOT[tr["id"]])
+            track=tr["id"], nav=nav, h1=H1[tr["id"]], tagline=cfg["tagline"], search=cfg["search"],
+            foot=FOOT[tr["id"]])
         (DOCS / cfg["file"]).write_text(html)
         print("wrote docs/" + cfg["file"])
 

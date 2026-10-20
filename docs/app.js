@@ -28,14 +28,14 @@
     git: { name: "Git", file: () => "Typed at the prompt", out: "Terminal" },
   };
   const COLLAPSE_AT = 30;
-  const multi = TRACK.langs.length > 1;
+  // Only the code page lets you choose languages (from the menu). The web page always shows HTML and CSS.
+  const multi = TRACK.id === "code";
 
   const concepts = DATA.concepts;
   const topics = [...new Set(concepts.map((c) => c.topic))];
 
   /* ---------- state <-> URL ---------- */
   const state = { langs: TRACK.default_langs.slice(), levels: ["intro"], topics: [], q: "" };
-  const storeKey = "sbs-langs-" + TRACK.id;
 
   function cleanLangs(list) {
     const ok = TRACK.langs.filter((l) => list.includes(l));
@@ -46,10 +46,7 @@
     const p = new URLSearchParams(location.hash.slice(1));
     let lang = p.get("lang");
     if (lang === "both") lang = "python,java";
-    if (lang) state.langs = cleanLangs(lang.split(","));
-    else {
-      try { const saved = localStorage.getItem(storeKey); if (saved) state.langs = cleanLangs(saved.split(",")); } catch (e) { /* storage unavailable */ }
-    }
+    state.langs = multi && lang ? cleanLangs(lang.split(",")) : TRACK.default_langs.slice();
     state.levels = p.get("level") ? p.get("level").split(",").filter((l) => LEVELS.some((x) => x.id === l)) : ["intro"];
     if (!state.levels.length) state.levels = ["intro"];
     state.topics = p.get("topic") ? p.get("topic").split(",").filter((t) => topics.includes(t)) : [];
@@ -63,7 +60,6 @@
     if (state.topics.length) p.set("topic", state.topics.join(","));
     if (state.q) p.set("q", state.q);
     try { history.replaceState(null, "", "#" + p.toString()); } catch (e) { location.hash = p.toString(); }
-    try { localStorage.setItem(storeKey, state.langs.join(",")); } catch (e) { /* storage unavailable */ }
   }
 
   /* ---------- filtering ---------- */
@@ -96,7 +92,6 @@
   const levelsEl = $("#levels");
   const topicsEl = $("#topics");
   const searchEl = $("#q");
-  const langEl = $("#langs");
 
   function renderFacets() {
     levelsEl.innerHTML = LEVELS.map((l, idx) => {
@@ -107,12 +102,6 @@
         '<span class="rung-label">' + l.label + "</span>" +
         '<span class="rung-blurb">' + l.blurb + "</span></button>";
     }).join("");
-
-    if (langEl) {
-      langEl.innerHTML = TRACK.langs.map((l) =>
-        '<button type="button" class="lang-btn lang-' + l + '" data-lang="' + l + '" aria-pressed="' + state.langs.includes(l) + '">' +
-        '<span class="lang-check" aria-hidden="true"></span>' + LANGS[l].name + "</button>").join("");
-    }
 
     // The sidebar is the only topic filter: each topic toggles, and lists the concepts it contains.
     const pool = concepts.filter((c) => state.levels.includes(c.level) && matchesQuery(c));
@@ -148,17 +137,55 @@
     update();
   });
 
-  if (langEl) langEl.addEventListener("click", (e) => {
-    const b = e.target.closest("[data-lang]");
-    if (!b) return;
-    const id = b.dataset.lang;
-    // Toggle a language; at least one stays on.
-    if (state.langs.includes(id)) {
-      if (state.langs.length > 1) state.langs = state.langs.filter((x) => x !== id);
-    } else {
-      state.langs = TRACK.langs.filter((x) => x === id || state.langs.includes(x));
+  /* ---------- top menu ---------- */
+  const NAMES = { python: "Python", java: "Java", javascript: "JavaScript" };
+  const compareBtn = $("#compare-btn");
+  const compareMenu = $("#compare-menu");
+  const menuBtn = $(".topnav-toggle");
+  const menu = $("#topnav-menu");
+
+  // Mark the current language view, and carry the chosen levels into every menu link.
+  function updateNav() {
+    const levelPart = "level=" + state.levels.join(",");
+    document.querySelectorAll(".topnav a[data-nav-lang]").forEach((a) => {
+      a.href = "index.html#lang=" + a.dataset.navLang + "&" + levelPart;
+      if (TRACK.id === "code" && a.dataset.navLang === state.langs.join(",")) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    document.querySelectorAll(".topnav a[data-nav-page]").forEach((a) => {
+      a.href = a.getAttribute("href").split("#")[0] + "#" + levelPart;
+    });
+    if (compareBtn) compareBtn.classList.toggle("is-current", TRACK.id === "code" && state.langs.length > 1);
+    if (TRACK.id === "code") {
+      const names = state.langs.map((l) => NAMES[l]);
+      const title = names.length === 3 ? "Python, Java, and JavaScript" : names.join(" + ");
+      $("#page-title").textContent = title;
+      document.title = "Side by Side: " + title;
     }
-    update();
+  }
+
+  function setCompare(open) {
+    if (!compareBtn) return;
+    compareBtn.setAttribute("aria-expanded", String(open));
+    compareMenu.hidden = !open;
+  }
+  if (compareBtn) {
+    compareBtn.addEventListener("click", () => setCompare(compareMenu.hidden));
+    compareMenu.addEventListener("click", (e) => { if (e.target.closest("a")) setCompare(false); });
+  }
+  function setMenu(open) {
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menu.classList.toggle("is-open", open);
+  }
+  menuBtn.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
+  menu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("click", (e) => {
+    if (compareBtn && !e.target.closest(".topnav-compare")) setCompare(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (compareMenu && !compareMenu.hidden) { setCompare(false); compareBtn.focus(); }
+    else if (menu.classList.contains("is-open")) { setMenu(false); menuBtn.focus(); }
   });
 
   topicsEl.addEventListener("click", (e) => {
@@ -450,6 +477,7 @@
   /* ---------- go ---------- */
   function update() {
     writeHash();
+    updateNav();
     renderFacets();
     renderKeys();
     renderConcepts();
@@ -463,6 +491,7 @@
   update();
   window.addEventListener("hashchange", () => {
     if (/^#c-/.test(location.hash)) return;
-    readHash(); renderFacets(); renderKeys(); renderConcepts();
+    readHash(); updateNav(); renderFacets(); renderKeys(); renderConcepts();
+    window.scrollTo(0, 0);
   });
 })();

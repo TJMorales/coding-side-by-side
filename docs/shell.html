@@ -8,40 +8,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=11" />
+    <link rel="stylesheet" href="style.css?v=12" />
     
   </head>
   <body data-track="shell">
     <a class="skip" href="#concepts">Skip to concepts</a>
 
-    <header class="masthead hero hero-shell hero-dark">
-      <nav class="pages" aria-label="Pages">
-        <a href="index.html">Python · Java · JavaScript</a>
-        <a href="web.html">HTML + CSS</a>
-        <a href="sql.html">SQL</a>
-        <a href="shell.html" aria-current="page">Command line</a>
-        <a href="git.html">Git</a>
+    <header class="topnav">
+      <a class="topnav-brand" href="index.html" aria-label="Side by Side, home">
+        <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
+      </a>
+      <button type="button" class="topnav-toggle" aria-expanded="false" aria-controls="topnav-menu">Menu</button>
+      <nav class="topnav-menu" id="topnav-menu" aria-label="Languages">
+        <ul class="topnav-list">
+          <li><a class="topnav-link nav-python" href="index.html#lang=python" data-nav-lang="python">Python</a></li>
+          <li><a class="topnav-link nav-java" href="index.html#lang=java" data-nav-lang="java">Java</a></li>
+          <li><a class="topnav-link nav-javascript" href="index.html#lang=javascript" data-nav-lang="javascript">JavaScript</a></li>
+          <li class="topnav-compare">
+            <button type="button" class="topnav-link" id="compare-btn" aria-expanded="false" aria-controls="compare-menu">Compare</button>
+            <ul class="compare-menu" id="compare-menu" hidden>
+              <li><a href="index.html#lang=python,java" data-nav-lang="python,java">Python + Java</a></li>
+              <li><a href="index.html#lang=python,javascript" data-nav-lang="python,javascript">Python + JavaScript</a></li>
+              <li><a href="index.html#lang=java,javascript" data-nav-lang="java,javascript">Java + JavaScript</a></li>
+              <li><a href="index.html#lang=python,java,javascript" data-nav-lang="python,java,javascript">All three</a></li>
+            </ul>
+          </li>
+          <li><a class="topnav-link" href="web.html" data-nav-page>HTML &amp; CSS</a></li>
+          <li><a class="topnav-link" href="sql.html" data-nav-page>SQL</a></li>
+          <li><a class="topnav-link" href="shell.html" data-nav-page aria-current="page">Command line</a></li>
+          <li><a class="topnav-link" href="git.html" data-nav-page>Git</a></li>
+        </ul>
       </nav>
-      <div class="masthead-top">
-        <p class="wordmark" aria-label="Side by Side">
-          <span class="wm-py">Side</span><span class="wm-seam" aria-hidden="true"></span><span class="wm-java">by Side</span>
-        </p>
-        <h1 class="page-title">Linux command line and bash</h1>
-        <p class="tagline">Linux commands and bash scripts, run in a real terminal. From <code>pwd</code> to pipes and safe scripts.</p>
-      </div>
-
-      <form class="facets facets-solo" role="search" aria-label="Filter concepts" onsubmit="return false">
-        <div class="facet facet-search">
-          <label for="q">Search</label>
-          <input id="q" type="search" placeholder="Try: grep, chmod, pipe, loop" autocomplete="off" spellcheck="false" />
-        </div>
-
-        <fieldset class="facet facet-level">
-          <legend>Level <span class="legend-hint">Pick one or more</span></legend>
-          <div class="ladder" id="levels"></div>
-        </fieldset>
-      </form>
     </header>
+
+    <div class="hero hero-shell">
+      <div class="hero-card">
+        <h1 class="page-title" id="page-title">Linux command line and bash</h1>
+        <p class="tagline">Linux commands and bash scripts, run in a real terminal. From <code>pwd</code> to pipes and safe scripts.</p>
+        <form class="facets" role="search" aria-label="Filter concepts" onsubmit="return false">
+          <div class="facet facet-search">
+            <label for="q">Search</label>
+            <input id="q" type="search" placeholder="Try: grep, chmod, pipe, loop" autocomplete="off" spellcheck="false" />
+          </div>
+          <fieldset class="facet facet-level">
+            <legend>Level <span class="legend-hint">Pick one or more</span></legend>
+            <div class="ladder" id="levels"></div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
 
     <div class="status-row">
       <div class="status-text">
@@ -65,9 +80,9 @@
       <p>Every session ran in bash 5 on Linux as the user student, in a real terminal. The output is what the commands printed.</p>
     </footer>
 
-    <script src="highlight.js?v=11"></script>
-    <script src="data/shell.js?v=11"></script>
-    <script src="data/index.js?v=11"></script>
-    <script src="app.js?v=11"></script>
+    <script src="highlight.js?v=12"></script>
+    <script src="data/shell.js?v=12"></script>
+    <script src="data/index.js?v=12"></script>
+    <script src="app.js?v=12"></script>
   </body>
 </html>
